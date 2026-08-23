@@ -59,10 +59,12 @@
       </a>
       <ul class="nav__links" id="navLinks">
         <li><a href="#about" class="nav__link" data-section="about" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#why" class="nav__link" data-section="why" data-i18n="nav.why">Pourquoi moi</a></li>
         <li><a href="#experience" class="nav__link" data-section="experience" data-i18n="nav.experience">Expérience</a></li>
         <li><a href="#skills" class="nav__link" data-section="skills" data-i18n="nav.skills">Compétences</a></li>
         <li><a href="#projects" class="nav__link" data-section="projects" data-i18n="nav.projects">Projets</a></li>
         <li><a href="#certifications" class="nav__link" data-section="certifications" data-i18n="nav.certs">Certs</a></li>
+        <li><a href="assets/cv-yahya-falhaoui.pdf" class="nav__link nav__link--cv magnetic-sm" download data-i18n="nav.cv">CV</a></li>
         <li><a href="#contact" class="nav__link nav__link--cta magnetic" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav__controls">
@@ -105,17 +107,21 @@
             <span class="typewriter-cursor" aria-hidden="true">▍</span>
           </p>
           <p class="hero__tagline reveal" data-delay="320" data-i18n="hero.tagline">
-            J'architecte des expériences web full-stack et des systèmes IA traçables —
-            de l'idée au déploiement Docker, avec rigueur et performance.
+            Ingénieur Full-Stack & IA — je livre des applications web sécurisées, de l'architecture
+            au déploiement Docker. Disponible pour un stage dès maintenant.
           </p>
+          <div class="hero__pitch reveal" data-delay="360">
+            <span class="hero__pitch-item" data-i18n="hero.pitch1">Angular · Spring Boot · Django · .NET</span>
+            <span class="hero__pitch-item" data-i18n="hero.pitch2">JWT · RBAC · Docker · PostgreSQL</span>
+            <span class="hero__pitch-item" data-i18n="hero.pitch3">Casablanca · Stage immédiat</span>
+          </div>
           <div class="hero__actions reveal" data-delay="420">
-            <a href="#contact" class="btn btn--primary magnetic">
-              <span data-i18n="hero.cta1">Démarrer un projet</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="assets/cv-yahya-falhaoui.pdf" class="btn btn--ghost magnetic" download>
+            <a href="assets/cv-yahya-falhaoui.pdf" class="btn btn--primary magnetic" download>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              <span data-i18n="hero.cta2">CV PDF</span>
+              <span data-i18n="hero.cta1">Télécharger mon CV</span>
+            </a>
+            <a href="#contact" class="btn btn--ghost magnetic">
+              <span data-i18n="hero.cta2">Planifier un entretien</span>
             </a>
           </div>
           <div class="hero__social reveal" data-delay="500">
@@ -145,12 +151,12 @@
             <p class="bento-card__sub" data-i18n="hero.bentoSub">EMSI · Master 2 IA</p>
           </div>
           <div class="bento-card bento-card--stat tilt-card">
-            <span class="bento-stat__value" data-count="8" data-suffix="+">0</span>
-            <span class="bento-stat__label" data-i18n="hero.statProjects">Projets livrés</span>
+            <span class="bento-stat__value" data-count="5" data-suffix="+">0</span>
+            <span class="bento-stat__label" data-i18n="hero.statProjects">Projets GitHub</span>
           </div>
           <div class="bento-card bento-card--stat tilt-card">
-            <span class="bento-stat__value" data-count="15" data-suffix="+">0</span>
-            <span class="bento-stat__label" data-i18n="hero.statTech">Technologies</span>
+            <span class="bento-stat__value" data-count="7" data-suffix="">0</span>
+            <span class="bento-stat__label" data-i18n="hero.statCerts">Certifications</span>
           </div>
           <div class="bento-card bento-card--stat tilt-card">
             <span class="bento-stat__value" data-count="2" data-suffix="">0</span>
@@ -182,6 +188,59 @@
         <span>React</span><span>Next.js</span><span>JWT · RBAC</span><span>IA Traçable</span>
       </div>
     </div>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+      <div class="container trust-bar__inner">
+        <span class="trust-bar__label" data-i18n="trust.label">Ils m'ont fait confiance</span>
+        <div class="trust-bar__logos">
+          <span class="trust-logo">EMSI</span>
+          <span class="trust-logo trust-logo--leoni">LEONI</span>
+          <span class="trust-logo trust-logo--6s">6SOLUTIONS</span>
+          <span class="trust-logo trust-logo--meta">Meta</span>
+          <span class="trust-logo trust-logo--oracle">Oracle</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Me — Recruiter scan -->
+    <section class="section section--compact" id="why">
+      <div class="container">
+        <header class="section__header section__header--center reveal">
+          <span class="section__tag" data-i18n="why.tag">Pour les recruteurs</span>
+          <h2 class="section__title" data-i18n-html="why.title">Pourquoi <span class="text-gradient">m'embaucher ?</span></h2>
+          <p class="section__subtitle" data-i18n="why.subtitle">Scannable en 30 secondes — profil stage Full-Stack & IA</p>
+        </header>
+        <div class="why-grid reveal">
+          <article class="why-card glass tilt-card">
+            <span class="why-card__num">01</span>
+            <h3 data-i18n="why.c1Title">Full-Stack opérationnel</h3>
+            <p data-i18n="why.c1Desc">Front Angular + back Spring Boot/Django/.NET. Je code, teste et déploie — pas seulement des maquettes.</p>
+          </article>
+          <article class="why-card glass tilt-card" data-delay="80">
+            <span class="why-card__num">02</span>
+            <h3 data-i18n="why.c2Title">Expérience entreprise</h3>
+            <p data-i18n="why.c2Desc">LEONI (industrie) + 6SOLUTIONS (PFA IA). Applications en production, pas que des projets école.</p>
+          </article>
+          <article class="why-card glass tilt-card" data-delay="160">
+            <span class="why-card__num">03</span>
+            <h3 data-i18n="why.c3Title">Sécurité & qualité</h3>
+            <p data-i18n="why.c3Desc">JWT, RBAC, audit SHA-256, tests k6, Docker Compose. Je pense prod dès le départ.</p>
+          </article>
+          <article class="why-card glass tilt-card" data-delay="240">
+            <span class="why-card__num">04</span>
+            <h3 data-i18n="why.c4Title">Profil IA différenciant</h3>
+            <p data-i18n="why.c4Desc">Master 2 IA + projet Traçabilité IA multisectoriel. Rare pour un profil dev web junior.</p>
+          </article>
+        </div>
+        <div class="why-cta reveal">
+          <a href="assets/cv-yahya-falhaoui.pdf" class="btn btn--primary magnetic" download>
+            <span data-i18n="why.cta">Télécharger le CV — 1 clic</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- About -->
     <section class="section" id="about">
@@ -307,6 +366,11 @@
                 <li data-i18n="experience.exp1t2">Auth JWT + RBAC · Journal d'audit · Empreintes SHA-256</li>
                 <li data-i18n="experience.exp1t3">Tests E2E k6 · Docker Compose · CI Git/GitHub</li>
               </ul>
+              <div class="exp-item__impact">
+                <span data-i18n="experience.exp1impact1">84+ commits</span>
+                <span data-i18n="experience.exp1impact2">3 domaines IA</span>
+                <span data-i18n="experience.exp1impact3">Docker prod-like</span>
+              </div>
               <div class="exp-item__stack">
                 <span>Java 17</span><span>Spring Boot</span><span>Angular</span><span>Flask</span>
                 <span>PostgreSQL</span><span>Docker</span><span>Nginx</span>
@@ -335,6 +399,10 @@
               <ul class="exp-item__list">
                 <li data-i18n="experience.exp2t1">Interface responsive · Base MySQL · Tests fonctionnels</li>
               </ul>
+              <div class="exp-item__impact">
+                <span data-i18n="experience.exp2impact1">Processus manuel → digital</span>
+                <span data-i18n="experience.exp2impact2">Mise en production</span>
+              </div>
               <div class="exp-item__stack">
                 <span>Django</span><span>Bootstrap</span><span>MySQL</span>
               </div>
@@ -354,6 +422,15 @@
             <h2 class="section__title" data-i18n-html="skills.title">Arsenal<br><span class="text-gradient">technique</span></h2>
           </div>
         </header>
+
+        <div class="skills-glance reveal">
+          <p class="skills-glance__label" data-i18n="skills.glance">Stack principal — visible immédiatement</p>
+          <div class="skills-glance__tags">
+            <span>Angular 21</span><span>Spring Boot</span><span>TypeScript</span><span>Django</span>
+            <span>.NET 8</span><span>PostgreSQL</span><span>Docker</span><span>JWT / RBAC</span>
+            <span>Python / Flask</span><span>Git · CI/CD</span>
+          </div>
+        </div>
 
         <div class="skills-tabs reveal">
           <div class="skills-tabs__nav" role="tablist">
@@ -436,9 +513,15 @@
             </div>
             <h3 data-i18n="projects.featTitle">Traçabilité IA</h3>
             <p data-i18n="projects.featDesc">
-              Plateforme web de validation humaine des décisions IA — authentification RBAC,
-              journal d'audit SHA-256, déploiement Docker. Projet phare chez 6SOLUTIONS.
+              Plateforme multisectorielle (crédit, santé, éducation) — validation humaine des décisions IA,
+              explicabilité ML, audit SHA-256, déploiement Docker. Projet phare 6SOLUTIONS.
             </p>
+            <div class="project-metrics">
+              <span data-i18n="projects.featM1">84+ commits</span>
+              <span data-i18n="projects.featM2">3 secteurs</span>
+              <span data-i18n="projects.featM3">JWT + RBAC</span>
+              <span data-i18n="projects.featM4">Docker Compose</span>
+            </div>
             <div class="project-featured__stack">
               <span>Angular 21</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span><span>k6</span>
             </div>
@@ -453,6 +536,10 @@
             <span class="project-card__badge" data-i18n="projects.p2Badge">Académique</span>
             <h3 data-i18n="projects.p2Title">GHotel — Gestion Hôtelière</h3>
             <p data-i18n="projects.p2Desc">Réservations, check-in/out, facturation PDF/Excel · 3 rôles · ASP.NET Core 8 MVC</p>
+            <div class="project-metrics project-metrics--sm">
+              <span data-i18n="projects.p2M1">5000+ LOC</span>
+              <span data-i18n="projects.p2M2">36 use cases</span>
+            </div>
             <div class="project-card__stack"><span>.NET 8</span><span>Entity Framework</span><span>SQL Server</span></div>
             <a href="https://github.com/Yahyafl3/ghotel" target="_blank" rel="noopener noreferrer" class="project-card__link link-arrow magnetic-sm"><span data-i18n="projects.github">GitHub</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </article>
@@ -495,45 +582,120 @@
           <div>
             <span class="section__tag" data-i18n="certs.tag">Certifications</span>
             <h2 class="section__title" data-i18n-html="certs.title">Apprentissage<br><span class="text-gradient">continu</span></h2>
+            <p class="section__subtitle" data-i18n="certs.subtitle">7 certifications · 5 institutions · IA, dev & soft skills</p>
           </div>
         </header>
 
-        <div class="certs-scroll reveal">
-          <article class="cert-card glass tilt-card">
-            <div class="cert-card__logo cert-card__logo--oracle">O</div>
-            <h3>Oracle AI Agent Studio</h3>
-            <p>Foundations Associate</p>
-          </article>
-          <article class="cert-card glass tilt-card">
-            <div class="cert-card__logo cert-card__logo--meta">M</div>
-            <h3>React Native & React</h3>
-            <p>Meta</p>
-          </article>
-          <article class="cert-card glass tilt-card">
-            <div class="cert-card__logo cert-card__logo--hkust">H</div>
-            <h3>Software Engineering</h3>
-            <p>HKUST</p>
-          </article>
-          <article class="cert-card glass tilt-card">
-            <div class="cert-card__logo cert-card__logo--epfl">E</div>
-            <h3>C++ OOP</h3>
-            <p>EPFL</p>
-          </article>
-          <article class="cert-card glass tilt-card">
-            <div class="cert-card__logo cert-card__logo--michigan">U</div>
-            <h3>Python Web Data</h3>
-            <p>Univ. Michigan</p>
-          </article>
-          <article class="cert-card glass tilt-card">
-            <div class="cert-card__logo cert-card__logo--michigan">U</div>
-            <h3>JavaScript</h3>
-            <p>Univ. Michigan</p>
-          </article>
-          <article class="cert-card glass tilt-card">
-            <div class="cert-card__logo cert-card__logo--coursera">C</div>
-            <h3>Successful Negotiation</h3>
-            <p>Coursera</p>
-          </article>
+        <div class="certs-showcase reveal">
+          <div class="certs-stats">
+            <div class="certs-stat">
+              <span class="certs-stat__value">7</span>
+              <span class="certs-stat__label" data-i18n="certs.statCount">Certifications</span>
+            </div>
+            <div class="certs-stat">
+              <span class="certs-stat__value">5</span>
+              <span class="certs-stat__label" data-i18n="certs.statOrgs">Institutions</span>
+            </div>
+            <div class="certs-stat">
+              <span class="certs-stat__value">IA</span>
+              <span class="certs-stat__label" data-i18n="certs.statFocus">Focus récent</span>
+            </div>
+          </div>
+
+          <div class="certs-orbit-scene reveal">
+            <div class="certs-orbit">
+              <div class="certs-orbit__ring" aria-hidden="true"></div>
+              <div class="certs-orbit__ring certs-orbit__ring--inner" aria-hidden="true"></div>
+
+              <article class="certs-orbit__hub glass cert-hub cert-hub--oracle">
+                <div class="cert-hub__glow" aria-hidden="true"></div>
+                <div class="cert-brand cert-brand--oracle cert-brand--lg">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="4"/><path d="M3 12c0 2.2 4 4 9 4s9-1.8 9-4M3 12c0-2.2 4-4 9-4s9 1.8 9 4"/></svg>
+                </div>
+                <h3 data-i18n="certs.c1title">Oracle AI Agent Studio</h3>
+                <span class="cert-hub__badge" data-i18n="certs.c1cat">IA · Enterprise</span>
+                <p data-i18n="certs.c1desc">Foundations Associate — agents IA, orchestration & bonnes pratiques enterprise</p>
+              </article>
+
+              <article class="cert-node cert-node--meta" style="--i: 0">
+                <div class="cert-node__circle">
+                  <div class="cert-brand cert-brand--meta">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                  </div>
+                </div>
+                <div class="cert-node__info glass">
+                  <span class="cert-node__cat" data-i18n="certs.c2cat">Frontend</span>
+                  <strong data-i18n="certs.c2title">React Native & React</strong>
+                  <span class="cert-node__issuer">Meta</span>
+                </div>
+              </article>
+
+              <article class="cert-node cert-node--hkust" style="--i: 1">
+                <div class="cert-node__circle">
+                  <div class="cert-brand cert-brand--hkust">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                  </div>
+                </div>
+                <div class="cert-node__info glass">
+                  <span class="cert-node__cat" data-i18n="certs.c3cat">Engineering</span>
+                  <strong data-i18n="certs.c3title">Software Engineering</strong>
+                  <span class="cert-node__issuer">HKUST</span>
+                </div>
+              </article>
+
+              <article class="cert-node cert-node--epfl" style="--i: 2">
+                <div class="cert-node__circle">
+                  <div class="cert-brand cert-brand--epfl">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </div>
+                </div>
+                <div class="cert-node__info glass">
+                  <span class="cert-node__cat" data-i18n="certs.c4cat">Backend</span>
+                  <strong data-i18n="certs.c4title">C++ OOP</strong>
+                  <span class="cert-node__issuer">EPFL</span>
+                </div>
+              </article>
+
+              <article class="cert-node cert-node--michigan" style="--i: 3">
+                <div class="cert-node__circle">
+                  <div class="cert-brand cert-brand--michigan">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  </div>
+                </div>
+                <div class="cert-node__info glass">
+                  <span class="cert-node__cat" data-i18n="certs.c5cat">Data</span>
+                  <strong data-i18n="certs.c5title">Python Web Data</strong>
+                  <span class="cert-node__issuer">Univ. Michigan</span>
+                </div>
+              </article>
+
+              <article class="cert-node cert-node--michigan" style="--i: 4">
+                <div class="cert-node__circle">
+                  <div class="cert-brand cert-brand--michigan">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  </div>
+                </div>
+                <div class="cert-node__info glass">
+                  <span class="cert-node__cat" data-i18n="certs.c6cat">Frontend</span>
+                  <strong data-i18n="certs.c6title">JavaScript</strong>
+                  <span class="cert-node__issuer">Univ. Michigan</span>
+                </div>
+              </article>
+
+              <article class="cert-node cert-node--coursera" style="--i: 5">
+                <div class="cert-node__circle">
+                  <div class="cert-brand cert-brand--coursera">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                  </div>
+                </div>
+                <div class="cert-node__info glass">
+                  <span class="cert-node__cat" data-i18n="certs.c7cat">Soft Skills</span>
+                  <strong data-i18n="certs.c7title">Successful Negotiation</strong>
+                  <span class="cert-node__issuer">Coursera</span>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -618,6 +780,21 @@
       </a>
     </div>
   </footer>
+
+  <!-- Sticky recruiter CTA -->
+  <aside class="sticky-cta" id="stickyCta" aria-label="Actions rapides">
+    <a href="assets/cv-yahya-falhaoui.pdf" class="sticky-cta__btn sticky-cta__btn--primary" download>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      <span data-i18n="sticky.cv">CV</span>
+    </a>
+    <a href="https://www.linkedin.com/in/yahya-falhaoui-bb2531332" class="sticky-cta__btn" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      <span data-i18n="sticky.linkedin">LinkedIn</span>
+    </a>
+    <a href="#contact" class="sticky-cta__btn sticky-cta__btn--accent">
+      <span data-i18n="sticky.contact">Contact</span>
+    </a>
+  </aside>
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>

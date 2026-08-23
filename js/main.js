@@ -414,6 +414,32 @@
     });
   }
 
+  /* --- Sticky Recruiter CTA --- */
+  function initStickyCta() {
+    const sticky = document.getElementById('stickyCta');
+    const hero = document.getElementById('hero');
+    if (!sticky || !hero) return;
+
+    let ticking = false;
+
+    function update() {
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      const show = window.scrollY > heroBottom - 120;
+      sticky.classList.toggle('visible', show);
+      document.body.classList.toggle('sticky-active', show);
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    update();
+  }
+
   /* --- Init --- */
   document.addEventListener('DOMContentLoaded', () => {
     window.i18nManager.init();
@@ -428,6 +454,7 @@
     initSkillsTabs();
     initReveal();
     initNav();
+    initStickyCta();
     initSpotlight();
     initTilt();
     initCursor();
