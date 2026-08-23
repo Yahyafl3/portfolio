@@ -1731,9 +1731,9 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 }
 
 .certs-orbit {
-  --orbit-size: min(900px, 98vw);
-  --orbit-r: calc(var(--orbit-size) * 0.395);
-  --node-size: 116px;
+  --orbit-size: min(920px, 98vw);
+  --orbit-r: calc(var(--orbit-size) * 0.43);
+  --node-size: 120px;
   position: relative;
   width: var(--orbit-size);
   height: var(--orbit-size);
@@ -1770,8 +1770,8 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(240px, 38vw, 300px);
-  height: clamp(240px, 38vw, 300px);
+  width: clamp(190px, 30vw, 270px);
+  height: clamp(190px, 30vw, 270px);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -1909,33 +1909,33 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 }
 
 .cert-brand__img--icon {
-  width: 68%;
-  height: 68%;
+  width: 78%;
+  height: 78%;
   object-fit: contain;
 }
 
-.cert-brand__img--tile {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.cert-brand--lg .cert-brand__img--icon {
+  width: 82%;
+  height: 82%;
 }
 
 .cert-brand--lg {
-  width: 88px;
-  height: 88px;
+  width: 100px;
+  height: 100px;
 }
 
 .cert-brand--oracle { --brand-ring: linear-gradient(135deg, #f80000, #ff4444); }
 .cert-brand--meta { --brand-ring: linear-gradient(135deg, #0081fb, #00c6ff); }
 
 .cert-brand--lg.cert-brand--oracle {
-  width: 120px;
-  height: 120px;
+  width: 132px;
+  height: 132px;
 }
 
-.cert-brand--lg .cert-brand__img--icon {
-  width: 72%;
-  height: 72%;
+.cert-brand__img--tile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .cert-brand--hkust,
@@ -2220,6 +2220,18 @@ body.sticky-active {
   .project-featured { grid-column: span 1; }
   .project-card--wide { grid-column: span 1; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .certs-orbit {
+    --orbit-size: min(760px, 98vw);
+    --orbit-r: calc(var(--orbit-size) * 0.44);
+  }
+  .certs-orbit__hub {
+    width: clamp(170px, 36vw, 220px);
+    height: clamp(170px, 36vw, 220px);
+  }
+  .cert-brand--lg.cert-brand--oracle {
+    width: 112px;
+    height: 112px;
+  }
 }
 
 @media (max-width: 768px) {
