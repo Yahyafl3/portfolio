@@ -1000,11 +1000,6 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   line-height: 1.75;
 }
 
-.why-cta {
-  display: flex;
-  justify-content: center;
-}
-
 /* --- Sections --- */
 .section {
   position: relative;
@@ -1862,52 +1857,6 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   transform: scale(1.12);
 }
 
-.cert-node__info {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%) translateY(6px);
-  min-width: 160px;
-  padding: 12px 14px;
-  border-radius: var(--r-md);
-  text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s, transform 0.25s var(--ease-out);
-  z-index: 10;
-}
-
-.cert-node:hover .cert-node__info,
-.cert-node:focus-within .cert-node__info {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-.cert-node__cat {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.5625rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-3);
-  margin-bottom: 4px;
-}
-
-.cert-node__info strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  line-height: 1.35;
-  margin-bottom: 4px;
-}
-
-.cert-node__issuer {
-  font-size: 0.6875rem;
-  color: var(--text-3);
-}
-
 /* Brand circles — professional logos */
 .cert-brand {
   display: flex;
@@ -2383,16 +2332,6 @@ body.sticky-active {
     height: 64px;
   }
 
-  .certs-orbit-scene .cert-node__info {
-    position: static;
-    transform: none;
-    opacity: 1;
-    pointer-events: all;
-    min-width: unset;
-    width: 100%;
-    padding: 10px;
-  }
-
   .sticky-cta {
     left: 12px;
     right: 12px;
@@ -2483,8 +2422,7 @@ html[dir="rtl"] .skill-bar {
 html[dir="rtl"] .why-grid,
 html[dir="rtl"] .trust-bar__inner,
 html[dir="rtl"] .hero__pitch,
-html[dir="rtl"] .cert-hub,
-html[dir="rtl"] .cert-node__info {
+html[dir="rtl"] .cert-hub {
   direction: rtl;
 }
 
