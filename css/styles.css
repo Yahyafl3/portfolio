@@ -1914,9 +1914,21 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   object-fit: contain;
 }
 
+.cert-brand__img--wordmark {
+  width: 86%;
+  height: auto;
+  max-height: 42%;
+  object-fit: contain;
+}
+
 .cert-brand--lg .cert-brand__img--icon {
   width: 82%;
   height: 82%;
+}
+
+.cert-brand--lg .cert-brand__img--wordmark {
+  width: 90%;
+  max-height: 46%;
 }
 
 .cert-brand--lg {
