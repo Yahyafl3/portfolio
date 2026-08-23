@@ -1726,13 +1726,14 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 .certs-orbit-scene {
   display: flex;
   justify-content: center;
-  padding: 20px 0 40px;
+  padding: 32px 24px 56px;
+  overflow: visible;
 }
 
 .certs-orbit {
-  --orbit-size: min(680px, 92vw);
-  --orbit-r: calc(var(--orbit-size) * 0.38);
-  --node-size: 72px;
+  --orbit-size: min(860px, 98vw);
+  --orbit-r: calc(var(--orbit-size) * 0.395);
+  --node-size: 100px;
   position: relative;
   width: var(--orbit-size);
   height: var(--orbit-size);
@@ -1769,8 +1770,8 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(200px, 34vw, 260px);
-  height: clamp(200px, 34vw, 260px);
+  width: clamp(240px, 38vw, 300px);
+  height: clamp(240px, 38vw, 300px);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -1921,9 +1922,9 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 }
 
 .cert-brand--lg.cert-brand--oracle {
-  width: 96px;
-  height: 96px;
-  padding: 10px;
+  width: 112px;
+  height: 112px;
+  padding: 12px;
 }
 
 .cert-brand--hkust,
@@ -2323,13 +2324,13 @@ body.sticky-active {
   }
 
   .certs-orbit-scene .cert-node__circle {
-    width: 64px;
-    height: 64px;
+    width: 88px;
+    height: 88px;
   }
 
   .certs-orbit-scene .cert-brand {
-    width: 64px;
-    height: 64px;
+    width: 88px;
+    height: 88px;
   }
 
   .sticky-cta {
