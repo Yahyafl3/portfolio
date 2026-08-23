@@ -677,12 +677,16 @@
         </header>
 
         <div class="contact-grid">
-          <form class="contact-form glass tilt-card reveal" id="contactForm" novalidate>
+          <form class="contact-form glass tilt-card reveal" id="contactForm" action="https://formsubmit.co/deac9ed230c6153606b323aeecce0d69" method="POST" novalidate>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://yahya-falhaoui.vercel.app/?sent=1#contact">
+            <input type="hidden" name="_subject" id="formSubmitSubject" value="[Portfolio] Contact">
             <input type="text" name="_gotcha" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-row">
               <div class="form-group">
                 <label for="name" data-i18n="contact.name">Nom</label>
-                <input type="text" id="name" name="name" required autocomplete="name" data-i18n-placeholder="contact.namePh" placeholder="Votre nom">
+                <input type="text" id="name" name="fullName" required autocomplete="name" data-i18n-placeholder="contact.namePh" placeholder="Votre nom">
               </div>
               <div class="form-group">
                 <label for="email" data-i18n="contact.email">Email</label>

@@ -352,13 +352,35 @@
   }
 
   /* --- Contact Form (FormSubmit) --- */
-  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/yahyafalhaoui411@gmail.com';
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/deac9ed230c6153606b323aeecce0d69';
+
+  function showFormStatus(status, text, type) {
+    if (!status) return;
+    status.textContent = text;
+    status.className = `form-status ${type}`;
+  }
+
+  function checkContactSent() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('sent') !== '1') return;
+
+    const status = document.getElementById('formStatus');
+    showFormStatus(status, window.i18nManager.t('contact.success'), 'success');
+
+    params.delete('sent');
+    const query = params.toString();
+    const nextUrl = `${window.location.pathname}${query ? `?${query}` : ''}#contact`;
+    window.history.replaceState(null, '', nextUrl);
+  }
 
   function initContactForm() {
     const form = document.getElementById('contactForm');
     const status = document.getElementById('formStatus');
     const submitBtn = document.getElementById('contactSubmit');
+    const subjectHidden = document.getElementById('formSubmitSubject');
     if (!form) return;
+
+    checkContactSent();
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -366,57 +388,56 @@
       const data = new FormData(form);
       if (data.get('_gotcha')) return;
 
-      const nameVal = String(data.get('name') || '').trim();
+      const nameVal = String(data.get('fullName') || '').trim();
       const emailVal = String(data.get('email') || '').trim();
       const subjectVal = String(data.get('subject') || '').trim();
       const messageVal = String(data.get('message') || '').trim();
 
       if (!nameVal || !emailVal || !subjectVal || !messageVal) {
-        status.textContent = window.i18nManager.t('contact.errorEmpty');
-        status.className = 'form-status error';
+        showFormStatus(status, window.i18nManager.t('contact.errorEmpty'), 'error');
         return;
       }
 
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-        status.textContent = window.i18nManager.t('contact.errorEmail');
-        status.className = 'form-status error';
+        showFormStatus(status, window.i18nManager.t('contact.errorEmail'), 'error');
         return;
       }
 
+      const mailSubject = `[Portfolio] ${subjectVal}`;
+      if (subjectHidden) subjectHidden.value = mailSubject;
+      data.set('_subject', mailSubject);
+
       if (submitBtn) submitBtn.disabled = true;
-      status.textContent = window.i18nManager.t('contact.sending');
-      status.className = 'form-status loading';
+      showFormStatus(status, window.i18nManager.t('contact.sending'), 'loading');
 
       try {
         const res = await fetch(FORM_ENDPOINT, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json'
-          },
-          body: JSON.stringify({
-            name: nameVal,
-            email: emailVal,
-            subject: subjectVal,
-            message: messageVal,
-            _subject: `[Portfolio] ${subjectVal}`,
-            _template: 'table',
-            _captcha: 'false'
-          })
+          headers: { Accept: 'application/json' },
+          body: data
         });
 
         const result = await res.json().catch(() => ({}));
+        const ok = res.ok && String(result.success) === 'true';
 
-        if (!res.ok) {
-          throw new Error(result.message || 'Send failed');
+        if (ok) {
+          showFormStatus(status, window.i18nManager.t('contact.success'), 'success');
+          form.reset();
+          return;
         }
 
-        status.textContent = window.i18nManager.t('contact.success');
-        status.className = 'form-status success';
-        form.reset();
+        const msg = String(result.message || '');
+        if (/activation|activate/i.test(msg)) {
+          showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
+          HTMLFormElement.prototype.submit.call(form);
+          return;
+        }
+
+        throw new Error(msg || 'Send failed');
       } catch {
-        status.textContent = window.i18nManager.t('contact.errorSend');
-        status.className = 'form-status error';
+        showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
+        HTMLFormElement.prototype.submit.call(form);
+        return;
       } finally {
         if (submitBtn) submitBtn.disabled = false;
       }

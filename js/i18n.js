@@ -169,7 +169,9 @@ window.I18N = {
       errorEmail: 'Adresse email invalide.',
       sending: 'Envoi en cours…',
       success: 'Message envoyé — je vous réponds sous 24h.',
-      errorSend: 'Erreur d\'envoi. Réessayez ou écrivez-moi directement par email.'
+      errorSend: 'Erreur d\'envoi. Réessayez ou écrivez-moi directement par email.',
+      errorActivation: 'Formulaire en attente d\'activation — vérifiez yahyafalhaoui411@gmail.com (spam inclus) pour le lien FormSubmit.',
+      fallbackSend: 'Redirection pour envoi sécurisé…'
     },
     footer: {
       built: 'Built with HTML · CSS · JS',
@@ -351,7 +353,9 @@ window.I18N = {
       errorEmail: 'Invalid email address.',
       sending: 'Sending…',
       success: 'Message sent — I\'ll reply within 24h.',
-      errorSend: 'Could not send. Try again or email me directly.'
+      errorSend: 'Could not send. Try again or email me directly.',
+      errorActivation: 'Form pending activation — check yahyafalhaoui411@gmail.com (including spam) for the FormSubmit link.',
+      fallbackSend: 'Redirecting for secure delivery…'
     },
     footer: {
       built: 'Built with HTML · CSS · JS',
@@ -533,7 +537,9 @@ window.I18N = {
       errorEmail: 'بريد إلكتروني غير صالح.',
       sending: 'جاري الإرسال…',
       success: 'تم الإرسال — سأرد خلال 24 ساعة.',
-      errorSend: 'فشل الإرسال. أعد المحاولة أو راسلني مباشرة.'
+      errorSend: 'فشل الإرسال. أعد المحاولة أو راسلني مباشرة.',
+      errorActivation: 'النموذج بانتظار التفعيل — تحقق من yahyafalhaoui411@gmail.com (بما في ذلك spam) لرابط FormSubmit.',
+      fallbackSend: 'جاري التوجيه للإرسال الآمن…'
     },
     footer: {
       built: 'Built with HTML · CSS · JS',
