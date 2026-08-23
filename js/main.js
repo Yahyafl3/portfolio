@@ -362,17 +362,22 @@
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const { name, email, subject, message, _gotcha } = form;
 
-      if (_gotcha && _gotcha.value) return;
+      const data = new FormData(form);
+      if (data.get('_gotcha')) return;
 
-      if (!name.value.trim() || !email.value.trim() || !subject.value.trim() || !message.value.trim()) {
+      const nameVal = String(data.get('name') || '').trim();
+      const emailVal = String(data.get('email') || '').trim();
+      const subjectVal = String(data.get('subject') || '').trim();
+      const messageVal = String(data.get('message') || '').trim();
+
+      if (!nameVal || !emailVal || !subjectVal || !messageVal) {
         status.textContent = window.i18nManager.t('contact.errorEmpty');
         status.className = 'form-status error';
         return;
       }
 
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
         status.textContent = window.i18nManager.t('contact.errorEmail');
         status.className = 'form-status error';
         return;
@@ -390,20 +395,20 @@
             Accept: 'application/json'
           },
           body: JSON.stringify({
-            name: name.value.trim(),
-            email: email.value.trim(),
-            subject: subject.value.trim(),
-            message: message.value.trim(),
-            _subject: `[Portfolio] ${subject.value.trim()}`,
+            name: nameVal,
+            email: emailVal,
+            subject: subjectVal,
+            message: messageVal,
+            _subject: `[Portfolio] ${subjectVal}`,
             _template: 'table',
             _captcha: 'false'
           })
         });
 
-        const data = await res.json().catch(() => ({}));
+        const result = await res.json().catch(() => ({}));
 
         if (!res.ok) {
-          throw new Error(data.message || 'Send failed');
+          throw new Error(result.message || 'Send failed');
         }
 
         status.textContent = window.i18nManager.t('contact.success');
