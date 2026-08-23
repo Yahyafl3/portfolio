@@ -28,7 +28,17 @@ Portfolio web premium pour **Yahya Falhaoui**, étudiant ingénieur Full-Stack &
 - **Multilingue FR / EN / AR** avec switcher dans la nav
 - **Mode clair & sombre** avec persistance localStorage
 
-## Lancer le site
+## Déploiement Vercel
+
+1. Pousser le repo sur GitHub (compte `Yahyafl3`)
+2. Aller sur [vercel.com/new](https://vercel.com/new)
+3. Importer le repository GitHub
+4. Laisser les paramètres par défaut (site statique, pas de build)
+5. Deploy — URL type `portfolio-xxx.vercel.app`
+
+Le fichier `vercel.json` est déjà configuré pour un déploiement statique.
+
+## Lancer en local
 
 Ouvrir `index.html` dans un navigateur, ou utiliser un serveur local :
 
