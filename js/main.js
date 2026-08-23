@@ -352,6 +352,7 @@
   }
 
   /* --- Contact Form (FormSubmit) --- */
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/deac9ed230c6153606b323aeecce0d69';
 
   function showFormStatus(status, text, type) {
     if (!status) return;
@@ -381,12 +382,11 @@
 
     checkContactSent();
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
       const data = new FormData(form);
-      if (data.get('_gotcha')) {
-        e.preventDefault();
-        return;
-      }
+      if (String(data.get('_gotcha') || '').trim()) return;
 
       const nameVal = String(data.get('fullName') || '').trim();
       const emailVal = String(data.get('email') || '').trim();
@@ -394,13 +394,11 @@
       const messageVal = String(data.get('message') || '').trim();
 
       if (!nameVal || !emailVal || !subjectVal || !messageVal) {
-        e.preventDefault();
         showFormStatus(status, window.i18nManager.t('contact.errorEmpty'), 'error');
         return;
       }
 
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-        e.preventDefault();
         showFormStatus(status, window.i18nManager.t('contact.errorEmail'), 'error');
         return;
       }
@@ -409,9 +407,35 @@
       if (subjectHidden) subjectHidden.value = mailSubject;
       const replyHidden = document.getElementById('formSubmitReplyTo');
       if (replyHidden) replyHidden.value = emailVal;
+      data.set('_subject', mailSubject);
+      data.set('_replyto', emailVal);
 
       showFormStatus(status, window.i18nManager.t('contact.sending'), 'loading');
       if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: data
+        });
+
+        const result = await res.json().catch(() => ({}));
+
+        if (String(result.success) === 'true') {
+          showFormStatus(status, window.i18nManager.t('contact.success'), 'success');
+          form.reset();
+          return;
+        }
+
+        showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
+        HTMLFormElement.prototype.submit.call(form);
+      } catch {
+        showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
+        HTMLFormElement.prototype.submit.call(form);
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 
