@@ -1964,8 +1964,19 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   padding: 10px;
 }
 
-.cert-brand--oracle { --brand-ring: linear-gradient(135deg, #f80000, #ff4444); padding: 12px; }
-.cert-brand--meta { --brand-ring: linear-gradient(135deg, #0081fb, #00c6ff); padding: 10px; }
+.cert-brand--oracle { --brand-ring: linear-gradient(135deg, #f80000, #ff4444); padding: 8px; }
+.cert-brand--meta { --brand-ring: linear-gradient(135deg, #0081fb, #00c6ff); padding: 6px; }
+.cert-brand--oracle .cert-brand__img,
+.cert-brand--meta .cert-brand__img {
+  object-fit: contain;
+}
+
+.cert-brand--lg.cert-brand--oracle {
+  width: 96px;
+  height: 96px;
+  padding: 10px;
+}
+
 .cert-brand--hkust,
 .cert-brand--epfl,
 .cert-brand--michigan,
