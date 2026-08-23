@@ -352,7 +352,6 @@
   }
 
   /* --- Contact Form (FormSubmit) --- */
-  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/deac9ed230c6153606b323aeecce0d69';
 
   function showFormStatus(status, text, type) {
     if (!status) return;
@@ -382,11 +381,12 @@
 
     checkContactSent();
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
+    form.addEventListener('submit', (e) => {
       const data = new FormData(form);
-      if (data.get('_gotcha')) return;
+      if (data.get('_gotcha')) {
+        e.preventDefault();
+        return;
+      }
 
       const nameVal = String(data.get('fullName') || '').trim();
       const emailVal = String(data.get('email') || '').trim();
@@ -394,53 +394,24 @@
       const messageVal = String(data.get('message') || '').trim();
 
       if (!nameVal || !emailVal || !subjectVal || !messageVal) {
+        e.preventDefault();
         showFormStatus(status, window.i18nManager.t('contact.errorEmpty'), 'error');
         return;
       }
 
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+        e.preventDefault();
         showFormStatus(status, window.i18nManager.t('contact.errorEmail'), 'error');
         return;
       }
 
       const mailSubject = `[Portfolio] ${subjectVal}`;
       if (subjectHidden) subjectHidden.value = mailSubject;
-      data.set('_subject', mailSubject);
+      const replyHidden = document.getElementById('formSubmitReplyTo');
+      if (replyHidden) replyHidden.value = emailVal;
 
-      if (submitBtn) submitBtn.disabled = true;
       showFormStatus(status, window.i18nManager.t('contact.sending'), 'loading');
-
-      try {
-        const res = await fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: data
-        });
-
-        const result = await res.json().catch(() => ({}));
-        const ok = res.ok && String(result.success) === 'true';
-
-        if (ok) {
-          showFormStatus(status, window.i18nManager.t('contact.success'), 'success');
-          form.reset();
-          return;
-        }
-
-        const msg = String(result.message || '');
-        if (/activation|activate/i.test(msg)) {
-          showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
-          HTMLFormElement.prototype.submit.call(form);
-          return;
-        }
-
-        throw new Error(msg || 'Send failed');
-      } catch {
-        showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
-        HTMLFormElement.prototype.submit.call(form);
-        return;
-      } finally {
-        if (submitBtn) submitBtn.disabled = false;
-      }
+      if (submitBtn) submitBtn.disabled = true;
     });
   }
 
