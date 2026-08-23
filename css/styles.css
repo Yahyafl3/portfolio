@@ -1731,9 +1731,9 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 }
 
 .certs-orbit {
-  --orbit-size: min(860px, 98vw);
+  --orbit-size: min(900px, 98vw);
   --orbit-r: calc(var(--orbit-size) * 0.395);
-  --node-size: 100px;
+  --node-size: 116px;
   position: relative;
   width: var(--orbit-size);
   height: var(--orbit-size);
@@ -1869,10 +1869,11 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   background: #fff;
   position: relative;
   flex-shrink: 0;
-  padding: 6px;
+  padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.35s, transform 0.35s var(--ease-out);
+  overflow: hidden;
 }
 
 [data-theme="light"] .cert-brand {
@@ -1904,34 +1905,43 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 50%;
   display: block;
+}
+
+.cert-brand__img--icon {
+  width: 68%;
+  height: 68%;
+  object-fit: contain;
+}
+
+.cert-brand__img--tile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .cert-brand--lg {
   width: 88px;
   height: 88px;
-  padding: 10px;
 }
 
-.cert-brand--oracle { --brand-ring: linear-gradient(135deg, #f80000, #ff4444); padding: 8px; }
-.cert-brand--meta { --brand-ring: linear-gradient(135deg, #0081fb, #00c6ff); padding: 6px; }
-.cert-brand--oracle .cert-brand__img,
-.cert-brand--meta .cert-brand__img {
-  object-fit: contain;
-}
+.cert-brand--oracle { --brand-ring: linear-gradient(135deg, #f80000, #ff4444); }
+.cert-brand--meta { --brand-ring: linear-gradient(135deg, #0081fb, #00c6ff); }
 
 .cert-brand--lg.cert-brand--oracle {
-  width: 112px;
-  height: 112px;
-  padding: 12px;
+  width: 120px;
+  height: 120px;
+}
+
+.cert-brand--lg .cert-brand__img--icon {
+  width: 72%;
+  height: 72%;
 }
 
 .cert-brand--hkust,
 .cert-brand--epfl,
 .cert-brand--michigan,
 .cert-brand--coursera {
-  padding: 0;
   background: transparent;
   border: none;
 }
@@ -2324,13 +2334,13 @@ body.sticky-active {
   }
 
   .certs-orbit-scene .cert-node__circle {
-    width: 88px;
-    height: 88px;
+    width: 96px;
+    height: 96px;
   }
 
   .certs-orbit-scene .cert-brand {
-    width: 88px;
-    height: 88px;
+    width: 96px;
+    height: 96px;
   }
 
   .sticky-cta {
