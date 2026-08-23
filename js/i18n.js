@@ -166,7 +166,10 @@ window.I18N = {
       location: 'Casablanca, Maroc 🇲🇦',
       interests: 'Bénévolat · Veille tech · Open Source',
       errorEmpty: 'Veuillez remplir tous les champs.',
-      success: 'Ouverture de votre client mail…'
+      errorEmail: 'Adresse email invalide.',
+      sending: 'Envoi en cours…',
+      success: 'Message envoyé — je vous réponds sous 24h.',
+      errorSend: 'Erreur d\'envoi. Réessayez ou écrivez-moi directement par email.'
     },
     footer: {
       built: 'Built with HTML · CSS · JS',
@@ -345,7 +348,10 @@ window.I18N = {
       location: 'Casablanca, Morocco 🇲🇦',
       interests: 'Volunteering · Tech watch · Open Source',
       errorEmpty: 'Please fill in all fields.',
-      success: 'Opening your mail client…'
+      errorEmail: 'Invalid email address.',
+      sending: 'Sending…',
+      success: 'Message sent — I\'ll reply within 24h.',
+      errorSend: 'Could not send. Try again or email me directly.'
     },
     footer: {
       built: 'Built with HTML · CSS · JS',
@@ -524,7 +530,10 @@ window.I18N = {
       location: 'الدار البيضاء، المغرب 🇲🇦',
       interests: 'تطوع · veille tech · Open Source',
       errorEmpty: 'يرجى ملء جميع الحقول.',
-      success: 'جاري فتح بريدك…'
+      errorEmail: 'بريد إلكتروني غير صالح.',
+      sending: 'جاري الإرسال…',
+      success: 'تم الإرسال — سأرد خلال 24 ساعة.',
+      errorSend: 'فشل الإرسال. أعد المحاولة أو راسلني مباشرة.'
     },
     footer: {
       built: 'Built with HTML · CSS · JS',

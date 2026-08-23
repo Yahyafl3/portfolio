@@ -678,6 +678,7 @@
 
         <div class="contact-grid">
           <form class="contact-form glass tilt-card reveal" id="contactForm" novalidate>
+            <input type="text" name="_gotcha" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-row">
               <div class="form-group">
                 <label for="name" data-i18n="contact.name">Nom</label>
@@ -696,7 +697,7 @@
               <label for="message" data-i18n="contact.message">Message</label>
               <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.messagePh" placeholder="Parlez-moi de votre projet..."></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--full magnetic">
+            <button type="submit" class="btn btn--primary btn--full magnetic" id="contactSubmit">
               <span data-i18n="contact.send">Envoyer</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
             </button>

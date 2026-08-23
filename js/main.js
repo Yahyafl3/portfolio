@@ -351,15 +351,20 @@
     });
   }
 
-  /* --- Contact Form --- */
+  /* --- Contact Form (FormSubmit) --- */
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/yahyafalhaoui411@gmail.com';
+
   function initContactForm() {
     const form = document.getElementById('contactForm');
     const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('contactSubmit');
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const { name, email, subject, message } = form;
+      const { name, email, subject, message, _gotcha } = form;
+
+      if (_gotcha && _gotcha.value) return;
 
       if (!name.value.trim() || !email.value.trim() || !subject.value.trim() || !message.value.trim()) {
         status.textContent = window.i18nManager.t('contact.errorEmpty');
@@ -367,11 +372,49 @@
         return;
       }
 
-      const mailto = `mailto:yahyafalhaoui411@gmail.com?subject=${encodeURIComponent(subject.value)}&body=${encodeURIComponent(`Nom: ${name.value}\nEmail: ${email.value}\n\n${message.value}`)}`;
-      window.location.href = mailto;
-      status.textContent = window.i18nManager.t('contact.success');
-      status.className = 'form-status success';
-      form.reset();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        status.textContent = window.i18nManager.t('contact.errorEmail');
+        status.className = 'form-status error';
+        return;
+      }
+
+      if (submitBtn) submitBtn.disabled = true;
+      status.textContent = window.i18nManager.t('contact.sending');
+      status.className = 'form-status loading';
+
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            name: name.value.trim(),
+            email: email.value.trim(),
+            subject: subject.value.trim(),
+            message: message.value.trim(),
+            _subject: `[Portfolio] ${subject.value.trim()}`,
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+          throw new Error(data.message || 'Send failed');
+        }
+
+        status.textContent = window.i18nManager.t('contact.success');
+        status.className = 'form-status success';
+        form.reset();
+      } catch {
+        status.textContent = window.i18nManager.t('contact.errorSend');
+        status.className = 'form-status error';
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 

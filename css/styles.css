@@ -1986,7 +1986,7 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   align-items: start;
 }
 
-.contact-form { padding: clamp(28px, 4vw, 40px); }
+.contact-form { padding: clamp(28px, 4vw, 40px); position: relative; }
 
 .form-row {
   display: grid;
@@ -2035,8 +2035,24 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   min-height: 1.5em;
 }
 
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-status.loading { color: var(--text-2); }
+
 .form-status.success { color: var(--green); }
 .form-status.error { color: #ff6b6b; }
+
+#contactSubmit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
 
 .contact-aside {
   display: flex;
