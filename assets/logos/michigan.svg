@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="University of Michigan">
+  <rect width="64" height="64" rx="12" fill="#00274C"/>
+  <path fill="#FFCB05" d="M32 12 14 22v20l18 10 18-10V22L32 12zm0 4.5 13.5 7.5v15L32 46.5l-13.5-7.5v-15L32 16.5z"/>
+  <text x="32" y="36" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#FFCB05">M</text>
+</svg>

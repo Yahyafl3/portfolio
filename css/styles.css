@@ -1908,7 +1908,7 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   color: var(--text-3);
 }
 
-/* Brand circles */
+/* Brand circles — professional logos */
 .cert-brand {
   display: flex;
   align-items: center;
@@ -1916,43 +1916,84 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   width: var(--node-size);
   height: var(--node-size);
   border-radius: 50%;
-  color: #fff;
+  background: #fff;
   position: relative;
   flex-shrink: 0;
+  padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.35s, transform 0.35s var(--ease-out);
+}
+
+[data-theme="light"] .cert-brand {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .cert-brand::before {
   content: '';
   position: absolute;
-  inset: -4px;
+  inset: -3px;
   border-radius: 50%;
   padding: 2px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.4), transparent 60%);
+  background: var(--brand-ring, linear-gradient(135deg, rgba(0,153,255,0.4), transparent 60%));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  opacity: 0.7;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cert-node:hover .cert-brand::before,
+.certs-orbit__hub:hover .cert-brand::before {
+  opacity: 1;
+}
+
+.cert-brand__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
 }
 
 .cert-brand--lg {
-  width: 80px;
-  height: 80px;
+  width: 88px;
+  height: 88px;
+  padding: 10px;
 }
 
-.cert-brand--oracle { background: linear-gradient(145deg, #f80000, #c40000); box-shadow: 0 8px 32px rgba(248,0,0,0.3); }
-.cert-brand--meta { background: linear-gradient(145deg, #0081fb, #0064c8); box-shadow: 0 8px 24px rgba(0,129,251,0.25); }
-.cert-brand--hkust { background: linear-gradient(145deg, #003366, #005599); box-shadow: 0 8px 24px rgba(0,51,102,0.25); }
-.cert-brand--epfl { background: linear-gradient(145deg, #e00000, #b00000); box-shadow: 0 8px 24px rgba(224,0,0,0.25); }
-.cert-brand--michigan { background: linear-gradient(145deg, #00274c 50%, #ffcb05 50%); color: #00274c; box-shadow: 0 8px 24px rgba(0,39,76,0.25); }
-.cert-brand--michigan svg { stroke: #00274c; }
-.cert-brand--coursera { background: linear-gradient(145deg, #0056d2, #2a73cc); box-shadow: 0 8px 24px rgba(0,86,210,0.25); }
+.cert-brand--oracle { --brand-ring: linear-gradient(135deg, #f80000, #ff4444); padding: 12px; }
+.cert-brand--meta { --brand-ring: linear-gradient(135deg, #0081fb, #00c6ff); padding: 10px; }
+.cert-brand--hkust,
+.cert-brand--epfl,
+.cert-brand--michigan,
+.cert-brand--coursera {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
 
-.cert-node--meta .cert-node__circle:hover { box-shadow: 0 0 32px rgba(0,129,251,0.35); }
-.cert-node--hkust .cert-node__circle:hover { box-shadow: 0 0 32px rgba(0,51,102,0.35); }
-.cert-node--epfl .cert-node__circle:hover { box-shadow: 0 0 32px rgba(224,0,0,0.35); }
-.cert-node--michigan .cert-node__circle:hover { box-shadow: 0 0 32px rgba(0,39,76,0.35); }
-.cert-node--coursera .cert-node__circle:hover { box-shadow: 0 0 32px rgba(0,86,210,0.35); }
+.cert-brand--hkust .cert-brand__img,
+.cert-brand--epfl .cert-brand__img,
+.cert-brand--michigan .cert-brand__img,
+.cert-brand--coursera .cert-brand__img {
+  object-fit: cover;
+}
+
+.cert-brand--oracle { box-shadow: 0 6px 28px rgba(248, 0, 0, 0.18); --brand-ring: linear-gradient(135deg, #f80000, #ff4444); }
+.cert-brand--meta { box-shadow: 0 6px 24px rgba(0, 129, 251, 0.18); --brand-ring: linear-gradient(135deg, #0081fb, #00c6ff); }
+.cert-brand--hkust { box-shadow: 0 6px 24px rgba(0, 51, 102, 0.18); --brand-ring: linear-gradient(135deg, #003366, #0066b3); }
+.cert-brand--epfl { box-shadow: 0 6px 24px rgba(255, 0, 0, 0.15); --brand-ring: linear-gradient(135deg, #ff0000, #cc0000); }
+.cert-brand--michigan { box-shadow: 0 6px 24px rgba(0, 39, 76, 0.18); --brand-ring: linear-gradient(135deg, #00274c, #ffcb05); }
+.cert-brand--coursera { box-shadow: 0 6px 24px rgba(0, 86, 210, 0.18); --brand-ring: linear-gradient(135deg, #0056d2, #2a73cc); }
+
+.cert-node--meta .cert-node__circle:hover .cert-brand { box-shadow: 0 8px 32px rgba(0,129,251,0.28); }
+.cert-node--hkust .cert-node__circle:hover .cert-brand { box-shadow: 0 8px 32px rgba(0,51,102,0.28); }
+.cert-node--epfl .cert-node__circle:hover .cert-brand { box-shadow: 0 8px 32px rgba(255,0,0,0.22); }
+.cert-node--michigan .cert-node__circle:hover .cert-brand { box-shadow: 0 8px 32px rgba(0,39,76,0.28); }
+.cert-node--coursera .cert-node__circle:hover .cert-brand { box-shadow: 0 8px 32px rgba(0,86,210,0.28); }
 
 /* --- Contact --- */
 .contact-grid {
