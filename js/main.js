@@ -504,49 +504,6 @@
     update();
   }
 
-  /* --- Certifications Filter --- */
-  function initCertsFilter() {
-    const filters = document.querySelectorAll('.certs-filter');
-    const cards = document.querySelectorAll('.cert-card');
-    if (!filters.length || !cards.length) return;
-
-    filters.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const cat = btn.dataset.filter;
-
-        // Update active filter
-        filters.forEach((b) => {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-
-        // Animate cards in/out
-        cards.forEach((card) => {
-          const cardCat = card.dataset.cat;
-          const show = cat === 'all' || cardCat === cat;
-
-          if (show) {
-            card.classList.remove('hidden');
-            // Stagger fade-in
-            requestAnimationFrame(() => {
-              card.style.opacity = '0';
-              card.style.transform = 'translateY(16px)';
-              requestAnimationFrame(() => {
-                card.style.transition = 'opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out)';
-                card.style.opacity = '';
-                card.style.transform = '';
-              });
-            });
-          } else {
-            card.classList.add('hidden');
-          }
-        });
-      });
-    });
-  }
-
   /* --- Init --- */
   document.addEventListener('DOMContentLoaded', () => {
     window.i18nManager.init();
@@ -567,6 +524,5 @@
     initCursor();
     initMagnetic();
     initContactForm();
-    initCertsFilter();
   });
 })();
