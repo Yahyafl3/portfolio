@@ -58,7 +58,7 @@ La carte Oracle affiche l’intitulé visible sur le certificat : **Oracle Certi
 
 ## Personnalisation
 
-1. **CV** — Remplacer le PDF dans `assets/cv-yahya-falhaoui.pdf`
+1. **CV** — Remplacer le PDF dans `assets/Yahya_Falhaoui_CV_PFE.pdf`
 2. **Liens GitHub** — Vérifier les URL des dépôts dans la section Projets
 3. **LinkedIn** — Vérifier l'URL dans les liens sociaux
 4. **Photo** — Remplacer les initiales `YF` dans `.bento-avatar` par une balise `<img>`
@@ -73,7 +73,7 @@ portfolio/
 ├── js/
 │   └── main.js
 ├── assets/
-│   ├── cv-yahya-falhaoui.pdf
+│   ├── Yahya_Falhaoui_CV_PFE.pdf
 │   └── certs/
 │       ├── oracle-javase17-developer.pdf
 │       └── oracle-javase17-developer.jpg
