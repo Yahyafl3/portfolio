@@ -2650,3 +2650,32 @@ html[dir="rtl"] .section__title {
 /* Keep the refreshed experience wordmarks above legacy card treatments. */
 .exp-item__brand--6s, .exp-item__brand--leoni { color: var(--text); background: var(--bg-surface); border: 1px solid var(--border); }
 .exp-item__brand--leoni { color: #e17642; }
+
+/* Use the supplied company artwork at both the experience and trust bar. */
+.trust-logo__image--company {
+  height: 34px;
+  max-width: 112px;
+  padding: 4px 8px;
+  border-radius: 7px;
+  background: #fff;
+  opacity: .9;
+  filter: none;
+}
+.trust-logo__image--company:hover { opacity: 1; filter: none; }
+.trust-logo__image--6solutions { max-width: 124px; }
+.exp-item__brand--6s, .exp-item__brand--leoni {
+  width: 126px;
+  height: 50px;
+  min-width: 126px;
+  max-width: 126px;
+  padding: 6px 8px;
+  border-radius: 9px;
+  background: #fff;
+  border: 1px solid rgba(20, 32, 40, .08);
+}
+.exp-item__brand--6s img, .exp-item__brand--leoni img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
