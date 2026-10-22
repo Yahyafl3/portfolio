@@ -4,47 +4,19 @@
  */
 window.I18N = {
   fr: {
-    meta: { title: 'Yahya Falhaoui — Full-Stack & IA Engineer', description: 'Yahya Falhaoui — Étudiant Ingénieur Full-Stack & IA. Angular, Spring Boot, Django, .NET. Portfolio professionnel, Casablanca.' },
-    preloader: { loading: 'Chargement' },
-    nav: { about: 'À propos', why: 'Pourquoi moi', experience: 'Expérience', skills: 'Compétences', projects: 'Projets', certs: 'Certifications', cv: 'CV', contact: 'Contact', menu: 'Ouvrir le menu', lang: 'Langue' },
+    meta: { title: 'Yahya Falhaoui — Développeur Full-Stack & Ingénieur IA', description: 'Yahya Falhaoui — Développeur Full-Stack & Ingénieur IA. Applications web sécurisées, traçabilité IA et ingénierie logicielle à Casablanca.' },
+    nav: { about: 'Profil', experience: 'Expérience', skills: 'Compétences', projects: 'Projets', ai: 'IA appliquée', certs: 'Certifications', cv: 'CV', contact: 'Contact', menu: 'Ouvrir le menu', lang: 'Langue', main: 'Navigation principale', home: 'Yahya Falhaoui — accueil', skip: 'Aller au contenu', quickLinks: 'Liens rapides' },
     hero: {
       badge: 'Recherche stage PFE · Casablanca, MA',
-      label: 'Bonjour, je suis',
-      tagline: "Étudiant ingénieur Full-Stack & IA — je conçois des applications web sécurisées, de l'architecture au déploiement Docker. Recherche un stage PFE de 6 mois dès février 2027 à Casablanca.",
-      pitch1: 'Angular · Spring Boot · Django · .NET',
-      pitch2: 'JWT · RBAC · Docker · PostgreSQL',
-      pitch3: 'Casablanca · PFE dès février 2027',
+      label: 'Systèmes Full-Stack · IA appliquée',
+      professionalTitle: 'Développeur Full-Stack & Ingénieur IA',
+      tagline: 'Je conçois des applications web sécurisées, de l’architecture au déploiement avec Docker.',
       cta1: 'Télécharger mon CV',
-      cta2: 'Planifier un entretien',
-      scroll: 'Scroll',
-      statProjects: 'Projets GitHub',
-      statCerts: 'Certifications',
-      statInternships: 'Stages pro',
-      stackLabel: 'Stack actuelle',
-      bentoRole: 'Full-Stack Dev',
-      bentoSub: 'EMSI · Master 2 IA',
-      typewriter: [
-        'Étudiant Ingénieur · Informatique & IA',
-        'Développeur Full-Stack',
-        'Traçabilité IA · Spring Boot · Angular',
-        'Oracle Certified · Java SE 17 Developer',
-        "De l'idée au déploiement Docker"
-      ]
-    },
-    trust: { label: "Ils m'ont fait confiance" },
-    why: {
-      tag: 'Pour les recruteurs',
-      title: 'Pourquoi <span class="text-gradient">m\'embaucher ?</span>',
-      subtitle: 'Scannable en 30 secondes — profil stage Full-Stack & IA',
-      c1Title: 'Full-Stack opérationnel',
-      c1Desc: 'Front Angular + back Spring Boot/Django/.NET. Je code, teste et déploie — pas seulement des maquettes.',
-      c2Title: 'Expérience entreprise',
-      c2Desc: 'LEONI (industrie) + 6SOLUTIONS (PFA IA). Applications en production, pas que des projets école.',
-      c3Title: 'Sécurité & qualité',
-      c3Desc: 'JWT, RBAC, audit SHA-256, tests k6, Docker Compose. Je pense prod dès le départ.',
-      c4Title: 'Profil IA différenciant',
-      c4Desc: 'Master 2 IA + projet Traçabilité IA multisectoriel. Rare pour un profil dev web junior.',
-      cta: 'Télécharger le CV — 1 clic'
+      ctaProjects: 'Explorer les projets',
+      ctaContact: 'Me contacter',
+      locationLabel: 'LOCALISATION',
+      internship: 'Stage de fin d’études · février 2027',
+      scroll: 'Découvrir',
     },
     about: {
       tag: 'À propos',
@@ -53,20 +25,16 @@ window.I18N = {
       p1: "Je transforme des problèmes métier en applications web robustes — front-end soigné, back-end sécurisé, données structurées. Mon focus : la <strong>traçabilité IA</strong> et les systèmes où chaque décision automatisée reste auditable.",
       p2: "Actuellement en recherche de <strong>stage développement web</strong> au sein d'une équipe digitale ambitieuse.",
       cta: 'Voir mon parcours complet',
-      card1Title: 'EMSI + Master 2 IA',
-      card1Desc: 'Double cursus ingénieur 2DSIC & intelligence artificielle',
-      card2Title: 'Full-Stack & IA',
-      card2Desc: 'Angular · Spring Boot · Django · .NET · Flask',
-      card3Title: 'Sécurité & Audit',
-      card3Desc: 'JWT, RBAC, SHA-256, tests k6, Docker Compose',
-      card4Title: 'Trilingue',
       card4Desc: 'Arabe · Français · Anglais technique',
       eduTitle: 'Formation',
       edu1Title: 'EMSI Casablanca',
       edu1Desc: 'Ingénieur Informatique & Réseaux · 2DSIC + Master 2 Intelligence Artificielle',
       edu2Title: 'La Tour Eiffel — Casablanca',
-      edu2Desc: 'Baccalauréat Sciences Physiques, Option Bilingue Français'
+      edu2Desc: 'Baccalauréat Sciences Physiques, Option Bilingue Français',
+      languagesLabel: 'LANGUES'
     },
+    proof: { label: 'Parcours en bref', aria: 'Parcours professionnel', fullstack: 'Stage Full-Stack & IA', web: 'Application web · traçabilité des biens', education: 'Ingénierie informatique · IA' },
+    section: { work: 'PROJETS SÉLECTIONNÉS', ai: 'IA APPLIQUÉE', experience: 'EXPÉRIENCE', profile: 'PROFIL', skills: 'COMPÉTENCES' },
     experience: {
       tag: 'Expérience',
       title: 'Impact en<br><span class="text-gradient">entreprise</span>',
@@ -78,27 +46,22 @@ window.I18N = {
       exp1t1: 'Front Angular 21 + PrimeNG · Back Spring Boot · PostgreSQL',
       exp1t2: "Auth JWT + RBAC · Journal d'audit · Empreintes SHA-256",
       exp1t3: 'Tests E2E k6 · Docker Compose · CI Git/GitHub',
-      exp1impact1: '84+ commits',
-      exp1impact2: '3 domaines IA',
-      exp1impact3: 'Docker prod-like',
       exp2Date: 'Juillet 2025',
       exp2Type: 'Stage',
       exp2Role: 'Stagiaire Développeur Web',
       exp2Company: 'LEONI Maroc · Aïn Sebaâ',
       exp2Desc: 'Application web de gestion et traçabilité des sorties de biens, remplaçant un processus manuel — UI, MySQL, tests avant prod.',
       exp2t1: 'Interface responsive · Base MySQL · Tests fonctionnels',
-      exp2impact1: 'Processus manuel → digital',
-      exp2impact2: 'Mise en production'
     },
     skills: {
       tag: 'Compétences',
       title: 'Arsenal<br><span class="text-gradient">technique</span>',
-      glance: 'Stack principal — visible immédiatement',
-      tabLang: 'Langages',
-      tabFw: 'Frameworks',
-      tabData: 'Data & DB',
+      glance: 'Technologies vérifiées, regroupées par domaine',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      data: 'Bases de données',
+      tools: 'Outils d’ingénierie',
       tabIA: 'IA',
-      tabTools: 'Outils',
       iaIntro: 'Machine Learning (scikit-learn), Deep Learning (PyTorch, Keras, YOLO), NLP et IA générative (LLM, RAG, LangChain, agents).'
     },
     projects: {
@@ -107,10 +70,21 @@ window.I18N = {
       featBadge: 'Featured · PFA 2026',
       featTitle: 'Traçabilité IA',
       featDesc: 'Problème : décisions IA opaques dans des secteurs sensibles. Solution : plateforme de validation humaine, explicabilité ML et journal d\'audit SHA-256, déployée en Docker. Projet phare 6SOLUTIONS (PFA).',
-      featM1: '84+ commits',
-      featM2: '3 secteurs',
-      featM3: 'JWT + RBAC',
-      featM4: 'Docker Compose',
+      lead: 'IA appliquée, systèmes Full-Stack et logiciels construits autour de vrais usages.',
+      contributionLabel: 'Contribution',
+      contribution: 'Projet en binôme, de la conception au déploiement.',
+      systemLabel: 'Enjeux système',
+      systemFocus: 'Validation humaine · ML explicable · Audit des décisions',
+      metricCommits: 'commits',
+      metricSectors: 'secteurs',
+      workflow: 'PARCOURS DE REVUE',
+      workflowCaption: 'Une décision doit laisser une trace compréhensible.',
+      domains: 'Crédit · santé · éducation',
+      hotelReservation: 'Réservation',
+      hotelStay: 'Arrivée / départ',
+      hotelBilling: 'Factures PDF · Excel',
+      manual: 'Manuel',
+      digital: 'Numérisé',
       p2Badge: 'Académique',
       p2Title: 'GHotel — Gestion Hôtelière',
       p2Desc: 'Réservations, check-in/out, facturation PDF/Excel · 3 rôles · ASP.NET Core 8 MVC',
@@ -126,6 +100,17 @@ window.I18N = {
       p5Title: 'Gestion Sortie des Biens',
       p5Desc: "Application web de traçabilité des sorties de biens — LEONI Maroc, remplacement d'un processus manuel",
       github: 'GitHub'
+    },
+    ai: {
+      tag: 'IA appliquée',
+      title: 'Du résultat du modèle<br><span>à une décision traçable.</span>',
+      summary: 'Dans Traçabilité IA, le modèle n’est qu’une étape. Une personne peut examiner son résultat et le système conserve une trace de la décision pour audit.',
+      readCase: 'Voir le dépôt du projet',
+      diagramLabel: 'Flux de décision assistée par IA : données, explication du modèle, revue humaine et journal d’audit',
+      input: 'Entrée', context: 'Contexte et données', model: 'Décision ML', explanation: 'Score et explication', review: 'Revue humaine', validation: 'Valider ou contester', audit: 'Trace d’audit', humanLoop: 'Validation humaine · Traçabilité IA',
+      step1Title: 'Expliquer', step1Desc: 'Rendre le résultat du modèle compréhensible.',
+      step2Title: 'Examiner', step2Desc: 'Garder une personne dans la boucle de décision.',
+      step3Title: 'Tracer', step3Desc: 'Conserver une trace d’audit avec empreinte SHA-256.'
     },
     certs: {
       tag: 'Certifications',
@@ -185,7 +170,7 @@ window.I18N = {
     contact: {
       tag: 'Contact',
       title: 'Prêt à<br><span class="text-gradient">collaborer ?</span>',
-      subtitle: 'Stage, projet ou opportunité — réponse sous 24h.',
+      subtitle: 'Stage, projet ou opportunité — contactez-moi directement ou via le formulaire.',
       name: 'Nom',
       email: 'Email',
       subject: 'Sujet',
@@ -198,13 +183,14 @@ window.I18N = {
       labelEmail: 'Email',
       labelPhone: 'Téléphone',
       labelLinkedin: 'LinkedIn',
+      labelGithub: 'GitHub',
       labelLocation: 'Localisation',
       location: 'Casablanca, Maroc 🇲🇦',
       interests: 'Bénévolat · Veille tech · Open Source',
       errorEmpty: 'Veuillez remplir tous les champs.',
       errorEmail: 'Adresse email invalide.',
       sending: 'Envoi en cours…',
-      success: 'Message envoyé — je vous réponds sous 24h.',
+      success: 'Message envoyé. Merci pour votre prise de contact.',
       errorSend: "Erreur d'envoi. Réessayez ou écrivez-moi directement par email.",
       errorActivation: 'Formulaire en attente d\'activation — vérifiez yahyafalhaoui411@gmail.com (spam inclus) pour le lien FormSubmit.',
       fallbackSend: 'Redirection pour envoi sécurisé…'
@@ -215,55 +201,27 @@ window.I18N = {
       projects: 'Projets',
       contact: 'Contact',
       cv: 'CV',
-      top: 'Retour en haut'
+      top: 'Retour en haut',
+      nav: 'Liens de pied de page'
     },
     sticky: { cv: 'CV', linkedin: 'LinkedIn', contact: 'Contact' },
     theme: { light: 'Mode clair', dark: 'Mode sombre' },
-    marquee: { ai: 'IA Traçable' }
   },
 
   en: {
-    meta: { title: 'Yahya Falhaoui — Full-Stack & AI Engineer', description: 'Yahya Falhaoui — Full-Stack & AI Engineering Student. Angular, Spring Boot, Django, .NET. Professional portfolio, Casablanca.' },
-    preloader: { loading: 'Loading' },
-    nav: { about: 'About', why: 'Why me', experience: 'Experience', skills: 'Skills', projects: 'Projects', certs: 'Certs', cv: 'Resume', contact: 'Contact', menu: 'Open menu', lang: 'Language' },
+    meta: { title: 'Yahya Falhaoui — Full-Stack Developer & AI Engineer', description: 'Yahya Falhaoui — Full-Stack Developer & AI Engineer. Secure web applications, AI traceability, and software engineering in Casablanca.' },
+    nav: { about: 'Profile', experience: 'Experience', skills: 'Skills', projects: 'Projects', ai: 'AI systems', certs: 'Certifications', cv: 'Resume', contact: 'Contact', menu: 'Open menu', lang: 'Language', main: 'Main navigation', home: 'Yahya Falhaoui — home', skip: 'Skip to content', quickLinks: 'Quick links' },
     hero: {
       badge: 'Seeking a final-year internship · Casablanca, MA',
-      label: "Hi, I'm",
-      tagline: 'Full-Stack & AI engineering student — I build secure web applications from architecture to Docker deployment. Seeking a six-month final-year internship in Casablanca from February 2027.',
-      pitch1: 'Angular · Spring Boot · Django · .NET',
-      pitch2: 'JWT · RBAC · Docker · PostgreSQL',
-      pitch3: 'Casablanca · Internship from February 2027',
+      label: 'Full-Stack systems · Applied AI',
+      professionalTitle: 'Full-Stack Developer & AI Engineer',
+      tagline: 'I build secure web applications, from system design through Docker deployment.',
       cta1: 'Download my resume',
-      cta2: 'Schedule an interview',
+      ctaProjects: 'Explore selected work',
+      ctaContact: 'Get in touch',
+      locationLabel: 'BASED IN',
+      internship: 'Final-year internship · February 2027',
       scroll: 'Scroll',
-      statProjects: 'GitHub projects',
-      statCerts: 'Certifications',
-      statInternships: 'Internships',
-      stackLabel: 'Current stack',
-      bentoRole: 'Full-Stack Dev',
-      bentoSub: 'EMSI · Master 2 AI',
-      typewriter: [
-        'Engineering Student · CS & AI',
-        'Full-Stack Developer',
-        'AI Traceability · Spring Boot · Angular',
-        'Oracle Certified · Java SE 17 Developer',
-        'From idea to Docker deployment'
-      ]
-    },
-    trust: { label: 'They trusted me' },
-    why: {
-      tag: 'For recruiters',
-      title: 'Why <span class="text-gradient">hire me?</span>',
-      subtitle: 'Scannable in 30 seconds — Full-Stack & AI internship profile',
-      c1Title: 'Production-ready Full-Stack',
-      c1Desc: 'Angular front + Spring Boot/Django/.NET back. I code, test, and deploy — not just mockups.',
-      c2Title: 'Industry experience',
-      c2Desc: 'LEONI (manufacturing) + 6SOLUTIONS (AI final project). Real apps, not just school projects.',
-      c3Title: 'Security & quality',
-      c3Desc: 'JWT, RBAC, SHA-256 audit, k6 tests, Docker Compose. Production mindset from day one.',
-      c4Title: 'Differentiating AI profile',
-      c4Desc: 'Master 2 AI + multisector AI Traceability project. Rare for a junior web dev profile.',
-      cta: 'Download resume — 1 click'
     },
     about: {
       tag: 'About',
@@ -272,20 +230,16 @@ window.I18N = {
       p1: 'I turn business problems into robust web applications — polished front-end, secure back-end, structured data. My focus: <strong>AI traceability</strong> and systems where every automated decision remains auditable.',
       p2: 'Currently seeking a <strong>web development internship</strong> within an ambitious digital team.',
       cta: 'View my full background',
-      card1Title: 'EMSI + Master 2 AI',
-      card1Desc: 'Dual degree: 2DSIC engineering & artificial intelligence',
-      card2Title: 'Full-Stack & AI',
-      card2Desc: 'Angular · Spring Boot · Django · .NET · Flask',
-      card3Title: 'Security & Audit',
-      card3Desc: 'JWT, RBAC, SHA-256, k6 tests, Docker Compose',
-      card4Title: 'Trilingual',
       card4Desc: 'Arabic · French · Technical English',
       eduTitle: 'Education',
       edu1Title: 'EMSI Casablanca',
       edu1Desc: 'Computer Science & Networks Engineer · 2DSIC + Master 2 Artificial Intelligence',
       edu2Title: 'La Tour Eiffel — Casablanca',
-      edu2Desc: 'Baccalaureate in Physical Sciences, French Bilingual Option'
+      edu2Desc: 'Baccalaureate in Physical Sciences, French Bilingual Option',
+      languagesLabel: 'LANGUAGES'
     },
+    proof: { label: 'Experience at a glance', aria: 'Professional background', fullstack: 'Full-Stack & AI internship', web: 'Web app · asset traceability', education: 'Computer Engineering · AI' },
+    section: { work: 'SELECTED WORK', ai: 'APPLIED AI', experience: 'EXPERIENCE', profile: 'PROFILE', skills: 'CAPABILITIES' },
     experience: {
       tag: 'Experience',
       title: 'Impact in<br><span class="text-gradient">industry</span>',
@@ -297,27 +251,22 @@ window.I18N = {
       exp1t1: 'Angular 21 + PrimeNG front · Spring Boot back · PostgreSQL',
       exp1t2: 'JWT + RBAC auth · Audit log · SHA-256 fingerprints',
       exp1t3: 'k6 E2E tests · Docker Compose · Git/GitHub CI',
-      exp1impact1: '84+ commits',
-      exp1impact2: '3 AI domains',
-      exp1impact3: 'Prod-like Docker',
       exp2Date: 'July 2025',
       exp2Type: 'Internship',
       exp2Role: 'Web Developer Intern',
       exp2Company: 'LEONI Morocco · Aïn Sebaâ',
       exp2Desc: 'Web app for asset exit management and traceability, replacing a manual process — UI, MySQL, pre-production testing.',
       exp2t1: 'Responsive interface · MySQL database · Functional testing',
-      exp2impact1: 'Manual → digital process',
-      exp2impact2: 'Production deployment'
     },
     skills: {
       tag: 'Skills',
       title: 'Technical<br><span class="text-gradient">arsenal</span>',
-      glance: 'Core stack — visible at a glance',
-      tabLang: 'Languages',
-      tabFw: 'Frameworks',
-      tabData: 'Data & DB',
+      glance: 'Verified technologies, grouped by discipline',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      data: 'Databases',
+      tools: 'Engineering tools',
       tabIA: 'AI',
-      tabTools: 'Tools',
       iaIntro: 'Machine Learning (scikit-learn), Deep Learning (PyTorch, Keras, YOLO), NLP, and generative AI (LLMs, RAG, LangChain, agents).'
     },
     projects: {
@@ -326,10 +275,21 @@ window.I18N = {
       featBadge: 'Featured · Final Project 2026',
       featTitle: 'AI Traceability',
       featDesc: 'Problem: opaque AI decisions in sensitive domains. Solution: human-in-the-loop validation, ML explainability, and SHA-256 audit logs, deployed with Docker. Flagship 6SOLUTIONS final project.',
-      featM1: '84+ commits',
-      featM2: '3 sectors',
-      featM3: 'JWT + RBAC',
-      featM4: 'Docker Compose',
+      lead: 'Applied AI, full-stack systems, and software shaped around real workflows.',
+      contributionLabel: 'Contribution',
+      contribution: 'Team project, from design through deployment.',
+      systemLabel: 'System focus',
+      systemFocus: 'Human validation · Explainable ML · Decision audit',
+      metricCommits: 'commits',
+      metricSectors: 'sectors',
+      workflow: 'REVIEW PATH',
+      workflowCaption: 'A decision should leave a reasoned trace.',
+      domains: 'Credit · health · education',
+      hotelReservation: 'Reservation',
+      hotelStay: 'Check-in / check-out',
+      hotelBilling: 'PDF · Excel billing',
+      manual: 'Manual',
+      digital: 'Digital',
       p2Badge: 'Academic',
       p2Title: 'GHotel — Hotel Management',
       p2Desc: 'Bookings, check-in/out, PDF/Excel billing · 3 roles · ASP.NET Core 8 MVC',
@@ -345,6 +305,17 @@ window.I18N = {
       p5Title: 'Asset Exit Management',
       p5Desc: "Web app for asset exit traceability — LEONI Morocco, replacing a manual process",
       github: 'GitHub'
+    },
+    ai: {
+      tag: 'Applied AI',
+      title: 'From model output<br><span>to accountable decisions.</span>',
+      summary: 'In AI Traceability, the model is one step in a wider decision process. People review its output, and the system records the decision for later audit.',
+      readCase: 'Explore the project repository',
+      diagramLabel: 'AI-assisted decision workflow: data, model explanation, human review, and audit log',
+      input: 'Input', context: 'Context & data', model: 'ML decision', explanation: 'Score + explanation', review: 'Human review', validation: 'Validate or challenge', audit: 'Audit record', humanLoop: 'Human validation · AI Traceability',
+      step1Title: 'Explain', step1Desc: 'Make the model output understandable.',
+      step2Title: 'Review', step2Desc: 'Keep a person in the decision loop.',
+      step3Title: 'Record', step3Desc: 'Keep an audit trail with a SHA-256 fingerprint.'
     },
     certs: {
       tag: 'Certifications',
@@ -404,7 +375,7 @@ window.I18N = {
     contact: {
       tag: 'Contact',
       title: 'Ready to<br><span class="text-gradient">collaborate?</span>',
-      subtitle: 'Internship, project or opportunity — reply within 24h.',
+      subtitle: 'For internships, projects, or opportunities, reach me directly or use the form.',
       name: 'Name',
       email: 'Email',
       subject: 'Subject',
@@ -417,13 +388,14 @@ window.I18N = {
       labelEmail: 'Email',
       labelPhone: 'Phone',
       labelLinkedin: 'LinkedIn',
+      labelGithub: 'GitHub',
       labelLocation: 'Location',
       location: 'Casablanca, Morocco 🇲🇦',
       interests: 'Volunteering · Tech watch · Open Source',
       errorEmpty: 'Please fill in all fields.',
       errorEmail: 'Invalid email address.',
       sending: 'Sending…',
-      success: "Message sent — I'll reply within 24h.",
+      success: 'Message sent. Thanks for reaching out.',
       errorSend: 'Could not send. Try again or email me directly.',
       errorActivation: 'Form pending activation — check yahyafalhaoui411@gmail.com (including spam) for the FormSubmit link.',
       fallbackSend: 'Redirecting for secure delivery…'
@@ -434,55 +406,27 @@ window.I18N = {
       projects: 'Projects',
       contact: 'Contact',
       cv: 'Resume',
-      top: 'Back to top'
+      top: 'Back to top',
+      nav: 'Footer links'
     },
     sticky: { cv: 'Resume', linkedin: 'LinkedIn', contact: 'Contact' },
     theme: { light: 'Light mode', dark: 'Dark mode' },
-    marquee: { ai: 'Traceable AI' }
   },
 
   ar: {
-    meta: { title: 'يحيى فلحاوي — مهندس برمجيات وذكاء اصطناعي', description: 'يحيى فلحاوي — طالب هندسة برمجيات وذكاء اصطناعي. خبرة في Angular وSpring Boot وDjango و.NET. معرض أعمال احترافي من الدار البيضاء.' },
-    preloader: { loading: 'جاري التحميل' },
-    nav: { about: 'نبذة عني', why: 'لماذا أنا', experience: 'الخبرة', skills: 'المهارات', projects: 'المشاريع', certs: 'الشهادات', cv: 'السيرة الذاتية', contact: 'تواصل', menu: 'فتح القائمة', lang: 'اختيار اللغة' },
+    meta: { title: 'يحيى فلحاوي — مطور Full-Stack ومهندس ذكاء اصطناعي', description: 'يحيى فلحاوي — مطور Full-Stack ومهندس ذكاء اصطناعي. تطبيقات ويب آمنة وتتبع قرارات الذكاء الاصطناعي وهندسة البرمجيات في الدار البيضاء.' },
+    nav: { about: 'الملف المهني', experience: 'الخبرة', skills: 'المهارات', projects: 'المشاريع', ai: 'أنظمة الذكاء الاصطناعي', certs: 'الشهادات', cv: 'السيرة الذاتية', contact: 'تواصل', menu: 'فتح القائمة', lang: 'اختيار اللغة', main: 'التنقل الرئيسي', home: 'يحيى فلحاوي — الصفحة الرئيسية', skip: 'انتقل إلى المحتوى', quickLinks: 'روابط سريعة' },
     hero: {
       badge: 'أبحث عن تدريب نهاية الدراسة · الدار البيضاء، المغرب',
-      label: 'مرحباً، أنا',
-      tagline: 'طالب هندسة برمجيات وذكاء اصطناعي، أطور تطبيقات ويب آمنة من التصميم إلى النشر باستخدام Docker. أبحث عن تدريب نهاية الدراسة لمدة ستة أشهر في الدار البيضاء ابتداءً من فبراير 2027.',
-      pitch1: 'Angular · Spring Boot · Django · .NET',
-      pitch2: 'JWT · RBAC · Docker · PostgreSQL',
-      pitch3: 'الدار البيضاء · تدريب ابتداءً من فبراير 2027',
+      label: 'أنظمة Full-Stack · ذكاء اصطناعي تطبيقي',
+      professionalTitle: 'مطور Full-Stack ومهندس ذكاء اصطناعي',
+      tagline: 'أصمم تطبيقات ويب آمنة من البنية إلى النشر باستخدام Docker.',
       cta1: 'تحميل السيرة الذاتية',
-      cta2: 'جدولة مقابلة',
+      ctaProjects: 'استكشف المشاريع',
+      ctaContact: 'تواصل معي',
+      locationLabel: 'الموقع',
+      internship: 'تدريب نهاية الدراسة · فبراير 2027',
       scroll: 'انتقل إلى الأسفل',
-      statProjects: 'مشاريع على GitHub',
-      statCerts: 'شهادات',
-      statInternships: 'تجارب تدريبية',
-      stackLabel: 'التقنيات المستخدمة',
-      bentoRole: 'مطور برمجيات شامل',
-      bentoSub: 'EMSI · ماجستير 2 في الذكاء الاصطناعي',
-      typewriter: [
-        'طالب هندسة · المعلوماتية والذكاء الاصطناعي',
-        'مطور تطبيقات متكاملة',
-        'تتبع قرارات الذكاء الاصطناعي · Spring Boot · Angular',
-        'Oracle Certified · Java SE 17 Developer',
-        'من الفكرة إلى نشر Docker'
-      ]
-    },
-    trust: { label: 'ثقوا بي' },
-    why: {
-      tag: 'للموظّفين',
-      title: 'لماذا <span class="text-gradient">توظّفني؟</span>',
-      subtitle: 'تعرّف على مؤهلاتي في 30 ثانية — مرشح لتدريب في تطوير البرمجيات والذكاء الاصطناعي',
-      c1Title: 'تطوير متكامل جاهز للإنتاج',
-      c1Desc: 'واجهات Angular وخدمات خلفية باستخدام Spring Boot وDjango و.NET. أبرمج وأختبر وأنشر تطبيقات فعلية.',
-      c2Title: 'خبرة في الشركات',
-      c2Desc: 'خبرة في LEONI بالقطاع الصناعي، ومشروع تخرج في 6SOLUTIONS لتتبع قرارات الذكاء الاصطناعي.',
-      c3Title: 'أمان وجودة',
-      c3Desc: 'مصادقة JWT وصلاحيات RBAC وسجل تدقيق SHA-256 واختبارات k6 وDocker Compose.',
-      c4Title: 'تخصص مميز في الذكاء الاصطناعي',
-      c4Desc: 'ماجستير في الذكاء الاصطناعي ومشروع لتتبع قراراته في قطاعات متعددة.',
-      cta: 'تحميل السيرة الذاتية'
     },
     about: {
       tag: 'نبذة',
@@ -491,20 +435,16 @@ window.I18N = {
       p1: 'أحوّل المشاكل التجارية إلى تطبيقات ويب قوية — واجهة أمامية أنيقة، خلفية آمنة، بيانات منظمة. تركيزي: <strong>تتبع IA</strong> والأنظمة حيث يبقى كل قرار آلي قابلاً للمراجعة.',
       p2: 'أبحث حالياً عن <strong>تدريب في تطوير الويب</strong> ضمن فريق رقمي طموح.',
       cta: 'عرض مسيرتي الكاملة',
-      card1Title: 'EMSI + ماستر 2 IA',
-      card1Desc: 'مسار مزدوج: مهندس 2DSIC والذكاء الاصطناعي',
-      card2Title: 'Full-Stack & IA',
-      card2Desc: 'Angular · Spring Boot · Django · .NET · Flask',
-      card3Title: 'الأمان والتدقيق',
-      card3Desc: 'JWT, RBAC, SHA-256, اختبارات k6, Docker Compose',
-      card4Title: 'ثلاثي اللغات',
       card4Desc: 'العربية · الفرنسية · الإنجليزية التقنية',
       eduTitle: 'التكوين',
       edu1Title: 'EMSI الدار البيضاء',
       edu1Desc: 'مهندس في المعلوماتية والشبكات · 2DSIC + ماجستير 2 في الذكاء الاصطناعي',
       edu2Title: 'La Tour Eiffel — الدار البيضاء',
-      edu2Desc: 'البكالوريا علوم فيزيائية، خيار ثنائي اللغة فرنسي'
+      edu2Desc: 'البكالوريا علوم فيزيائية، خيار ثنائي اللغة فرنسي',
+      languagesLabel: 'اللغات'
     },
+    proof: { label: 'لمحة عن الخبرة', aria: 'الخلفية المهنية', fullstack: 'تدريب Full-Stack والذكاء الاصطناعي', web: 'تطبيق ويب · تتبع الأصول', education: 'هندسة الحاسوب · الذكاء الاصطناعي' },
+    section: { work: 'مشاريع مختارة', ai: 'ذكاء اصطناعي تطبيقي', experience: 'الخبرة', profile: 'الملف المهني', skills: 'المهارات' },
     experience: {
       tag: 'الخبرة',
       title: 'تأثير في<br><span class="text-gradient">الشركات</span>',
@@ -516,27 +456,22 @@ window.I18N = {
       exp1t1: 'واجهة Angular 21 وPrimeNG · خدمات Spring Boot · PostgreSQL',
       exp1t2: 'مصادقة JWT وصلاحيات RBAC · سجل تدقيق · بصمات SHA-256',
       exp1t3: 'اختبارات k6 · Docker Compose · تكامل Git وGitHub',
-      exp1impact1: 'أكثر من 84 تغييراً برمجياً',
-      exp1impact2: '3 مجالات تطبيق',
-      exp1impact3: 'بيئة Docker مماثلة للإنتاج',
       exp2Date: 'يوليو 2025',
       exp2Type: 'تدريب',
       exp2Role: 'متدرب مطور ويب',
       exp2Company: 'LEONI Maroc · عين السبع',
       exp2Desc: 'تطبيق ويب لإدارة وتتبع إخراج الأصول استبدل إجراءً يدوياً، وشمل الواجهة وقاعدة MySQL والاختبار قبل الإنتاج.',
       exp2t1: 'واجهة متجاوبة · قاعدة MySQL · اختبارات وظيفية',
-      exp2impact1: 'تحويل الإجراء اليدوي إلى رقمي',
-      exp2impact2: 'إطلاق التطبيق في بيئة الإنتاج'
     },
     skills: {
       tag: 'المهارات',
       title: 'ترسانة<br><span class="text-gradient">تقنية</span>',
-      glance: 'أبرز التقنيات والخبرات',
-      tabLang: 'اللغات',
-      tabFw: 'الأطر',
-      tabData: 'البيانات وقواعدها',
+      glance: 'تقنيات موثقة، مجمعة حسب مجال العمل',
+      frontend: 'الواجهة الأمامية',
+      backend: 'الخادم',
+      data: 'قواعد البيانات',
+      tools: 'أدوات هندسة البرمجيات',
       tabIA: 'الذكاء الاصطناعي',
-      tabTools: 'الأدوات',
       iaIntro: 'تعلّم الآلة (scikit-learn)، والتعلّم العميق (PyTorch وKeras وYOLO)، ومعالجة اللغة الطبيعية والذكاء الاصطناعي التوليدي (LLM وRAG وLangChain والوكلاء).'
     },
     projects: {
@@ -545,10 +480,21 @@ window.I18N = {
       featBadge: 'مشروع التخرج · 2026',
       featTitle: 'تتبع قرارات الذكاء الاصطناعي',
       featDesc: 'المشكلة: غموض القرارات الآلية في القطاعات الحساسة. الحل: منصة للمراجعة البشرية وتفسير نماذج التعلم الآلي وتسجيل عمليات التدقيق ببصمة SHA-256، منشورة باستخدام Docker. مشروع التخرج في 6SOLUTIONS.',
-      featM1: 'أكثر من 84 تغييراً برمجياً',
-      featM2: '3 قطاعات',
-      featM3: 'JWT + RBAC',
-      featM4: 'Docker Compose',
+      lead: 'ذكاء اصطناعي تطبيقي وأنظمة Full-Stack وبرمجيات ترتبط بسير عمل حقيقي.',
+      contributionLabel: 'المساهمة',
+      contribution: 'مشروع مشترك من التصميم حتى النشر.',
+      systemLabel: 'محاور النظام',
+      systemFocus: 'مراجعة بشرية · تعلم آلي قابل للتفسير · تدقيق القرارات',
+      metricCommits: 'تغيير برمجي',
+      metricSectors: 'مجالات',
+      workflow: 'مسار المراجعة',
+      workflowCaption: 'ينبغي أن يترك القرار أثراً قابلاً للفهم.',
+      domains: 'التمويل · الصحة · التعليم',
+      hotelReservation: 'الحجوزات',
+      hotelStay: 'تسجيل الدخول والخروج',
+      hotelBilling: 'فواتير PDF · Excel',
+      manual: 'يدوي',
+      digital: 'رقمي',
       p2Badge: 'أكاديمي',
       p2Title: 'GHotel — إدارة فندقية',
       p2Desc: 'إدارة الحجوزات وتسجيل الدخول والمغادرة والفواتير بصيغتي PDF وExcel · 3 أدوار · ASP.NET Core 8 MVC',
@@ -564,6 +510,17 @@ window.I18N = {
       p5Title: 'إدارة خروج الأصول',
       p5Desc: 'تطبيق ويب لتتبع خروج الأصول — LEONI Maroc، يحل محل عملية يدوية',
       github: 'GitHub'
+    },
+    ai: {
+      tag: 'ذكاء اصطناعي تطبيقي',
+      title: 'من مخرجات النموذج<br><span>إلى قرارات قابلة للمساءلة.</span>',
+      summary: 'في مشروع تتبع قرارات الذكاء الاصطناعي، النموذج خطوة ضمن عملية أوسع. يراجع الأشخاص مخرجاته ويسجل النظام القرار للتدقيق لاحقاً.',
+      readCase: 'استكشف مستودع المشروع',
+      diagramLabel: 'سير قرار مدعوم بالذكاء الاصطناعي: البيانات وشرح النموذج والمراجعة البشرية وسجل التدقيق',
+      input: 'مدخلات', context: 'السياق والبيانات', model: 'قرار التعلم الآلي', explanation: 'النتيجة والتفسير', review: 'مراجعة بشرية', validation: 'اعتماد أو اعتراض', audit: 'سجل التدقيق', humanLoop: 'مراجعة بشرية · تتبع قرارات الذكاء الاصطناعي',
+      step1Title: 'التفسير', step1Desc: 'توضيح مخرجات النموذج.',
+      step2Title: 'المراجعة', step2Desc: 'إبقاء الإنسان ضمن دورة القرار.',
+      step3Title: 'التسجيل', step3Desc: 'حفظ أثر للتدقيق ببصمة SHA-256.'
     },
     certs: {
       tag: 'الشهادات',
@@ -623,7 +580,7 @@ window.I18N = {
     contact: {
       tag: 'تواصل',
       title: 'مستعد<br><span class="text-gradient">للتعاون؟</span>',
-      subtitle: 'تدريب، مشروع أو فرصة — رد خلال 24 ساعة.',
+      subtitle: 'للتدريب أو المشاريع أو الفرص، يمكن التواصل مباشرة أو استخدام النموذج.',
       name: 'الاسم',
       email: 'البريد',
       subject: 'الموضوع',
@@ -636,13 +593,14 @@ window.I18N = {
       labelEmail: 'البريد',
       labelPhone: 'الهاتف',
       labelLinkedin: 'LinkedIn',
+      labelGithub: 'GitHub',
       labelLocation: 'الموقع',
       location: 'الدار البيضاء، المغرب 🇲🇦',
       interests: 'العمل التطوعي · متابعة التقنية · البرمجيات مفتوحة المصدر',
       errorEmpty: 'يرجى ملء جميع الحقول.',
       errorEmail: 'بريد إلكتروني غير صالح.',
       sending: 'جاري الإرسال…',
-      success: 'تم الإرسال — سأرد خلال 24 ساعة.',
+      success: 'تم إرسال الرسالة. شكراً لتواصلك.',
       errorSend: 'فشل الإرسال. أعد المحاولة أو راسلني مباشرة.',
       errorActivation: 'النموذج بانتظار التفعيل — تحقق من yahyafalhaoui411@gmail.com (بما في ذلك spam) لرابط FormSubmit.',
       fallbackSend: 'جاري التوجيه للإرسال الآمن…'
@@ -653,19 +611,27 @@ window.I18N = {
       projects: 'المشاريع',
       contact: 'تواصل',
       cv: 'CV',
-      top: 'العودة للأعلى'
+      top: 'العودة للأعلى',
+      nav: 'روابط أسفل الصفحة'
     },
     sticky: { cv: 'CV', linkedin: 'LinkedIn', contact: 'تواصل' },
     theme: { light: 'الوضع الفاتح', dark: 'الوضع الداكن' },
-    marquee: { ai: 'ذكاء اصطناعي قابل للتتبع' }
   }
 };
+
+function readPreference(key) {
+  try { return localStorage.getItem(key); } catch (_) { return null; }
+}
+
+function savePreference(key, value) {
+  try { localStorage.setItem(key, value); } catch (_) { /* Preferences are optional. */ }
+}
 
 window.i18nManager = {
   lang: 'fr',
 
   init() {
-    const savedLang = localStorage.getItem('lang');
+    const savedLang = readPreference('lang');
     this.lang = window.I18N[savedLang] ? savedLang : 'fr';
     this.apply(this.lang);
     this.bindLangSwitch();
@@ -684,7 +650,7 @@ window.i18nManager = {
   apply(lang) {
     if (!window.I18N[lang]) return;
     this.lang = lang;
-    localStorage.setItem('lang', lang);
+    savePreference('lang', lang);
 
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -733,7 +699,4 @@ window.i18nManager = {
     });
   },
 
-  getTypewriterRoles() {
-    return (window.I18N[this.lang] || window.I18N.fr).hero.typewriter;
-  }
 };

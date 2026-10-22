@@ -3,591 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yahya Falhaoui — Étudiant Ingénieur Full-Stack & IA. Angular, Spring Boot, Django, .NET. Portfolio professionnel, Casablanca.">
+  <meta name="description" content="Yahya Falhaoui — Full-Stack Developer & AI Engineer. Secure web applications, AI traceability, and software engineering in Casablanca.">
   <meta name="author" content="Yahya Falhaoui">
-  <meta name="theme-color" content="#04040a" id="themeColorMeta">
+  <meta name="theme-color" content="#111714" id="themeColorMeta">
   <script>
     (function () {
-      var t = localStorage.getItem('theme');
-      var theme = t || 'light';
-      document.documentElement.setAttribute('data-theme', theme);
-      var lang = localStorage.getItem('lang') || 'fr';
-      document.documentElement.lang = lang;
-      if (lang === 'ar') document.documentElement.dir = 'rtl';
-      var meta = document.getElementById('themeColorMeta');
-      if (meta) meta.content = theme === 'light' ? '#f7f4ed' : '#121b18';
+      document.documentElement.classList.add('js');
+      try {
+        var theme = localStorage.getItem('theme') || 'dark';
+        var lang = localStorage.getItem('lang') || 'fr';
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      } catch (_) { document.documentElement.setAttribute('data-theme', 'dark'); }
     })();
   </script>
-  <meta property="og:title" content="Yahya Falhaoui — Ingénieur Informatique & IA">
-  <meta property="og:description" content="Développeur Full-Stack · Traçabilité IA · EMSI Casablanca">
+  <meta property="og:title" content="Yahya Falhaoui — Full-Stack Developer & AI Engineer">
+  <meta property="og:description" content="Full-Stack engineering, AI traceability, and software built for accountable decisions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yahya-falhaoui.vercel.app">
   <link rel="canonical" href="https://yahya-falhaoui.vercel.app">
-  <title>Yahya Falhaoui — Full-Stack & IA Engineer</title>
+  <title>Yahya Falhaoui — Full-Stack Developer & AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/redesign.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23315d4b'/><stop offset='100%25' stop-color='%23b7633c'/></linearGradient></defs><text y='.85em' x='50%25' text-anchor='middle' font-size='72' font-family='system-ui' fill='url(%23g)'>YF</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d8ff6c'/><text x='50' y='65' text-anchor='middle' font-size='44' font-family='system-ui' font-weight='700' fill='%23111714'>YF</text></svg>">
 </head>
 <body>
-  <!-- Preloader -->
-  <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader__inner">
-      <div class="preloader__logo">YF</div>
-      <div class="preloader__bar"><div class="preloader__fill" id="preloaderFill"></div></div>
-      <span class="preloader__text" data-i18n="preloader.loading">Chargement</span>
-    </div>
-  </div>
-
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-
-  <div class="ambient">
-    <div class="ambient__mesh" aria-hidden="true"></div>
-    <div class="ambient__grid" aria-hidden="true"></div>
-    <div class="grain" aria-hidden="true"></div>
-  </div>
-
   <header class="nav-header" id="nav">
-    <nav class="nav container" aria-label="Navigation principale">
-      <a href="#hero" class="nav__logo">
-        <span class="nav__logo-mark">YF</span>
-        <span class="nav__logo-text">Falhaoui</span>
-      </a>
+    <nav class="nav container" aria-label="Main navigation" data-i18n-aria="nav.main">
+      <a href="#hero" class="nav__logo" aria-label="Yahya Falhaoui — home" data-i18n-aria="nav.home"><span class="nav__logo-mark">YF</span><span class="nav__logo-text">Yahya Falhaoui</span></a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#about" class="nav__link" data-section="about" data-i18n="nav.about">À propos</a></li>
-        <li><a href="#why" class="nav__link" data-section="why" data-i18n="nav.why">Pourquoi moi</a></li>
-        <li><a href="#experience" class="nav__link" data-section="experience" data-i18n="nav.experience">Expérience</a></li>
-        <li><a href="#skills" class="nav__link" data-section="skills" data-i18n="nav.skills">Compétences</a></li>
-        <li><a href="#projects" class="nav__link" data-section="projects" data-i18n="nav.projects">Projets</a></li>
-        <li><a href="#certifications" class="nav__link" data-section="certifications" data-i18n="nav.certs">Certs</a></li>
-        <li><a href="assets/Yahya_Falhaoui_CV_PFE.pdf" class="nav__link nav__link--cv magnetic-sm" download data-i18n="nav.cv">CV</a></li>
-        <li><a href="#contact" class="nav__link nav__link--cta magnetic" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#projects" class="nav__link" data-section="projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#ai" class="nav__link" data-section="ai" data-i18n="nav.ai">AI systems</a></li>
+        <li><a href="#experience" class="nav__link" data-section="experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#about" class="nav__link" data-section="about" data-i18n="nav.about">Profile</a></li>
+        <li><a href="#skills" class="nav__link" data-section="skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#certifications" class="nav__link" data-section="certifications" data-i18n="nav.certs">Certifications</a></li>
+        <li><a href="assets/Yahya_Falhaoui_CV_PFE.pdf" class="nav__link nav__link--cv" download data-i18n="nav.cv">CV</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav__controls">
-        <div class="lang-switch" role="group" data-i18n-aria="nav.lang" aria-label="Langue">
-          <button type="button" class="lang-switch__btn active" data-lang="fr" aria-pressed="true">FR</button>
-          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
-          <button type="button" class="lang-switch__btn" data-lang="ar" aria-pressed="false">AR</button>
-        </div>
-        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Mode clair / sombre">
-          <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-        </button>
+        <div class="lang-switch" role="group" data-i18n-aria="nav.lang" aria-label="Language"><button type="button" class="lang-switch__btn active" data-lang="fr" aria-pressed="true">FR</button><button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button><button type="button" class="lang-switch__btn" data-lang="ar" aria-pressed="false">AR</button></div>
+        <button type="button" class="theme-toggle" id="themeToggle" data-i18n-aria="theme.light" aria-label="Switch theme"><svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></button>
       </div>
-      <button class="nav__toggle" id="navToggle" data-i18n-aria="nav.menu" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+      <button class="nav__toggle" id="navToggle" type="button" aria-controls="navLinks" aria-expanded="false" data-i18n-aria="nav.menu" aria-label="Open menu"><span></span><span></span></button>
     </nav>
   </header>
+  <main id="main">
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="hero">
-      <div class="hero__spotlight" id="heroSpotlight" aria-hidden="true"></div>
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
       <div class="container hero__inner">
-        <div class="hero__content">
-          <div class="hero__badge reveal">
-            <span class="hero__pulse"></span>
-            <span data-i18n="hero.badge">Disponible pour un stage · Casablanca, MA</span>
-          </div>
-          <h1 class="hero__title">
-            <span class="hero__line reveal" data-delay="80">
-              <span class="hero__label" data-i18n="hero.label">Bonjour, je suis</span>
-            </span>
-            <span class="hero__name reveal" data-delay="160">
-              Yahya<span class="hero__name-accent">.</span>Falhaoui
-            </span>
-          </h1>
-          <p class="hero__role">
-            <span id="typewriter" aria-live="polite"></span>
-            <span class="typewriter-cursor" aria-hidden="true">▌</span>
-          </p>
-          <p class="hero__tagline reveal" data-delay="320" data-i18n="hero.tagline">
-            Ingénieur Full-Stack & IA — je livre des applications web sécurisées, de l'architecture
-            au déploiement Docker. Recherche un stage PFE de six mois à partir de février 2027, à Casablanca.
-          </p>
-          <div class="hero__pitch reveal" data-delay="360">
-            <span class="hero__pitch-item" data-i18n="hero.pitch1">Angular · Spring Boot · Django · .NET</span>
-            <span class="hero__pitch-item" data-i18n="hero.pitch2">JWT · RBAC · Docker · PostgreSQL</span>
-            <span class="hero__pitch-item" data-i18n="hero.pitch3">Casablanca · PFE dès février 2027</span>
-          </div>
-          <div class="hero__actions reveal" data-delay="420">
-            <a href="assets/Yahya_Falhaoui_CV_PFE.pdf" class="btn btn--primary magnetic" download>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              <span data-i18n="hero.cta1">Télécharger mon CV</span>
-            </a>
-            <a href="#contact" class="btn btn--ghost magnetic">
-              <span data-i18n="hero.cta2">Planifier un entretien</span>
-            </a>
-          </div>
-          <div class="hero__social reveal" data-delay="500">
-            <a href="mailto:yahyafalhaoui411@gmail.com" aria-label="Email" class="hero__social-link magnetic-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/yahya-falhaoui-bb2531332" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hero__social-link magnetic-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="https://github.com/Yahyafl3" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hero__social-link magnetic-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.875-.42-.405-1.02-.705-.015-.72.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <a href="tel:+212629378510" aria-label="Téléphone" class="hero__social-link magnetic-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            </a>
-          </div>
+        <div class="hero__content reveal">
+          <p class="eyebrow hero__eyebrow"><span class="status-mark" aria-hidden="true"></span><span data-i18n="hero.badge">PFE internship · Casablanca · Feb 2027</span></p>
+          <p class="hero__pretitle" data-i18n="hero.label">Full-Stack systems · Applied AI</p>
+          <h1 class="hero__name" id="heroTitle">Yahya<br><span>Falhaoui</span></h1>
+          <p class="hero__role" data-i18n="hero.professionalTitle">Full-Stack Developer & AI Engineer</p>
+          <p class="hero__tagline" data-i18n="hero.tagline">I build secure web applications, from architecture to Docker deployment.</p>
+          <div class="hero__actions"><a href="#projects" class="btn btn--primary"><span data-i18n="hero.ctaProjects">Explore selected work</span><span aria-hidden="true">↘</span></a><a href="assets/Yahya_Falhaoui_CV_PFE.pdf" class="btn btn--text" download><span data-i18n="hero.cta1">Download my CV</span><span aria-hidden="true">↗</span></a><a href="#contact" class="hero__contact-link" data-i18n="hero.ctaContact">Get in touch</a></div>
+          <div class="hero__location"><span class="mono-label" data-i18n="hero.locationLabel">BASED IN</span><span data-i18n="contact.location">Casablanca, Morocco</span><span class="hero__location-separator" aria-hidden="true"></span><span data-i18n="hero.internship">Final-year internship · February 2027</span></div>
         </div>
-
-        <div class="hero__bento reveal" data-delay="240">
-          <div class="bento-card bento-card--profile tilt-card">
-            <div class="bento-card__glow"></div>
-            <div class="bento-avatar">
-              <span>YF</span>
-              <div class="bento-avatar__orbit"></div>
-            </div>
-            <p class="bento-card__role" data-i18n="hero.bentoRole">Full-Stack Dev</p>
-            <p class="bento-card__sub" data-i18n="hero.bentoSub">EMSI · Master 2 IA</p>
+        <div class="hero__visual reveal" role="img" data-i18n-aria="ai.diagramLabel" aria-label="AI decision workflow: input, model explanation, human review, audit record">
+          <div class="hero__visual-head"><span>FIELD NOTE / 01</span><span>DECISION SYSTEMS</span></div>
+          <div class="signal-map"><div class="signal-map__spine"></div>
+            <div class="signal-node signal-node--input"><span class="signal-node__index">01</span><span class="signal-node__icon signal-node__icon--input"></span><span class="signal-node__label" data-i18n="ai.input">Input</span><span class="signal-node__detail" data-i18n="ai.context">Context & data</span></div>
+            <div class="signal-node signal-node--model"><span class="signal-node__index">02</span><span class="signal-node__icon signal-node__icon--model"></span><span class="signal-node__label" data-i18n="ai.model">ML decision</span><span class="signal-node__detail" data-i18n="ai.explanation">Score + explanation</span></div>
+            <div class="signal-node signal-node--review"><span class="signal-node__index">03</span><span class="signal-node__icon signal-node__icon--review"></span><span class="signal-node__label" data-i18n="ai.review">Human review</span><span class="signal-node__detail" data-i18n="ai.validation">Validate or challenge</span></div>
+            <div class="signal-node signal-node--audit"><span class="signal-node__index">04</span><span class="signal-node__icon signal-node__icon--audit"></span><span class="signal-node__label" data-i18n="ai.audit">Audit record</span><span class="signal-node__detail">SHA-256</span></div>
           </div>
-          <div class="bento-card bento-card--stat tilt-card">
-            <span class="bento-stat__value" data-count="5" data-suffix="+">0</span>
-            <span class="bento-stat__label" data-i18n="hero.statProjects">Projets GitHub</span>
-          </div>
-          <div class="bento-card bento-card--stat tilt-card">
-            <span class="bento-stat__value" data-count="9" data-suffix="">0</span>
-            <span class="bento-stat__label" data-i18n="hero.statCerts">Certifications</span>
-          </div>
-          <div class="bento-card bento-card--stat tilt-card">
-            <span class="bento-stat__value" data-count="2" data-suffix="">0</span>
-            <span class="bento-stat__label" data-i18n="hero.statInternships">Stages pro</span>
-          </div>
-          <div class="bento-card bento-card--stack tilt-card">
-            <span class="bento-stack__label" data-i18n="hero.stackLabel">Stack actuelle</span>
-            <div class="bento-stack__tags">
-              <span>Angular 21</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span>
-            </div>
-          </div>
+          <div class="hero__visual-foot"><span data-i18n="ai.humanLoop">Human-in-the-loop · AI Traceability</span><span class="mono-label">6SOLUTIONS / 2026</span></div>
         </div>
-      </div>
-
-      <a href="#about" class="hero__scroll" aria-label="Défiler">
-        <span class="hero__scroll-line"></span>
-        <span data-i18n="hero.scroll">Scroll</span>
-      </a>
-    </section>
-
-    <!-- Tech Marquee -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Java SE 17</span><span>Spring Boot</span><span>Angular</span><span>Django</span>
-        <span>PostgreSQL</span><span>Docker</span><span>TypeScript</span><span>Python</span>
-        <span>React</span><span>Next.js</span><span>JWT · RBAC</span><span data-i18n="marquee.ai">IA Traçable</span>
-        <span>Java SE 17</span><span>Spring Boot</span><span>Angular</span><span>Django</span>
-        <span>PostgreSQL</span><span>Docker</span><span>TypeScript</span><span>Python</span>
-        <span>React</span><span>Next.js</span><span>JWT · RBAC</span><span data-i18n="marquee.ai">IA Traçable</span>
-      </div>
-    </div>
-
-    <!-- Trust Bar -->
-    <div class="trust-bar">
-      <div class="container trust-bar__inner">
-        <span class="trust-bar__label" data-i18n="trust.label">Ils m'ont fait confiance</span>
-        <div class="trust-bar__logos">
-          <span class="trust-logo">EMSI</span>
-          <img class="trust-logo__image trust-logo__image--company trust-logo__image--leoni" src="assets/logos/leoni-logo.png" alt="LEONI" width="96" height="31" loading="lazy">
-          <img class="trust-logo__image trust-logo__image--company trust-logo__image--6solutions" src="assets/logos/6solutions-logo.png" alt="6SOLUTIONS" width="112" height="31" loading="lazy">
-          <img class="trust-logo__image trust-logo__image--meta" src="assets/logos/meta-mark.png" alt="Meta" width="34" height="28" loading="lazy">
-          <img class="trust-logo__image trust-logo__image--oracle" src="assets/logos/oracle-wordmark.png" alt="Oracle" width="76" height="22" loading="lazy">
-        </div>
-      </div>
-    </div>
-
-    <!-- Why Me — Recruiter scan -->
-    <section class="section section--compact" id="why">
-      <div class="container">
-        <header class="section__header section__header--center reveal">
-          <span class="section__tag" data-i18n="why.tag">Pour les recruteurs</span>
-          <h2 class="section__title" data-i18n-html="why.title">Pourquoi <span class="text-gradient">m'embaucher ?</span></h2>
-          <p class="section__subtitle" data-i18n="why.subtitle">Scannable en 30 secondes — profil stage Full-Stack & IA</p>
-        </header>
-        <div class="why-grid reveal">
-          <article class="why-card glass tilt-card">
-            <span class="why-card__num">01</span>
-            <h3 data-i18n="why.c1Title">Full-Stack opérationnel</h3>
-            <p data-i18n="why.c1Desc">Front Angular + back Spring Boot/Django/.NET. Je code, teste et déploie — pas seulement des maquettes.</p>
-          </article>
-          <article class="why-card glass tilt-card" data-delay="80">
-            <span class="why-card__num">02</span>
-            <h3 data-i18n="why.c2Title">Expérience entreprise</h3>
-            <p data-i18n="why.c2Desc">LEONI (industrie) + 6SOLUTIONS (PFA IA). Applications en production, pas que des projets école.</p>
-          </article>
-          <article class="why-card glass tilt-card" data-delay="160">
-            <span class="why-card__num">03</span>
-            <h3 data-i18n="why.c3Title">Sécurité & qualité</h3>
-            <p data-i18n="why.c3Desc">JWT, RBAC, audit SHA-256, tests k6, Docker Compose. Je pense prod dès le départ.</p>
-          </article>
-          <article class="why-card glass tilt-card" data-delay="240">
-            <span class="why-card__num">04</span>
-            <h3 data-i18n="why.c4Title">Profil IA différenciant</h3>
-            <p data-i18n="why.c4Desc">Master 2 IA + projet Traçabilité IA multisectoriel. Rare pour un profil dev web junior.</p>
-          </article>
-        </div>
+        <a class="hero__scroll" href="#why"><span data-i18n="hero.scroll">Scroll to explore</span><span aria-hidden="true">↓</span></a>
       </div>
     </section>
 
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="section__index">01</span>
-          <div>
-            <span class="section__tag" data-i18n="about.tag">À propos</span>
-            <h2 class="section__title" data-i18n-html="about.title">Construire des produits<br><span class="text-gradient">fiables & intelligents</span></h2>
-          </div>
-        </header>
-
-        <div class="about-bento">
-          <article class="about-bento__main glass tilt-card reveal">
-            <p class="about-bento__lead" data-i18n-html="about.lead">
-              Étudiant ingénieur <strong>5ème année EMSI Casablanca</strong> (2DSIC) +
-              <strong> Master 2 Intelligence Artificielle</strong>.
-            </p>
-            <p data-i18n-html="about.p1">
-              Je transforme des problèmes métier en applications web robustes — front-end soigné,
-              back-end sécurisé, données structurées. Mon focus : la <strong>traçabilité IA</strong>
-              et les systèmes où chaque décision automatisée reste auditable.
-            </p>
-            <p data-i18n-html="about.p2">
-              Actuellement en recherche de <strong>stage développement web</strong> au sein d'une
-              équipe digitale ambitieuse.
-            </p>
-            <div class="about-bento__cta">
-              <a href="assets/Yahya_Falhaoui_CV_PFE.pdf" class="link-arrow magnetic-sm" download>
-                <span data-i18n="about.cta">Voir mon parcours complet</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <div class="about-bento__cards">
-            <article class="mini-card glass tilt-card reveal" data-delay="80">
-              <div class="mini-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
-              </div>
-              <h3 data-i18n="about.card1Title">EMSI + Master 2 IA</h3>
-              <p data-i18n="about.card1Desc">Double cursus ingénieur 2DSIC & intelligence artificielle</p>
-            </article>
-            <article class="mini-card glass tilt-card reveal" data-delay="160">
-              <div class="mini-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </div>
-              <h3 data-i18n="about.card2Title">Full-Stack & IA</h3>
-              <p data-i18n="about.card2Desc">Angular · Spring Boot · Django · .NET · Flask</p>
-            </article>
-            <article class="mini-card glass tilt-card reveal" data-delay="240">
-              <div class="mini-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              </div>
-              <h3 data-i18n="about.card3Title">Sécurité & Audit</h3>
-              <p data-i18n="about.card3Desc">JWT, RBAC, SHA-256, tests k6, Docker Compose</p>
-            </article>
-            <article class="mini-card glass tilt-card reveal" data-delay="320">
-              <div class="mini-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-              </div>
-              <h3 data-i18n="about.card4Title">Trilingue</h3>
-              <p data-i18n="about.card4Desc">Arabe · Français · Anglais technique</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="education reveal">
-          <h3 class="education__title" data-i18n="about.eduTitle">Formation</h3>
-          <div class="education__list">
-            <article class="edu-item glass tilt-card">
-              <div class="edu-item__year">2022 — 2027</div>
-              <div class="edu-item__content">
-                <h4 data-i18n="about.edu1Title">EMSI Casablanca</h4>
-                <p data-i18n="about.edu1Desc">Ingénieur Informatique & Réseaux · 2DSIC + Master 2 Intelligence Artificielle</p>
-              </div>
-            </article>
-            <article class="edu-item glass tilt-card">
-              <div class="edu-item__year">2021 — 2022</div>
-              <div class="edu-item__content">
-                <h4 data-i18n="about.edu2Title">La Tour Eiffel — Casablanca</h4>
-                <p data-i18n="about.edu2Desc">Baccalauréat Sciences Physiques, Option Bilingue Français</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
+    <section class="proof-strip" id="why" aria-label="Professional background" data-i18n-aria="proof.aria">
+      <div class="container proof-strip__inner"><p class="proof-strip__label mono-label" data-i18n="proof.label">Selected experience</p><div class="proof-item"><span class="proof-item__index">01</span><span class="proof-item__name">6SOLUTIONS</span><span data-i18n="proof.fullstack">Full-Stack & AI internship</span></div><div class="proof-item"><span class="proof-item__index">02</span><span class="proof-item__name">LEONI</span><span data-i18n="proof.web">Web application · asset traceability</span></div><div class="proof-item"><span class="proof-item__index">03</span><span class="proof-item__name">EMSI</span><span data-i18n="proof.education">Computer Engineering · AI</span></div></div>
     </section>
 
-    <!-- Experience -->
-    <section class="section section--alt" id="experience">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="section__index">02</span>
-          <div>
-            <span class="section__tag" data-i18n="experience.tag">Expérience</span>
-            <h2 class="section__title" data-i18n-html="experience.title">Impact en<br><span class="text-gradient">entreprise</span></h2>
-          </div>
-        </header>
-
-        <div class="exp-timeline">
-          <article class="exp-item glass tilt-card reveal">
-            <div class="exp-item__marker">
-              <span class="exp-item__dot"></span>
-              <span class="exp-item__line"></span>
-            </div>
-            <div class="exp-item__body">
-              <div class="exp-item__top">
-                <div class="exp-item__brand exp-item__brand--6s"><img src="assets/logos/6solutions-logo.png" alt="Logo 6SOLUTIONS" width="140" height="39" loading="lazy"></div>
-                <div class="exp-item__meta">
-                  <time datetime="2026-07" data-i18n="experience.exp1Date">Juil. — Sept. 2026</time>
-                  <span class="exp-item__type" data-i18n="experience.exp1Type">Stage PFA</span>
-                </div>
-              </div>
-              <h3 data-i18n="experience.exp1Role">Développeur Full-Stack & IA</h3>
-              <p class="exp-item__company" data-i18n="experience.exp1Company">6SOLUTIONS · Casablanca</p>
-              <p class="exp-item__desc" data-i18n-html="experience.exp1Desc">
-                <strong>Traçabilité IA</strong> — Plateforme de validation humaine des décisions
-                assistées par IA (crédit, santé, éducation). Projet binôme, de la conception au déploiement.
-              </p>
-              <ul class="exp-item__list">
-                <li data-i18n="experience.exp1t1">Front Angular 21 + PrimeNG · Back Spring Boot · PostgreSQL</li>
-                <li data-i18n="experience.exp1t2">Auth JWT + RBAC · Journal d'audit · Empreintes SHA-256</li>
-                <li data-i18n="experience.exp1t3">Tests E2E k6 · Docker Compose · CI Git/GitHub</li>
-              </ul>
-              <div class="exp-item__impact">
-                <span data-i18n="experience.exp1impact1">84+ commits</span>
-                <span data-i18n="experience.exp1impact2">3 domaines IA</span>
-                <span data-i18n="experience.exp1impact3">Docker prod-like</span>
-              </div>
-              <div class="exp-item__stack">
-                <span>Java 17</span><span>Spring Boot</span><span>Angular</span><span>Flask</span>
-                <span>PostgreSQL</span><span>Docker</span><span>Nginx</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="exp-item glass tilt-card reveal" data-delay="120">
-            <div class="exp-item__marker">
-              <span class="exp-item__dot"></span>
-            </div>
-            <div class="exp-item__body">
-              <div class="exp-item__top">
-                <div class="exp-item__brand exp-item__brand--leoni"><img src="assets/logos/leoni-logo.png" alt="Logo LEONI" width="140" height="39" loading="lazy"></div>
-                <div class="exp-item__meta">
-                  <time datetime="2025-07" data-i18n="experience.exp2Date">Juillet 2025</time>
-                  <span class="exp-item__type" data-i18n="experience.exp2Type">Stage</span>
-                </div>
-              </div>
-              <h3 data-i18n="experience.exp2Role">Stagiaire Développeur Web</h3>
-              <p class="exp-item__company" data-i18n="experience.exp2Company">LEONI Maroc · Aïn Sebaâ</p>
-              <p class="exp-item__desc" data-i18n="experience.exp2Desc">
-                Application web de gestion et traçabilité des sorties de biens,
-                remplaçant un processus manuel — UI, MySQL, tests avant prod.
-              </p>
-              <ul class="exp-item__list">
-                <li data-i18n="experience.exp2t1">Interface responsive · Base MySQL · Tests fonctionnels</li>
-              </ul>
-              <div class="exp-item__impact">
-                <span data-i18n="experience.exp2impact1">Processus manuel → digital</span>
-                <span data-i18n="experience.exp2impact2">Mise en production</span>
-              </div>
-              <div class="exp-item__stack">
-                <span>Django</span><span>Bootstrap</span><span>MySQL</span>
-              </div>
-            </div>
-          </article>
-        </div>
+    <section class="section work-section" id="projects" aria-labelledby="projectsTitle"><div class="container">
+      <header class="section-heading reveal"><div class="section-heading__index mono-label">01 / <span data-i18n="section.work">SELECTED WORK</span></div><div class="section-heading__copy"><p class="eyebrow" data-i18n="projects.tag">Selected projects</p><h2 class="section__title" id="projectsTitle" data-i18n-html="projects.title">Built to solve<br><span>real problems</span></h2><p class="section__subtitle" data-i18n="projects.lead">Applied AI, full-stack systems, and software shaped around real workflows.</p></div></header>
+      <article class="project-featured reveal"><div class="project-featured__content"><div class="project-featured__meta"><span class="project-featured__badge" data-i18n="projects.featBadge">PFA · 6SOLUTIONS · 2026</span><span class="mono-label">01 / 05</span></div><h3 data-i18n="projects.featTitle">AI Traceability</h3><p class="project-featured__desc" data-i18n="projects.featDesc">Problem: opaque AI decisions in sensitive domains. Solution: human review, ML explainability, and a SHA-256 audit trail, deployed with Docker.</p><div class="project-featured__story"><div><span class="mono-label" data-i18n="projects.contributionLabel">Contribution</span><p data-i18n="projects.contribution">Team project, from design through deployment.</p></div><div><span class="mono-label" data-i18n="projects.systemLabel">System focus</span><p data-i18n="projects.systemFocus">Human validation · Explainable ML · Decision audit</p></div></div><div class="project-featured__stack"><span>Angular 21</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span><span>k6</span></div><div class="project-featured__footer"><span class="project-metric"><strong>84+</strong><span data-i18n="projects.metricCommits">commits</span></span><span class="project-metric"><strong>3</strong><span data-i18n="projects.metricSectors">sectors</span></span><a href="https://github.com/Yahyafl3/tracabilite-ia" target="_blank" rel="noopener noreferrer" class="project-link"><span data-i18n="projects.github">GitHub</span><span aria-hidden="true">↗</span></a></div></div>
+        <div class="project-featured__visual" role="img" data-i18n-aria="ai.diagramLabel" aria-label="AI decision review workflow"><div class="workflow-heading"><span class="mono-label">TRACE / 01</span><span class="workflow-heading__line"></span><span class="mono-label" data-i18n="projects.workflow">REVIEW PATH</span></div><div class="workflow-card workflow-card--event"><span class="workflow-card__key">01</span><div><span class="workflow-card__title" data-i18n="ai.context">Context & data</span><span class="workflow-card__sub" data-i18n="projects.domains">Credit · health · education</span></div><span class="workflow-card__symbol">↘</span></div><div class="workflow-connector"><span></span><span></span><span></span></div><div class="workflow-card workflow-card--model"><span class="workflow-card__key">02</span><div><span class="workflow-card__title" data-i18n="ai.explanation">Score + explanation</span><span class="workflow-card__sub">ML / XAI</span></div><span class="workflow-card__symbol">⌁</span></div><div class="workflow-connector"><span></span><span></span><span></span></div><div class="workflow-card workflow-card--human"><span class="workflow-card__key">03</span><div><span class="workflow-card__title" data-i18n="ai.review">Human review</span><span class="workflow-card__sub" data-i18n="ai.validation">Validate or challenge</span></div><span class="workflow-card__symbol">○</span></div><div class="workflow-connector"><span></span><span></span><span></span></div><div class="workflow-card workflow-card--audit"><span class="workflow-card__key">04</span><div><span class="workflow-card__title" data-i18n="ai.audit">Audit record</span><span class="workflow-card__sub">SHA-256 · PostgreSQL</span></div><span class="workflow-card__symbol">#</span></div><p class="workflow-caption mono-label" data-i18n="projects.workflowCaption">A decision should leave a reasoned trace.</p></div></article>
+      <div class="project-grid">
+        <article class="project-card project-card--hotel reveal"><div class="project-card__top"><span class="mono-label">02 / <span data-i18n="projects.p2Badge">Academic</span></span><span class="project-card__stamp">ASP.NET CORE 8</span></div><div class="project-art project-art--hotel" aria-hidden="true"><div class="hotel-ledger"><span data-i18n="projects.hotelReservation">Reservation</span><span data-i18n="projects.hotelStay">Check-in / check-out</span><span data-i18n="projects.hotelBilling">PDF · Excel billing</span></div><div class="hotel-index">G<br>H</div></div><h3 data-i18n="projects.p2Title">GHotel — Hotel Management</h3><p data-i18n="projects.p2Desc">Reservations, check-in/out, PDF/Excel billing · 3 roles · ASP.NET Core 8 MVC</p><div class="project-card__facts"><span data-i18n="projects.p2M1">5000+ LOC</span><span data-i18n="projects.p2M2">36 use cases</span></div><div class="project-card__bottom"><div class="project-card__stack"><span>.NET 8</span><span>Entity Framework</span><span>SQL Server</span></div><a href="https://github.com/Yahyafl3/ghotel" target="_blank" rel="noopener noreferrer" class="project-link"><span data-i18n="projects.github">GitHub</span><span aria-hidden="true">↗</span></a></div></article>
+        <article class="project-card project-card--clinic reveal"><div class="project-card__top"><span class="mono-label">03 / <span data-i18n="projects.p3Badge">Academic</span></span><span class="project-card__stamp">JAVA / SWING</span></div><div class="project-art project-art--clinic" aria-hidden="true"><span class="clinic-orbit clinic-orbit--one"></span><span class="clinic-orbit clinic-orbit--two"></span><span class="clinic-core">G</span><span class="clinic-label">GESTION<br>CABINET</span></div><h3 data-i18n="projects.p3Title">GestionCabinet</h3><p data-i18n="projects.p3Desc">Clinic management for patients, appointments, and medical follow-up.</p><div class="project-card__bottom"><div class="project-card__stack"><span>Java</span><span>MySQL</span><span>Swing</span></div><a href="https://github.com/Yahyafl3/GestionCabinet" target="_blank" rel="noopener noreferrer" class="project-link"><span data-i18n="projects.github">GitHub</span><span aria-hidden="true">↗</span></a></div></article>
+        <article class="project-card project-card--match reveal"><div class="project-card__top"><span class="mono-label">04 / <span data-i18n="projects.p4Badge">Academic</span></span><span class="project-card__stamp">JAVA / JAVAFX</span></div><div class="project-art project-art--match" aria-hidden="true"><span class="bracket-line bracket-line--a"></span><span class="bracket-line bracket-line--b"></span><span class="bracket-line bracket-line--c"></span><span class="bracket-node bracket-node--a"></span><span class="bracket-node bracket-node--b"></span><span class="bracket-node bracket-node--c"></span><span class="bracket-node bracket-node--d"></span><span class="bracket-final"></span></div><h3 data-i18n="projects.p4Title">Gestion Match — FIFA 2030</h3><p data-i18n="projects.p4Desc">World Cup 2030 management system built with Java and JavaFX.</p><div class="project-card__bottom"><div class="project-card__stack"><span>Java</span><span>JavaFX</span><span>SQL</span></div><a href="https://github.com/Yahyafl3/gestionmatch" target="_blank" rel="noopener noreferrer" class="project-link"><span data-i18n="projects.github">GitHub</span><span aria-hidden="true">↗</span></a></div></article>
+        <article class="project-card project-card--assets reveal"><div class="project-card__top"><span class="mono-label">05 / <span data-i18n="projects.p5Badge">LEONI internship</span></span><span class="project-card__stamp">DJANGO / MYSQL</span></div><div class="project-art project-art--assets" aria-hidden="true"><span class="asset-track"></span><span class="asset-stop asset-stop--one"></span><span class="asset-stop asset-stop--two"></span><span class="asset-stop asset-stop--three"></span><span class="asset-track-label asset-track-label--start" data-i18n="projects.manual">Manual</span><span class="asset-track-label asset-track-label--end" data-i18n="projects.digital">Digital</span></div><h3 data-i18n="projects.p5Title">Asset Exit Management</h3><p data-i18n="projects.p5Desc">Asset-exit traceability web app at LEONI Morocco, replacing a manual process.</p><div class="project-card__bottom"><div class="project-card__stack"><span>Django</span><span>MySQL</span><span>Bootstrap</span></div><a href="https://github.com/Yahyafl3/gestion-de-sortie-des-biens" target="_blank" rel="noopener noreferrer" class="project-link"><span data-i18n="projects.github">GitHub</span><span aria-hidden="true">↗</span></a></div></article>
       </div>
-    </section>
+    </div></section>
 
-    <!-- Skills -->
-    <section class="section" id="skills">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="section__index">03</span>
-          <div>
-            <span class="section__tag" data-i18n="skills.tag">Compétences</span>
-            <h2 class="section__title" data-i18n-html="skills.title">Arsenal<br><span class="text-gradient">technique</span></h2>
-          </div>
-        </header>
+    <section class="section ai-section" id="ai" aria-labelledby="aiTitle"><div class="container ai-section__inner"><div class="section-heading__index mono-label">02 / <span data-i18n="section.ai">APPLIED AI</span></div><div class="ai-section__copy reveal"><p class="eyebrow" data-i18n="ai.tag">Applied AI</p><h2 class="section__title" id="aiTitle" data-i18n-html="ai.title">From model output<br><span>to accountable decisions.</span></h2><p class="section__subtitle" data-i18n="ai.summary">In AI Traceability, the model is one step in a wider decision process. People review its output, and the system records the decision for later audit.</p><a href="https://github.com/Yahyafl3/tracabilite-ia" target="_blank" rel="noopener noreferrer" class="link-arrow"><span data-i18n="ai.readCase">Explore the project repository</span><span aria-hidden="true">↗</span></a></div><div class="ai-pipeline reveal" role="img" data-i18n-aria="ai.diagramLabel" aria-label="AI decision workflow"><div class="ai-pipeline__rail"></div><article class="ai-step"><span class="ai-step__number">A</span><div><h3 data-i18n="ai.step1Title">Explain</h3><p data-i18n="ai.step1Desc">Make model output understandable.</p></div><span class="ai-step__code">ML / XAI</span></article><article class="ai-step"><span class="ai-step__number">B</span><div><h3 data-i18n="ai.step2Title">Review</h3><p data-i18n="ai.step2Desc">Keep a human in the decision loop.</p></div><span class="ai-step__code">HUMAN</span></article><article class="ai-step"><span class="ai-step__number">C</span><div><h3 data-i18n="ai.step3Title">Record</h3><p data-i18n="ai.step3Desc">Keep an audit trail with a SHA-256 fingerprint.</p></div><span class="ai-step__code">SHA-256</span></article></div></div></section>
 
-        <div class="skills-glance reveal">
-          <p class="skills-glance__label" data-i18n="skills.glance">Stack principal — visible immédiatement</p>
-          <div class="skills-glance__tags">
-            <span>Java SE 17</span><span>Spring Boot</span><span>Angular 21</span><span>TypeScript</span>
-            <span>Django · .NET 8</span><span>PostgreSQL</span><span>Docker</span><span>Python / Flask</span>
-            <span>JWT / RBAC</span><span>Git · CI/CD</span>
-          </div>
-        </div>
+    <section class="section experience-section" id="experience" aria-labelledby="experienceTitle"><div class="container"><header class="section-heading reveal"><div class="section-heading__index mono-label">03 / <span data-i18n="section.experience">EXPERIENCE</span></div><div class="section-heading__copy"><p class="eyebrow" data-i18n="experience.tag">Experience</p><h2 class="section__title" id="experienceTitle" data-i18n-html="experience.title">Work in<br><span>context.</span></h2></div></header><div class="experience-list">
+      <article class="experience-entry reveal"><div class="experience-entry__side"><span class="experience-entry__number">01</span><time datetime="2026-07" data-i18n="experience.exp1Date">Jul — Sep 2026</time></div><div class="experience-entry__body"><div class="experience-entry__heading"><img src="assets/logos/6solutions-logo.png" alt="6SOLUTIONS" width="128" height="36" loading="lazy"><span class="experience-entry__type" data-i18n="experience.exp1Type">Final-year internship</span></div><h3 data-i18n="experience.exp1Role">Full-Stack & AI Developer</h3><p class="experience-entry__company" data-i18n="experience.exp1Company">6SOLUTIONS · Casablanca</p><p class="experience-entry__desc" data-i18n-html="experience.exp1Desc">AI Traceability — platform for human review of AI-assisted decisions in credit, health, and education. Team project from design to deployment.</p><ul><li data-i18n="experience.exp1t1">Angular 21 + PrimeNG · Spring Boot · PostgreSQL</li><li data-i18n="experience.exp1t2">JWT + RBAC · Audit log · SHA-256 fingerprints</li><li data-i18n="experience.exp1t3">k6 · Docker Compose · Git / GitHub</li></ul><div class="experience-entry__tags"><span>Java 17</span><span>Spring Boot</span><span>Angular</span><span>Flask</span><span>PostgreSQL</span><span>Docker</span><span>Nginx</span></div></div></article>
+      <article class="experience-entry reveal"><div class="experience-entry__side"><span class="experience-entry__number">02</span><time datetime="2025-07" data-i18n="experience.exp2Date">July 2025</time></div><div class="experience-entry__body"><div class="experience-entry__heading"><img src="assets/logos/leoni-logo.png" alt="LEONI" width="118" height="34" loading="lazy"><span class="experience-entry__type" data-i18n="experience.exp2Type">Internship</span></div><h3 data-i18n="experience.exp2Role">Web Developer Intern</h3><p class="experience-entry__company" data-i18n="experience.exp2Company">LEONI Morocco · Aïn Sebaâ</p><p class="experience-entry__desc" data-i18n="experience.exp2Desc">Web app for asset exit management and traceability, replacing a manual process — UI, MySQL, pre-production testing.</p><ul><li data-i18n="experience.exp2t1">Responsive interface · MySQL · Functional tests</li></ul><div class="experience-entry__tags"><span>Django</span><span>Bootstrap</span><span>MySQL</span></div></div></article>
+    </div></div></section>
 
-        <div class="skills-tabs reveal">
-          <div class="skills-tabs__nav" role="tablist">
-            <button class="skills-tabs__btn active" id="tab-button-langages" role="tab" aria-controls="tab-langages" aria-selected="true" tabindex="0" data-tab="langages" data-i18n="skills.tabLang">Langages</button>
-            <button class="skills-tabs__btn" id="tab-button-frameworks" role="tab" aria-controls="tab-frameworks" aria-selected="false" tabindex="-1" data-tab="frameworks" data-i18n="skills.tabFw">Frameworks</button>
-            <button class="skills-tabs__btn" id="tab-button-data" role="tab" aria-controls="tab-data" aria-selected="false" tabindex="-1" data-tab="data" data-i18n="skills.tabData">Data & DB</button>
-            <button class="skills-tabs__btn" id="tab-button-ia" role="tab" aria-controls="tab-ia" aria-selected="false" tabindex="-1" data-tab="ia" data-i18n="skills.tabIA">IA</button>
-            <button class="skills-tabs__btn" id="tab-button-tools" role="tab" aria-controls="tab-tools" aria-selected="false" tabindex="-1" data-tab="tools" data-i18n="skills.tabTools">Outils</button>
-          </div>
+    <section class="section profile-section" id="about" aria-labelledby="aboutTitle"><div class="container"><header class="section-heading reveal"><div class="section-heading__index mono-label">04 / <span data-i18n="section.profile">PROFILE</span></div><div class="section-heading__copy"><p class="eyebrow" data-i18n="about.tag">Profile</p><h2 class="section__title" id="aboutTitle" data-i18n-html="about.title">Building reliable<br><span>intelligent products.</span></h2></div></header><div class="profile-grid"><div class="profile-copy reveal"><p class="profile-copy__lead" data-i18n-html="about.lead">Fifth-year engineering student at EMSI Casablanca, with a Master 2 in Artificial Intelligence.</p><p data-i18n-html="about.p1">I turn business problems into robust web applications, with a focus on AI traceability and auditable automated decisions.</p><p data-i18n-html="about.p2">Seeking a web development internship with a digital team.</p><a href="assets/Yahya_Falhaoui_CV_PFE.pdf" download class="link-arrow"><span data-i18n="about.cta">View my background</span><span aria-hidden="true">↗</span></a></div><div class="education-records"><h3 class="mono-label" data-i18n="about.eduTitle">Education</h3><article class="education-record"><time>2022 — 2027</time><div><h4 data-i18n="about.edu1Title">EMSI Casablanca</h4><p data-i18n="about.edu1Desc">Computer Engineering & Networks · 2DSIC + Master 2 Artificial Intelligence</p></div></article><article class="education-record"><time>2021 — 2022</time><div><h4 data-i18n="about.edu2Title">La Tour Eiffel — Casablanca</h4><p data-i18n="about.edu2Desc">Physical Sciences Baccalaureate · Bilingual French track</p></div></article><p class="profile-languages"><span class="mono-label" data-i18n="about.languagesLabel">LANGUAGES</span><span data-i18n="about.card4Desc">Arabic · French · technical English</span></p></div></div></div></section>
 
-          <div class="skills-tabs__panels">
-            <div class="skills-panel active" id="tab-langages" role="tabpanel" aria-labelledby="tab-button-langages">
-              <div class="skills-tags-grid">
-                <span class="skill-chip skill-chip--hot">Java</span>
-                <span class="skill-chip skill-chip--hot">TypeScript / JavaScript</span>
-                <span class="skill-chip">Python</span>
-                <span class="skill-chip">C# / .NET</span>
-                <span class="skill-chip">PHP</span>
-                <span class="skill-chip">C / C++</span>
-              </div>
-            </div>
-            <div class="skills-panel" id="tab-frameworks" role="tabpanel" aria-labelledby="tab-button-frameworks" hidden>
-              <div class="skills-tags-grid">
-                <span class="skill-chip skill-chip--hot">Angular 21</span>
-                <span class="skill-chip skill-chip--hot">Spring Boot</span>
-                <span class="skill-chip">Django</span>
-                <span class="skill-chip">React.js</span>
-                <span class="skill-chip">Next.js</span>
-                <span class="skill-chip">.NET Core 8</span>
-                <span class="skill-chip">Symfony</span>
-                <span class="skill-chip">Node.js</span>
-                <span class="skill-chip">PrimeNG</span>
-                <span class="skill-chip">Flask</span>
-                <span class="skill-chip">Bootstrap</span>
-              </div>
-            </div>
-            <div class="skills-panel" id="tab-data" role="tabpanel" aria-labelledby="tab-button-data" hidden>
-              <div class="skills-tags-grid">
-                <span class="skill-chip skill-chip--hot">PostgreSQL</span>
-                <span class="skill-chip skill-chip--hot">MySQL</span>
-                <span class="skill-chip">SQL Server</span>
-                <span class="skill-chip">MongoDB</span>
-                <span class="skill-chip">Oracle Database</span>
-              </div>
-            </div>
-            <div class="skills-panel" id="tab-ia" role="tabpanel" aria-labelledby="tab-button-ia" hidden>
-              <p class="skills-panel__intro" data-i18n="skills.iaIntro">Machine Learning (scikit-learn), Deep Learning (PyTorch, Keras, YOLO), NLP et IA générative (LLM, RAG, LangChain, agents).</p>
-              <div class="skills-tags-grid">
-                <span class="skill-chip skill-chip--hot">Machine Learning · scikit-learn</span>
-                <span class="skill-chip skill-chip--hot">Deep Learning · PyTorch</span>
-                <span class="skill-chip">Keras</span>
-                <span class="skill-chip">YOLO</span>
-                <span class="skill-chip">NLP</span>
-                <span class="skill-chip">LLM · RAG</span>
-                <span class="skill-chip">LangChain</span>
-                <span class="skill-chip">Agents IA</span>
-              </div>
-            </div>
-            <div class="skills-panel" id="tab-tools" role="tabpanel" aria-labelledby="tab-button-tools" hidden>
-              <div class="skills-tags-grid">
-                <span class="skill-chip skill-chip--hot">Docker</span>
-                <span class="skill-chip skill-chip--hot">Git / GitHub</span>
-                <span class="skill-chip">JWT / RBAC</span>
-                <span class="skill-chip">REST API</span>
-                <span class="skill-chip">k6 Testing</span>
-                <span class="skill-chip">Linux</span>
-                <span class="skill-chip">Nginx</span>
-                <span class="skill-chip">UML</span>
-                <span class="skill-chip">Agile</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section section--alt" id="projects">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="section__index">04</span>
-          <div>
-            <span class="section__tag" data-i18n="projects.tag">Projets</span>
-            <h2 class="section__title" data-i18n-html="projects.title">Réalisations<br><span class="text-gradient">sélectionnées</span></h2>
-          </div>
-        </header>
-
-        <div class="projects-bento">
-          <article class="project-featured glass tilt-card reveal">
-            <div class="project-featured__glow"></div>
-            <div class="project-featured__header">
-              <span class="project-featured__badge" data-i18n="projects.featBadge">Featured · PFA 2026</span>
-              <span class="project-featured__num">01</span>
-            </div>
-            <h3 data-i18n="projects.featTitle">Traçabilité IA</h3>
-            <p data-i18n="projects.featDesc">
-              Plateforme multisectorielle (crédit, santé, éducation) — validation humaine des décisions IA,
-              explicabilité ML, audit SHA-256, déploiement Docker. Projet phare 6SOLUTIONS.
-            </p>
-            <div class="project-metrics">
-              <span data-i18n="projects.featM1">84+ commits</span>
-              <span data-i18n="projects.featM2">3 secteurs</span>
-              <span data-i18n="projects.featM3">JWT + RBAC</span>
-              <span data-i18n="projects.featM4">Docker Compose</span>
-            </div>
-            <div class="project-featured__stack">
-              <span>Angular 21</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span><span>k6</span>
-            </div>
-            <a href="https://github.com/Yahyafl3/tracabilite-ia" target="_blank" rel="noopener noreferrer" class="project-featured__link link-arrow magnetic-sm">
-              <span data-i18n="projects.github">GitHub</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </article>
-
-          <article class="project-card glass tilt-card reveal" data-delay="80">
-            <span class="project-card__num">02</span>
-            <span class="project-card__badge" data-i18n="projects.p2Badge">Académique</span>
-            <h3 data-i18n="projects.p2Title">GHotel — Gestion Hôtelière</h3>
-            <p data-i18n="projects.p2Desc">Réservations, check-in/out, facturation PDF/Excel · 3 rôles · ASP.NET Core 8 MVC</p>
-            <div class="project-metrics project-metrics--sm">
-              <span data-i18n="projects.p2M1">5000+ LOC</span>
-              <span data-i18n="projects.p2M2">36 use cases</span>
-            </div>
-            <div class="project-card__stack"><span>.NET 8</span><span>Entity Framework</span><span>SQL Server</span></div>
-            <a href="https://github.com/Yahyafl3/ghotel" target="_blank" rel="noopener noreferrer" class="project-card__link link-arrow magnetic-sm"><span data-i18n="projects.github">GitHub</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-
-          <article class="project-card glass tilt-card reveal" data-delay="120">
-            <span class="project-card__num">03</span>
-            <span class="project-card__badge" data-i18n="projects.p3Badge">Académique</span>
-            <h3 data-i18n="projects.p3Title">GestionCabinet</h3>
-            <p data-i18n="projects.p3Desc">Application de gestion de cabinet — patients, rendez-vous et suivi médical</p>
-            <div class="project-card__stack"><span>Java</span><span>MySQL</span><span>Swing</span></div>
-            <a href="https://github.com/Yahyafl3/GestionCabinet" target="_blank" rel="noopener noreferrer" class="project-card__link link-arrow magnetic-sm"><span data-i18n="projects.github">GitHub</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-
-          <article class="project-card glass tilt-card reveal" data-delay="160">
-            <span class="project-card__num">04</span>
-            <span class="project-card__badge" data-i18n="projects.p4Badge">Académique</span>
-            <h3 data-i18n="projects.p4Title">Gestion Match — FIFA 2030</h3>
-            <p data-i18n="projects.p4Desc">Système de gestion complet pour la Coupe du Monde 2030 — Java/JavaFX</p>
-            <div class="project-card__stack"><span>Java</span><span>JavaFX</span><span>SQL</span></div>
-            <a href="https://github.com/Yahyafl3/gestionmatch" target="_blank" rel="noopener noreferrer" class="project-card__link link-arrow magnetic-sm"><span data-i18n="projects.github">GitHub</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-
-          <article class="project-card glass tilt-card reveal" data-delay="200">
-            <span class="project-card__num">05</span>
-            <span class="project-card__badge" data-i18n="projects.p5Badge">Stage LEONI</span>
-            <h3 data-i18n="projects.p5Title">Gestion Sortie des Biens</h3>
-            <p data-i18n="projects.p5Desc">Application web de traçabilité des sorties de biens — LEONI Maroc, remplacement d'un processus manuel</p>
-            <div class="project-card__stack"><span>Django</span><span>MySQL</span><span>Bootstrap</span></div>
-            <a href="https://github.com/Yahyafl3/gestion-de-sortie-des-biens" target="_blank" rel="noopener noreferrer" class="project-card__link link-arrow magnetic-sm"><span data-i18n="projects.github">GitHub</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    <section class="section skills-section" id="skills" aria-labelledby="skillsTitle"><div class="container"><header class="section-heading reveal"><div class="section-heading__index mono-label">05 / <span data-i18n="section.skills">CAPABILITIES</span></div><div class="section-heading__copy"><p class="eyebrow" data-i18n="skills.tag">Capabilities</p><h2 class="section__title" id="skillsTitle" data-i18n-html="skills.title">Tools for<br><span>building systems.</span></h2><p class="section__subtitle" data-i18n="skills.glance">Verified technologies grouped by the work they support.</p></div></header><div class="skill-groups">
+      <section class="skill-group reveal"><h3 data-i18n="skills.frontend">Frontend</h3><div class="skill-group__items"><span>Angular 21</span><span>TypeScript / JavaScript</span><span>React.js</span><span>Next.js</span><span>PrimeNG</span><span>Bootstrap</span></div></section>
+      <section class="skill-group reveal"><h3 data-i18n="skills.backend">Backend</h3><div class="skill-group__items"><span>Java SE 17</span><span>Spring Boot</span><span>Django</span><span>.NET Core 8</span><span>Symfony</span><span>Node.js</span><span>Flask</span><span>PHP</span><span>C#</span></div></section>
+      <section class="skill-group reveal"><h3 data-i18n="skills.data">Databases</h3><div class="skill-group__items"><span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span><span>MongoDB</span><span>Oracle Database</span></div></section>
+      <section class="skill-group skill-group--ai reveal"><h3 data-i18n="skills.tabIA">AI / ML</h3><p data-i18n="skills.iaIntro">Machine Learning, Deep Learning, NLP, and generative AI.</p><div class="skill-group__items"><span>scikit-learn</span><span>PyTorch</span><span>Keras</span><span>YOLO</span><span>NLP</span><span>LLM · RAG</span><span>LangChain</span><span>AI agents</span></div></section>
+      <section class="skill-group reveal"><h3 data-i18n="skills.tools">Engineering tools</h3><div class="skill-group__items"><span>Docker</span><span>Git / GitHub</span><span>JWT / RBAC</span><span>REST API</span><span>k6</span><span>Linux</span><span>Nginx</span><span>UML</span><span>Agile</span></div></section>
+    </div></div></section>
     <!-- Certifications -->
     <section class="section" id="certifications">
       <div class="container">
         <header class="section__header reveal">
-          <span class="section__index">05</span>
+          <span class="section__index">06</span>
           <div>
             <span class="section__tag" data-i18n="certs.tag">Certifications</span>
             <h2 class="section__title" data-i18n-html="certs.title">Apprentissage<br><span class="text-gradient">continu</span></h2>
@@ -955,15 +485,15 @@
     <section class="section section--contact" id="contact">
       <div class="container">
         <header class="section__header reveal">
-          <span class="section__index">06</span>
+          <span class="section__index">07</span>
           <div>
             <span class="section__tag" data-i18n="contact.tag">Contact</span>
             <h2 class="section__title" data-i18n-html="contact.title">Prêt à<br><span class="text-gradient">collaborer ?</span></h2>
-            <p class="section__subtitle" data-i18n="contact.subtitle">Stage, projet ou opportunité — réponse sous 24h.</p>
+            <p class="section__subtitle" data-i18n="contact.subtitle">Stage, projet ou opportunité — contactez-moi directement ou via le formulaire.</p>
           </div>
         </header>
 
-        <div class="contact-grid">
+          <div class="contact-grid">
           <form class="contact-form glass tilt-card reveal" id="contactForm" action="https://formsubmit.co/deac9ed230c6153606b323aeecce0d69" method="POST" novalidate>
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
@@ -1009,6 +539,10 @@
               <span class="contact-link__label" data-i18n="contact.labelLinkedin">LinkedIn</span>
               <span class="contact-link__value">Yahya Falhaoui →</span>
             </a>
+            <a href="https://github.com/Yahyafl3" target="_blank" rel="noopener noreferrer" class="contact-link glass tilt-card magnetic-sm">
+              <span class="contact-link__label" data-i18n="contact.labelGithub">GitHub</span>
+              <span class="contact-link__value">Yahyafl3 →</span>
+            </a>
             <div class="contact-link glass contact-link--static">
               <span class="contact-link__label" data-i18n="contact.labelLocation">Localisation</span>
               <span class="contact-link__value" data-i18n="contact.location">Casablanca, Maroc 🇲🇦</span>
@@ -1024,9 +558,9 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="footer__logo">YF</span>
-        <p>© 2027 Yahya Falhaoui<br><span class="footer__mono" data-i18n="footer.built">Built with HTML · CSS · JS</span></p>
+        <p>© <span id="currentYear">2026</span> Yahya Falhaoui<br><span class="footer__mono" data-i18n="footer.built">Built with HTML · CSS · JS</span></p>
       </div>
-      <nav class="footer__nav" aria-label="Liens footer">
+      <nav class="footer__nav" aria-label="Footer links" data-i18n-aria="footer.nav">
         <a href="#about" data-i18n="footer.about">À propos</a>
         <a href="#projects" data-i18n="footer.projects">Projets</a>
         <a href="#contact" data-i18n="footer.contact">Contact</a>
@@ -1038,20 +572,7 @@
     </div>
   </footer>
 
-  <!-- Sticky recruiter CTA -->
-  <aside class="sticky-cta" id="stickyCta" aria-label="Actions rapides">
-    <a href="assets/Yahya_Falhaoui_CV_PFE.pdf" class="sticky-cta__btn sticky-cta__btn--primary" download>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-      <span data-i18n="sticky.cv">CV</span>
-    </a>
-    <a href="https://www.linkedin.com/in/yahya-falhaoui-bb2531332" class="sticky-cta__btn" target="_blank" rel="noopener noreferrer">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      <span data-i18n="sticky.linkedin">LinkedIn</span>
-    </a>
-    <a href="#contact" class="sticky-cta__btn sticky-cta__btn--accent">
-      <span data-i18n="sticky.contact">Contact</span>
-    </a>
-  </aside>
+  <aside class="sticky-cta" id="stickyCta" aria-label="Quick links" data-i18n-aria="nav.quickLinks"><a href="assets/Yahya_Falhaoui_CV_PFE.pdf" class="sticky-cta__btn sticky-cta__btn--primary" download><span data-i18n="sticky.cv">CV</span></a><a href="https://www.linkedin.com/in/yahya-falhaoui-bb2531332" class="sticky-cta__btn" target="_blank" rel="noopener noreferrer"><span data-i18n="sticky.linkedin">LinkedIn</span></a><a href="#contact" class="sticky-cta__btn sticky-cta__btn--accent"><span data-i18n="sticky.contact">Contact</span></a></aside>
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
