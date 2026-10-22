@@ -26,7 +26,7 @@
   <title>Yahya Falhaoui — Full-Stack & IA Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300b4ff'/><stop offset='100%25' stop-color='%23a855f7'/></linearGradient></defs><text y='.85em' x='50%25' text-anchor='middle' font-size='72' font-family='system-ui' fill='url(%23g)'>YF</text></svg>">
 </head>
@@ -104,7 +104,7 @@
           </h1>
           <p class="hero__role">
             <span id="typewriter" aria-live="polite"></span>
-            <span class="typewriter-cursor" aria-hidden="true">Γûì</span>
+            <span class="typewriter-cursor" aria-hidden="true">▌</span>
           </p>
           <p class="hero__tagline reveal" data-delay="320" data-i18n="hero.tagline">
             Ingénieur Full-Stack & IA — je livre des applications web sécurisées, de l'architecture
@@ -155,7 +155,7 @@
             <span class="bento-stat__label" data-i18n="hero.statProjects">Projets GitHub</span>
           </div>
           <div class="bento-card bento-card--stat tilt-card">
-            <span class="bento-stat__value" data-count="8" data-suffix="">0</span>
+            <span class="bento-stat__value" data-count="9" data-suffix="">0</span>
             <span class="bento-stat__label" data-i18n="hero.statCerts">Certifications</span>
           </div>
           <div class="bento-card bento-card--stat tilt-card">
@@ -180,12 +180,12 @@
     <!-- Tech Marquee -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Angular</span><span>Spring Boot</span><span>Django</span><span>.NET Core</span>
+        <span>Java SE 17</span><span>Spring Boot</span><span>Angular</span><span>Django</span>
         <span>PostgreSQL</span><span>Docker</span><span>TypeScript</span><span>Python</span>
-        <span>React</span><span>Next.js</span><span>JWT · RBAC</span><span>IA Traçable</span>
-        <span>Angular</span><span>Spring Boot</span><span>Django</span><span>.NET Core</span>
+        <span>React</span><span>Next.js</span><span>JWT · RBAC</span><span data-i18n="marquee.ai">IA Traçable</span>
+        <span>Java SE 17</span><span>Spring Boot</span><span>Angular</span><span>Django</span>
         <span>PostgreSQL</span><span>Docker</span><span>TypeScript</span><span>Python</span>
-        <span>React</span><span>Next.js</span><span>JWT · RBAC</span><span>IA Traçable</span>
+        <span>React</span><span>Next.js</span><span>JWT · RBAC</span><span data-i18n="marquee.ai">IA Traçable</span>
       </div>
     </div>
 
@@ -394,7 +394,7 @@
                 <li data-i18n="experience.exp2t1">Interface responsive · Base MySQL · Tests fonctionnels</li>
               </ul>
               <div class="exp-item__impact">
-                <span data-i18n="experience.exp2impact1">Processus manuel ΓåÆ digital</span>
+                <span data-i18n="experience.exp2impact1">Processus manuel → digital</span>
                 <span data-i18n="experience.exp2impact2">Mise en production</span>
               </div>
               <div class="exp-item__stack">
@@ -420,32 +420,33 @@
         <div class="skills-glance reveal">
           <p class="skills-glance__label" data-i18n="skills.glance">Stack principal — visible immédiatement</p>
           <div class="skills-glance__tags">
-            <span>Angular 21</span><span>Spring Boot</span><span>TypeScript</span><span>Django</span>
-            <span>.NET 8</span><span>PostgreSQL</span><span>Docker</span><span>JWT / RBAC</span>
-            <span>Python / Flask</span><span>Git · CI/CD</span>
+            <span>Java SE 17</span><span>Spring Boot</span><span>Angular 21</span><span>TypeScript</span>
+            <span>Django · .NET 8</span><span>PostgreSQL</span><span>Docker</span><span>Python / Flask</span>
+            <span>JWT / RBAC</span><span>Git · CI/CD</span>
           </div>
         </div>
 
         <div class="skills-tabs reveal">
           <div class="skills-tabs__nav" role="tablist">
-            <button class="skills-tabs__btn active" role="tab" aria-selected="true" data-tab="langages" data-i18n="skills.tabLang">Langages</button>
-            <button class="skills-tabs__btn" role="tab" aria-selected="false" data-tab="frameworks" data-i18n="skills.tabFw">Frameworks</button>
-            <button class="skills-tabs__btn" role="tab" aria-selected="false" data-tab="data" data-i18n="skills.tabData">Data & DB</button>
-            <button class="skills-tabs__btn" role="tab" aria-selected="false" data-tab="tools" data-i18n="skills.tabTools">Outils</button>
+            <button class="skills-tabs__btn active" id="tab-button-langages" role="tab" aria-controls="tab-langages" aria-selected="true" tabindex="0" data-tab="langages" data-i18n="skills.tabLang">Langages</button>
+            <button class="skills-tabs__btn" id="tab-button-frameworks" role="tab" aria-controls="tab-frameworks" aria-selected="false" tabindex="-1" data-tab="frameworks" data-i18n="skills.tabFw">Frameworks</button>
+            <button class="skills-tabs__btn" id="tab-button-data" role="tab" aria-controls="tab-data" aria-selected="false" tabindex="-1" data-tab="data" data-i18n="skills.tabData">Data & DB</button>
+            <button class="skills-tabs__btn" id="tab-button-ia" role="tab" aria-controls="tab-ia" aria-selected="false" tabindex="-1" data-tab="ia" data-i18n="skills.tabIA">IA &amp; Data</button>
+            <button class="skills-tabs__btn" id="tab-button-tools" role="tab" aria-controls="tab-tools" aria-selected="false" tabindex="-1" data-tab="tools" data-i18n="skills.tabTools">Outils</button>
           </div>
 
           <div class="skills-tabs__panels">
-            <div class="skills-panel active" id="tab-langages" role="tabpanel">
-              <div class="skills-panel__grid">
-                <div class="skill-bar" data-level="92"><span class="skill-bar__name">TypeScript / JavaScript</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">92%</span></div>
-                <div class="skill-bar" data-level="88"><span class="skill-bar__name">Java</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">88%</span></div>
-                <div class="skill-bar" data-level="86"><span class="skill-bar__name">Python</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">86%</span></div>
-                <div class="skill-bar" data-level="82"><span class="skill-bar__name">C# / .NET</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">82%</span></div>
-                <div class="skill-bar" data-level="78"><span class="skill-bar__name">PHP</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">78%</span></div>
-                <div class="skill-bar" data-level="72"><span class="skill-bar__name">C / C++</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">72%</span></div>
+            <div class="skills-panel active" id="tab-langages" role="tabpanel" aria-labelledby="tab-button-langages">
+              <div class="skills-tags-grid">
+                <span class="skill-chip skill-chip--hot">Java</span>
+                <span class="skill-chip skill-chip--hot">TypeScript / JavaScript</span>
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">C# / .NET</span>
+                <span class="skill-chip">PHP</span>
+                <span class="skill-chip">C / C++</span>
               </div>
             </div>
-            <div class="skills-panel" id="tab-frameworks" role="tabpanel" hidden>
+            <div class="skills-panel" id="tab-frameworks" role="tabpanel" aria-labelledby="tab-button-frameworks" hidden>
               <div class="skills-tags-grid">
                 <span class="skill-chip skill-chip--hot">Angular 21</span>
                 <span class="skill-chip skill-chip--hot">Spring Boot</span>
@@ -460,16 +461,28 @@
                 <span class="skill-chip">Bootstrap</span>
               </div>
             </div>
-            <div class="skills-panel" id="tab-data" role="tabpanel" hidden>
-              <div class="skills-panel__grid">
-                <div class="skill-bar" data-level="88"><span class="skill-bar__name">PostgreSQL</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">88%</span></div>
-                <div class="skill-bar" data-level="86"><span class="skill-bar__name">MySQL</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">86%</span></div>
-                <div class="skill-bar" data-level="80"><span class="skill-bar__name">SQL Server</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">80%</span></div>
-                <div class="skill-bar" data-level="72"><span class="skill-bar__name">MongoDB</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">72%</span></div>
-                <div class="skill-bar" data-level="68"><span class="skill-bar__name">Oracle 12c</span><div class="skill-bar__track"><div class="skill-bar__fill"></div></div><span class="skill-bar__pct">68%</span></div>
+            <div class="skills-panel" id="tab-data" role="tabpanel" aria-labelledby="tab-button-data" hidden>
+              <div class="skills-tags-grid">
+                <span class="skill-chip skill-chip--hot">PostgreSQL</span>
+                <span class="skill-chip skill-chip--hot">MySQL</span>
+                <span class="skill-chip">SQL Server</span>
+                <span class="skill-chip">MongoDB</span>
+                <span class="skill-chip">Oracle Database</span>
               </div>
             </div>
-            <div class="skills-panel" id="tab-tools" role="tabpanel" hidden>
+            <div class="skills-panel" id="tab-ia" role="tabpanel" aria-labelledby="tab-button-ia" hidden>
+              <p class="skills-panel__intro" data-i18n="skills.iaIntro">Compétences IA issues de mon Master 2 et du projet Traçabilité IA — validation humaine, audit et explicabilité.</p>
+              <div class="skills-tags-grid">
+                <span class="skill-chip skill-chip--hot">Python</span>
+                <span class="skill-chip skill-chip--hot">Flask</span>
+                <span class="skill-chip">Traçabilité IA</span>
+                <span class="skill-chip">Explainability ML</span>
+                <span class="skill-chip">Human-in-the-loop</span>
+                <span class="skill-chip">REST APIs (IA)</span>
+                <span class="skill-chip">Audit SHA-256</span>
+              </div>
+            </div>
+            <div class="skills-panel" id="tab-tools" role="tabpanel" aria-labelledby="tab-button-tools" hidden>
               <div class="skills-tags-grid">
                 <span class="skill-chip skill-chip--hot">Docker</span>
                 <span class="skill-chip skill-chip--hot">Git / GitHub</span>
@@ -576,14 +589,14 @@
           <div>
             <span class="section__tag" data-i18n="certs.tag">Certifications</span>
             <h2 class="section__title" data-i18n-html="certs.title">Apprentissage<br><span class="text-gradient">continu</span></h2>
-            <p class="section__subtitle" data-i18n="certs.subtitle">8 certifications · 5 institutions · IA, dev & soft skills</p>
+            <p class="section__subtitle" data-i18n="certs.subtitle">9 certifications · 5 institutions · Java OCP, IA, dev & soft skills</p>
           </div>
         </header>
 
         <!-- Stats strip -->
         <div class="certs-strip reveal">
           <div class="certs-strip__stat">
-            <span class="certs-strip__val">8</span>
+            <span class="certs-strip__val">9</span>
             <span class="certs-strip__lbl" data-i18n="certs.statCount">Certifications</span>
           </div>
           <div class="certs-strip__divider" aria-hidden="true"></div>
@@ -593,7 +606,7 @@
           </div>
           <div class="certs-strip__divider" aria-hidden="true"></div>
           <div class="certs-strip__stat">
-            <span class="certs-strip__val">2026</span>
+            <span class="certs-strip__val" data-i18n="certs.statLatestVal">Oct. 2026</span>
             <span class="certs-strip__lbl" data-i18n="certs.statLatest">Plus récente</span>
           </div>
           <div class="certs-strip__divider" aria-hidden="true"></div>
@@ -604,24 +617,59 @@
         </div>
 
         <!-- Filter tabs -->
-        <div class="certs-filters reveal" role="tablist" aria-label="Filtrer par catégorie">
-          <button class="certs-filter active" role="tab" aria-selected="true"  data-filter="all"      data-i18n="certs.filterAll">Toutes</button>
-          <button class="certs-filter"        role="tab" aria-selected="false" data-filter="ai"       data-i18n="certs.filterAI">IA &amp; Enterprise</button>
-          <button class="certs-filter"        role="tab" aria-selected="false" data-filter="frontend" data-i18n="certs.filterFE">Frontend &amp; Mobile</button>
-          <button class="certs-filter"        role="tab" aria-selected="false" data-filter="eng"      data-i18n="certs.filterEng">Engineering</button>
-          <button class="certs-filter"        role="tab" aria-selected="false" data-filter="lang"     data-i18n="certs.filterLang">Langages</button>
-          <button class="certs-filter"        role="tab" aria-selected="false" data-filter="soft"     data-i18n="certs.filterSoft">Soft Skills</button>
+        <div class="certs-filters reveal" role="group" data-i18n-aria="certs.filterLabel" aria-label="Filtrer par catégorie">
+          <button class="certs-filter active" type="button" aria-pressed="true"  data-filter="all"      data-i18n="certs.filterAll">Toutes</button>
+          <button class="certs-filter"        type="button" aria-pressed="false" data-filter="ai"       data-i18n="certs.filterAI">IA &amp; Enterprise</button>
+          <button class="certs-filter"        type="button" aria-pressed="false" data-filter="frontend" data-i18n="certs.filterFE">Frontend &amp; Mobile</button>
+          <button class="certs-filter"        type="button" aria-pressed="false" data-filter="eng"      data-i18n="certs.filterEng">Engineering</button>
+          <button class="certs-filter"        type="button" aria-pressed="false" data-filter="lang"     data-i18n="certs.filterLang">Langages</button>
+          <button class="certs-filter"        type="button" aria-pressed="false" data-filter="soft"     data-i18n="certs.filterSoft">Soft Skills</button>
         </div>
 
         <!-- Cards grid -->
         <div class="certs-grid" id="certsGrid">
 
-          <!-- Oracle — Featured / AI -->
-          <article class="cert-card cert-card--featured glass tilt-card reveal" data-cat="ai" aria-label="Oracle Fusion AI Agent Studio">
+          <!-- Oracle Java SE 17 — OCP (Featured) -->
+          <article class="cert-card cert-card--featured glass tilt-card reveal" data-cat="lang" aria-label="Oracle Certified Professional Java SE 17 Developer">
             <div class="cert-card__glow" aria-hidden="true"></div>
             <div class="cert-card__top">
               <div class="cert-card__logo cert-logo--oracle">
-                <img src="assets/logos/oracle-official.png" alt="Oracle" width="80" height="32" loading="lazy">
+                <img src="assets/logos/oracle-icon.svg" alt="Oracle" width="80" height="32" loading="lazy">
+              </div>
+              <span class="cert-card__badge cert-badge--lang" data-i18n="certs.c9cat">Langage · Professionnel</span>
+            </div>
+            <h3 class="cert-card__title" data-i18n="certs.c9title">Oracle Certified Professional: Java SE 17 Developer</h3>
+            <p class="cert-card__level" data-i18n="certs.c9level">Oracle Certified Professional (OCP) · Oracle University</p>
+            <div class="cert-card__meta">
+              <span class="cert-card__org">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Oracle
+              </span>
+              <span class="cert-card__date">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span data-i18n="certs.c9date">19 octobre 2026</span>
+              </span>
+            </div>
+            <div class="cert-card__skills">
+              <span>Java SE 17</span><span>OCP</span><span>Backend</span><span>Enterprise Java</span>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__id">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                ID 103522663OCPJSE17
+              </span>
+              <a href="assets/certs/oracle-javase17-developer.pdf" target="_blank" rel="noopener noreferrer" class="cert-card__verify magnetic-sm" data-i18n-aria="certs.openOracle" aria-label="Ouvrir le certificat Oracle Java SE 17 en PDF">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span data-i18n="certs.verifyPdf">Ouvrir le certificat (PDF)</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Oracle Fusion AI Agent Studio -->
+          <article class="cert-card glass tilt-card reveal" data-delay="40" data-cat="ai" aria-label="Oracle Fusion AI Agent Studio">
+            <div class="cert-card__top">
+              <div class="cert-card__logo cert-logo--oracle">
+                <img src="assets/logos/oracle-icon.svg" alt="Oracle" width="44" height="44" loading="lazy">
               </div>
               <span class="cert-card__badge cert-badge--ai" data-i18n="certs.c1cat">IA · Enterprise</span>
             </div>
@@ -656,7 +704,7 @@
           <article class="cert-card glass tilt-card reveal" data-delay="60" data-cat="frontend" aria-label="React Basics — Meta">
             <div class="cert-card__top">
               <div class="cert-card__logo cert-logo--meta">
-                <img src="assets/logos/meta-official.png" alt="Meta" width="44" height="44" loading="lazy">
+                <img src="assets/logos/meta-icon.svg" alt="Meta" width="44" height="44" loading="lazy">
               </div>
               <span class="cert-card__badge cert-badge--frontend" data-i18n="certs.c3cat">Frontend</span>
             </div>
@@ -691,7 +739,7 @@
           <article class="cert-card glass tilt-card reveal" data-delay="120" data-cat="frontend" aria-label="React Native — Meta">
             <div class="cert-card__top">
               <div class="cert-card__logo cert-logo--meta">
-                <img src="assets/logos/meta-official.png" alt="Meta" width="44" height="44" loading="lazy">
+                <img src="assets/logos/meta-icon.svg" alt="Meta" width="44" height="44" loading="lazy">
               </div>
               <span class="cert-card__badge cert-badge--frontend" data-i18n="certs.c2cat">Frontend · Mobile</span>
             </div>
@@ -957,11 +1005,11 @@
             </a>
             <a href="https://www.linkedin.com/in/yahya-falhaoui-bb2531332" target="_blank" rel="noopener noreferrer" class="contact-link glass tilt-card magnetic-sm">
               <span class="contact-link__label" data-i18n="contact.labelLinkedin">LinkedIn</span>
-              <span class="contact-link__value">Yahya Falhaoui ΓåÆ</span>
+              <span class="contact-link__value">Yahya Falhaoui →</span>
             </a>
             <div class="contact-link glass contact-link--static">
               <span class="contact-link__label" data-i18n="contact.labelLocation">Localisation</span>
-              <span class="contact-link__value" data-i18n="contact.location">Casablanca, Maroc ≡ƒç▓≡ƒçª</span>
+              <span class="contact-link__value" data-i18n="contact.location">Casablanca, Maroc 🇲🇦</span>
             </div>
             <p class="contact-note" data-i18n="contact.interests">Bénévolat · Veille tech · Open Source</p>
           </div>
@@ -974,7 +1022,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="footer__logo">YF</span>
-        <p>┬⌐ 2027 Yahya Falhaoui<br><span class="footer__mono" data-i18n="footer.built">Built with HTML · CSS · JS</span></p>
+        <p>© 2027 Yahya Falhaoui<br><span class="footer__mono" data-i18n="footer.built">Built with HTML · CSS · JS</span></p>
       </div>
       <nav class="footer__nav" aria-label="Liens footer">
         <a href="#about" data-i18n="footer.about">À propos</a>

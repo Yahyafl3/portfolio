@@ -14,7 +14,7 @@
 
   --text: #eeeef4;
   --text-2: #9494a8;
-  --text-3: #5a5a6e;
+  --text-3: #85859a;
 
   --blue: #0099ff;
   --cyan: #00e5c0;
@@ -54,7 +54,7 @@
   --border-hover: rgba(0, 0, 0, 0.14);
   --text: #0f0f16;
   --text-2: #4a4a5c;
-  --text-3: #7a7a8e;
+  --text-3: #666679;
   --blue: #0077cc;
   --cyan: #009980;
   --purple: #7c22ce;
@@ -93,8 +93,6 @@
 [data-theme="light"] .form-group textarea {
   background: rgba(255,255,255,0.8);
 }
-
-[data-theme="light"] .skill-bar__track { background: rgba(0,0,0,0.06); }
 
 [data-theme="light"] .project-featured__num,
 [data-theme="light"] .project-card__num {
@@ -399,7 +397,7 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 .nav__link--cta {
   background: var(--grad) !important;
   color: #fff !important;
-  margin-left: 8px;
+  margin-inline-start: 8px;
   padding: 10px 20px;
 }
 
@@ -1276,7 +1274,7 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 
 .exp-item__list li {
   position: relative;
-  padding-left: 18px;
+  padding-inline-start: 18px;
   font-size: 0.9375rem;
   color: var(--text-2);
   margin-bottom: 8px;
@@ -1285,7 +1283,7 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 .exp-item__list li::before {
   content: '';
   position: absolute;
-  left: 0; top: 10px;
+  inset-inline-start: 0; top: 10px;
   width: 6px; height: 6px;
   border-radius: 50%;
   background: var(--blue);
@@ -1417,47 +1415,12 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.skills-panel__grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.skill-bar {
-  display: grid;
-  grid-template-columns: 180px 1fr 48px;
-  align-items: center;
-  gap: 16px;
-}
-
-.skill-bar__name {
-  font-size: 0.875rem;
-  font-weight: 500;
+.skills-panel__intro {
+  font-size: 0.9375rem;
   color: var(--text-2);
-}
-
-.skill-bar__track {
-  height: 6px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 100px;
-  overflow: hidden;
-}
-
-.skill-bar__fill {
-  height: 100%;
-  width: 0;
-  border-radius: 100px;
-  background: var(--grad);
-  transition: width 1.4s var(--ease-out);
-}
-
-.skill-bar.animated .skill-bar__fill { width: var(--level); }
-
-.skill-bar__pct {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-3);
-  text-align: right;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  max-width: 640px;
 }
 
 .skills-tags-grid {
@@ -1936,6 +1899,10 @@ body.custom-cursor .cursor-ring { opacity: 1; }
   padding: 8px 12px;
 }
 
+.cert-card--featured .cert-card__logo img {
+  object-fit: contain;
+}
+
 /* --- Badges --- */
 .cert-card__badge {
   font-family: var(--font-mono);
@@ -2131,8 +2098,8 @@ body.custom-cursor .cursor-ring { opacity: 1; }
 
 @media (max-width: 768px) {
   .certs-strip { padding: 16px 20px; gap: 0; }
-  .certs-strip__stat { padding-right: 20px; }
-  .certs-strip__divider { margin-right: 20px; }
+  .certs-strip__stat { padding-inline-end: 20px; }
+  .certs-strip__divider { margin-inline-end: 20px; }
   .certs-strip__val { font-size: 1.375rem; }
   .certs-grid { grid-template-columns: 1fr; }
   .cert-card--featured { grid-column: span 1; padding: 24px; }
@@ -2426,7 +2393,7 @@ body.sticky-active {
   :root { --nav-h: 68px; }
 
   .nav__controls {
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 
   .nav__toggle {
@@ -2461,12 +2428,10 @@ body.sticky-active {
   }
 
   .nav__link { width: 100%; text-align: center; padding: 14px; }
-  .nav__link--cta { margin-left: 0; margin-top: 8px; }
+  .nav__link--cta { margin-inline-start: 0; margin-top: 8px; }
 
   .about-bento__cards { grid-template-columns: 1fr; }
   .projects-bento { grid-template-columns: 1fr; }
-  .skill-bar { grid-template-columns: 1fr 48px; }
-  .skill-bar__name { grid-column: 1 / -1; }
   .form-row { grid-template-columns: 1fr; }
   .edu-item { flex-direction: column; align-items: flex-start; gap: 8px; }
   .hero__scroll { display: none; }
@@ -2535,39 +2500,61 @@ html[dir="rtl"] .section__header {
   direction: rtl;
 }
 
+html[lang="ar"] body,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] textarea {
+  font-family: 'Noto Sans Arabic', var(--font-body), sans-serif;
+}
+
+html[lang="ar"] body { text-align: start; }
+html[lang="ar"] .nav__logo,
+html[lang="ar"] .nav__logo-mark,
+html[lang="ar"] .bento-avatar,
+html[lang="ar"] .trust-bar__logos,
+html[lang="ar"] .hero__social,
+html[lang="ar"] .project-card__stack,
+html[lang="ar"] .cert-card__skills { direction: ltr; }
+html[lang="ar"] .nav__controls { margin-inline-start: 0; margin-inline-end: 16px; }
+html[lang="ar"] .nav__link--cta { margin-inline-start: 0; margin-inline-end: 8px; }
+html[lang="ar"] .exp-item__list li { padding-inline-start: 18px; padding-inline-end: 0; }
+html[lang="ar"] .exp-item__list li::before { inset-inline-start: 0; inset-inline-end: auto; }
+html[lang="ar"] .cert-card__id,
+html[lang="ar"] .cert-card__org,
+html[lang="ar"] .cert-card__date { direction: ltr; }
+html[lang="ar"] .cert-card__date > span { direction: rtl; unicode-bidi: plaintext; }
+html[lang="ar"] .contact-link[href^="mailto:"] .contact-link__value,
+html[lang="ar"] .contact-link[href^="tel:"] .contact-link__value,
+html[lang="ar"] .contact-link[href*="linkedin.com"] .contact-link__value {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: start;
+}
+html[lang="ar"] .hero__name,
+html[lang="ar"] .section__title { letter-spacing: 0; line-height: 1.55; }
+html[lang="ar"] .lang-switch__btn { min-width: 38px; padding-inline: 9px; }
+
 html[dir="rtl"] .link-arrow svg,
-html[dir="rtl"] .project-card__link svg,
-html[dir="rtl"] .btn svg {
+html[dir="rtl"] .project-card__link svg {
   transform: scaleX(-1);
 }
 
-html[dir="rtl"] .exp-item__list li {
-  padding-left: 0;
-  padding-right: 18px;
-}
-
-html[dir="rtl"] .exp-item__list li::before {
-  left: auto;
-  right: 0;
-}
+html[dir="rtl"] .exp-item__list li { padding-inline-start: 18px; padding-inline-end: 0; }
+html[dir="rtl"] .exp-item__list li::before { inset-inline-start: 0; inset-inline-end: auto; }
 
 html[dir="rtl"] .timeline,
 html[dir="rtl"] .edu-item {
-  text-align: right;
+  text-align: start;
 }
 
 html[dir="rtl"] .nav__controls {
-  margin-left: 16px;
-  margin-right: auto;
+  margin-inline-start: auto;
+  margin-inline-end: 16px;
 }
 
 html[dir="rtl"] .nav__link--cta {
-  margin-left: 0;
-  margin-right: 8px;
-}
-
-html[dir="rtl"] .skill-bar {
-  direction: ltr;
+  margin-inline-start: 0;
+  margin-inline-end: 8px;
 }
 
 html[dir="rtl"] .why-grid,

@@ -128,30 +128,6 @@
     });
   }
 
-  /* --- Skill Bars --- */
-  function initSkillBars() {
-    const animateBars = (container) => {
-      container.querySelectorAll('.skill-bar').forEach((bar) => {
-        if (bar.classList.contains('animated')) return;
-        const level = bar.dataset.level;
-        bar.querySelector('.skill-bar__fill').style.setProperty('--level', level + '%');
-        bar.classList.add('animated');
-      });
-    };
-
-    const panel = document.querySelector('.skills-panel.active');
-    if (panel) animateBars(panel);
-
-    document.querySelectorAll('.skills-panel').forEach((panel) => {
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && panel.classList.contains('active')) {
-          animateBars(panel);
-        }
-      }, { threshold: 0.2 });
-      observer.observe(panel);
-    });
-  }
-
   /* --- Skills Tabs --- */
   function initSkillsTabs() {
     const btns = document.querySelectorAll('.skills-tabs__btn');
@@ -164,22 +140,32 @@
         btns.forEach((b) => {
           b.classList.remove('active');
           b.setAttribute('aria-selected', 'false');
+          b.tabIndex = -1;
         });
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
+        btn.tabIndex = 0;
 
         panels.forEach((panel) => {
           const isActive = panel.id === 'tab-' + tab;
           panel.classList.toggle('active', isActive);
           panel.hidden = !isActive;
-          if (isActive) {
-            panel.querySelectorAll('.skill-bar').forEach((bar) => {
-              const level = bar.dataset.level;
-              bar.querySelector('.skill-bar__fill').style.setProperty('--level', level + '%');
-              bar.classList.add('animated');
-            });
-          }
         });
+      });
+
+      btn.addEventListener('keydown', (event) => {
+        const currentIndex = Array.from(btns).indexOf(btn);
+        const rtl = document.documentElement.dir === 'rtl';
+        let nextIndex;
+        if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = btns.length - 1;
+        else if (event.key === 'ArrowRight') nextIndex = (currentIndex + (rtl ? -1 : 1) + btns.length) % btns.length;
+        else if (event.key === 'ArrowLeft') nextIndex = (currentIndex + (rtl ? 1 : -1) + btns.length) % btns.length;
+        else return;
+
+        event.preventDefault();
+        btns[nextIndex].focus();
+        btns[nextIndex].click();
       });
     });
   }
@@ -354,9 +340,10 @@
   /* --- Contact Form (FormSubmit) --- */
   const FORM_ENDPOINT = 'https://formsubmit.co/ajax/deac9ed230c6153606b323aeecce0d69';
 
-  function showFormStatus(status, text, type) {
+  function showFormStatus(status, messageKey, type) {
     if (!status) return;
-    status.textContent = text;
+    status.dataset.i18nStatus = messageKey;
+    status.textContent = window.i18nManager.t(messageKey);
     status.className = `form-status ${type}`;
   }
 
@@ -365,7 +352,7 @@
     if (params.get('sent') !== '1') return;
 
     const status = document.getElementById('formStatus');
-    showFormStatus(status, window.i18nManager.t('contact.success'), 'success');
+    showFormStatus(status, 'contact.success', 'success');
 
     params.delete('sent');
     const query = params.toString();
@@ -394,12 +381,12 @@
       const messageVal = String(data.get('message') || '').trim();
 
       if (!nameVal || !emailVal || !subjectVal || !messageVal) {
-        showFormStatus(status, window.i18nManager.t('contact.errorEmpty'), 'error');
+        showFormStatus(status, 'contact.errorEmpty', 'error');
         return;
       }
 
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-        showFormStatus(status, window.i18nManager.t('contact.errorEmail'), 'error');
+        showFormStatus(status, 'contact.errorEmail', 'error');
         return;
       }
 
@@ -410,7 +397,7 @@
       data.set('_subject', mailSubject);
       data.set('_replyto', emailVal);
 
-      showFormStatus(status, window.i18nManager.t('contact.sending'), 'loading');
+      showFormStatus(status, 'contact.sending', 'loading');
       if (submitBtn) submitBtn.disabled = true;
 
       try {
@@ -423,15 +410,15 @@
         const result = await res.json().catch(() => ({}));
 
         if (String(result.success) === 'true') {
-          showFormStatus(status, window.i18nManager.t('contact.success'), 'success');
+          showFormStatus(status, 'contact.success', 'success');
           form.reset();
           return;
         }
 
-        showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
+        showFormStatus(status, 'contact.fallbackSend', 'loading');
         HTMLFormElement.prototype.submit.call(form);
       } catch {
-        showFormStatus(status, window.i18nManager.t('contact.fallbackSend'), 'loading');
+        showFormStatus(status, 'contact.fallbackSend', 'loading');
         HTMLFormElement.prototype.submit.call(form);
       } finally {
         if (submitBtn) submitBtn.disabled = false;
@@ -517,10 +504,10 @@
         // Update active filter
         filters.forEach((b) => {
           b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
+          b.setAttribute('aria-pressed', 'false');
         });
         btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
+        btn.setAttribute('aria-pressed', 'true');
 
         // Animate cards in/out
         cards.forEach((card) => {
@@ -550,6 +537,12 @@
   /* --- Init --- */
   document.addEventListener('DOMContentLoaded', () => {
     window.i18nManager.init();
+    window.addEventListener('langchange', () => {
+      const status = document.getElementById('formStatus');
+      if (status?.dataset.i18nStatus) {
+        status.textContent = window.i18nManager.t(status.dataset.i18nStatus);
+      }
+    });
     initTheme();
     initPreloader();
     initScrollProgress();
@@ -557,7 +550,6 @@
     setTimeout(typeWriter, 1200);
     window.addEventListener('langchange', resetTypewriter);
     initCounters();
-    initSkillBars();
     initSkillsTabs();
     initReveal();
     initNav();

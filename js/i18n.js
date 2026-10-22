@@ -6,7 +6,7 @@ window.I18N = {
   fr: {
     meta: { title: 'Yahya Falhaoui — Full-Stack & IA Engineer', description: 'Yahya Falhaoui — Étudiant Ingénieur Full-Stack & IA. Angular, Spring Boot, Django, .NET. Portfolio professionnel, Casablanca.' },
     preloader: { loading: 'Chargement' },
-    nav: { about: 'À propos', why: 'Pourquoi moi', experience: 'Expérience', skills: 'Compétences', projects: 'Projets', certs: 'Certs', cv: 'CV', contact: 'Contact', menu: 'Ouvrir le menu', lang: 'Langue' },
+    nav: { about: 'À propos', why: 'Pourquoi moi', experience: 'Expérience', skills: 'Compétences', projects: 'Projets', certs: 'Certifications', cv: 'CV', contact: 'Contact', menu: 'Ouvrir le menu', lang: 'Langue' },
     hero: {
       badge: 'Disponible pour un stage · Casablanca, MA',
       label: 'Bonjour, je suis',
@@ -27,6 +27,7 @@ window.I18N = {
         'Étudiant Ingénieur · Informatique & IA',
         'Développeur Full-Stack',
         'Traçabilité IA · Spring Boot · Angular',
+        'Oracle Certified · Java SE 17 Developer',
         "De l'idée au déploiement Docker"
       ]
     },
@@ -96,14 +97,16 @@ window.I18N = {
       tabLang: 'Langages',
       tabFw: 'Frameworks',
       tabData: 'Data & DB',
-      tabTools: 'Outils'
+      tabIA: 'IA & Data',
+      tabTools: 'Outils',
+      iaIntro: 'Compétences IA issues de mon Master 2 et du projet Traçabilité IA — validation humaine, audit et explicabilité.'
     },
     projects: {
       tag: 'Projets',
       title: 'Réalisations<br><span class="text-gradient">sélectionnées</span>',
       featBadge: 'Featured · PFA 2026',
       featTitle: 'Traçabilité IA',
-      featDesc: 'Plateforme multisectorielle (crédit, santé, éducation) — validation humaine des décisions IA, explicabilité ML, audit SHA-256, déploiement Docker. Projet phare 6SOLUTIONS.',
+      featDesc: 'Problème : décisions IA opaques dans des secteurs sensibles. Solution : plateforme de validation humaine, explicabilité ML et journal d\'audit SHA-256, déployée en Docker. Projet phare 6SOLUTIONS (PFA).',
       featM1: '84+ commits',
       featM2: '3 secteurs',
       featM3: 'JWT + RBAC',
@@ -127,12 +130,57 @@ window.I18N = {
     certs: {
       tag: 'Certifications',
       title: 'Apprentissage<br><span class="text-gradient">continu</span>',
-      intro: 'Apprentissage continu à travers des certifications reconnues en ingénierie logicielle, développement web, cloud et intelligence artificielle.',
-      featured: 'À la une',
-      viewCert: 'Voir le certificat →',
-      viewCredential: 'Vérifier la certification ↗',
-      modalClose: 'Fermer',
-      modalVerify: 'Vérifier ↗'
+      subtitle: '9 certifications · 5 institutions · Java OCP, IA, dev & soft skills',
+      statCount: 'Certifications',
+      statOrgs: 'Institutions',
+      statLatest: 'Plus récente',
+      statLatestVal: 'Oct. 2026',
+      filterLabel: 'Filtrer les certifications par catégorie',
+      filterAll: 'Toutes',
+      filterAI: 'IA & Enterprise',
+      filterFE: 'Frontend & Mobile',
+      filterEng: 'Engineering',
+      filterLang: 'Langages',
+      filterSoft: 'Soft Skills',
+      verify: 'Voir le certificat',
+      verifyPdf: 'Ouvrir le certificat (PDF)',
+      openOracle: 'Ouvrir le certificat Oracle Java SE 17 en PDF',
+      c9cat: 'Langage · Professionnel',
+      c9title: 'Oracle Certified Professional: Java SE 17 Developer',
+      c9level: 'Oracle Certified Professional (OCP) · Oracle University',
+      c9date: '19 octobre 2026',
+      c1cat: 'IA · Enterprise',
+      c1title: 'Oracle Fusion AI Agent Studio',
+      c1level: 'Certified Foundations Associate — Rel 1',
+      c1date: '23 août 2026',
+      c2cat: 'Frontend · Mobile',
+      c2title: 'React Native',
+      c2level: 'Cours autorisé par Meta · Coursera',
+      c2date: '17 déc. 2025',
+      c3cat: 'Frontend',
+      c3title: 'React Basics',
+      c3level: 'Cours autorisé par Meta · Coursera',
+      c3date: '13 déc. 2025',
+      c4cat: 'Engineering',
+      c4title: 'Software Engineering: Design & Project Management',
+      c4level: 'HKUST · Coursera',
+      c4date: '27 mai 2025',
+      c5cat: 'Langage · Backend',
+      c5title: 'Introduction à la POO en C++',
+      c5level: 'EPFL · Coursera',
+      c5date: '25 déc. 2024',
+      c6cat: 'Langage · Web',
+      c6title: 'Interactivity with JavaScript',
+      c6level: 'University of Michigan · Coursera',
+      c6date: '24 déc. 2024',
+      c7cat: 'Data · Web',
+      c7title: 'Using Python to Access Web Data',
+      c7level: 'University of Michigan · Coursera',
+      c7date: '29 mai 2025',
+      c8cat: 'Soft Skills',
+      c8title: 'Successful Negotiation: Essential Strategies & Skills',
+      c8level: 'University of Michigan · Coursera',
+      c8date: '22 janv. 2025'
     },
     contact: {
       tag: 'Contact',
@@ -162,7 +210,7 @@ window.I18N = {
       fallbackSend: 'Redirection pour envoi sécurisé…'
     },
     footer: {
-      built: 'Built with HTML · CSS · JS',
+      built: 'Réalisé en HTML · CSS · JavaScript',
       about: 'À propos',
       projects: 'Projets',
       contact: 'Contact',
@@ -198,6 +246,7 @@ window.I18N = {
         'Engineering Student · CS & AI',
         'Full-Stack Developer',
         'AI Traceability · Spring Boot · Angular',
+        'Oracle Certified · Java SE 17 Developer',
         'From idea to Docker deployment'
       ]
     },
@@ -267,14 +316,16 @@ window.I18N = {
       tabLang: 'Languages',
       tabFw: 'Frameworks',
       tabData: 'Data & DB',
-      tabTools: 'Tools'
+      tabIA: 'AI & Data',
+      tabTools: 'Tools',
+      iaIntro: 'AI skills from my Master 2 and AI Traceability project — human validation, audit trails, and explainability.'
     },
     projects: {
       tag: 'Projects',
       title: 'Selected<br><span class="text-gradient">works</span>',
       featBadge: 'Featured · Final Project 2026',
       featTitle: 'AI Traceability',
-      featDesc: 'Multisector platform (credit, health, education) — human validation of AI decisions, ML explainability, SHA-256 audit, Docker deployment. Flagship 6SOLUTIONS project.',
+      featDesc: 'Problem: opaque AI decisions in sensitive domains. Solution: human-in-the-loop validation, ML explainability, and SHA-256 audit logs, deployed with Docker. Flagship 6SOLUTIONS final project.',
       featM1: '84+ commits',
       featM2: '3 sectors',
       featM3: 'JWT + RBAC',
@@ -298,12 +349,57 @@ window.I18N = {
     certs: {
       tag: 'Certifications',
       title: 'Continuous<br><span class="text-gradient">learning</span>',
-      intro: 'Continuous learning through recognized certifications in software engineering, web development, cloud and artificial intelligence.',
-      featured: 'Featured',
-      viewCert: 'View certificate →',
-      viewCredential: 'Verify credential ↗',
-      modalClose: 'Close',
-      modalVerify: 'Verify ↗'
+      subtitle: '9 certifications · 5 institutions · Java OCP, AI, dev & soft skills',
+      statCount: 'Certifications',
+      statOrgs: 'Institutions',
+      statLatest: 'Latest',
+      statLatestVal: 'Oct. 2026',
+      filterLabel: 'Filter certifications by category',
+      filterAll: 'All',
+      filterAI: 'AI & Enterprise',
+      filterFE: 'Frontend & Mobile',
+      filterEng: 'Engineering',
+      filterLang: 'Languages',
+      filterSoft: 'Soft Skills',
+      verify: 'View certificate',
+      verifyPdf: 'Open certificate (PDF)',
+      openOracle: 'Open the Oracle Java SE 17 certificate as a PDF',
+      c9cat: 'Language · Professional',
+      c9title: 'Oracle Certified Professional: Java SE 17 Developer',
+      c9level: 'Oracle Certified Professional (OCP) · Oracle University',
+      c9date: 'October 19, 2026',
+      c1cat: 'AI · Enterprise',
+      c1title: 'Oracle Fusion AI Agent Studio',
+      c1level: 'Certified Foundations Associate — Rel 1',
+      c1date: 'August 23, 2026',
+      c2cat: 'Frontend · Mobile',
+      c2title: 'React Native',
+      c2level: 'Meta-authorized course · Coursera',
+      c2date: 'Dec 17, 2025',
+      c3cat: 'Frontend',
+      c3title: 'React Basics',
+      c3level: 'Meta-authorized course · Coursera',
+      c3date: 'Dec 13, 2025',
+      c4cat: 'Engineering',
+      c4title: 'Software Engineering: Design & Project Management',
+      c4level: 'HKUST · Coursera',
+      c4date: 'May 27, 2025',
+      c5cat: 'Language · Backend',
+      c5title: 'Introduction to OOP in C++',
+      c5level: 'EPFL · Coursera',
+      c5date: 'Dec 25, 2024',
+      c6cat: 'Language · Web',
+      c6title: 'Interactivity with JavaScript',
+      c6level: 'University of Michigan · Coursera',
+      c6date: 'Dec 24, 2024',
+      c7cat: 'Data · Web',
+      c7title: 'Using Python to Access Web Data',
+      c7level: 'University of Michigan · Coursera',
+      c7date: 'May 29, 2025',
+      c8cat: 'Soft Skills',
+      c8title: 'Successful Negotiation: Essential Strategies & Skills',
+      c8level: 'University of Michigan · Coursera',
+      c8date: 'Jan 22, 2025'
     },
     contact: {
       tag: 'Contact',
@@ -333,7 +429,7 @@ window.I18N = {
       fallbackSend: 'Redirecting for secure delivery…'
     },
     footer: {
-      built: 'Built with HTML · CSS · JS',
+      built: 'Built with HTML · CSS · JavaScript',
       about: 'About',
       projects: 'Projects',
       contact: 'Contact',
@@ -346,29 +442,30 @@ window.I18N = {
   },
 
   ar: {
-    meta: { title: 'يحيى فلحاوي — مهندس Full-Stack & الذكاء الاصطناعي', description: 'يحيى فلحاوي — طالب مهندس Full-Stack & IA. Angular, Spring Boot, Django, .NET. محفظة أعمال احترافية، الدار البيضاء.' },
+    meta: { title: 'يحيى فلحاوي — مهندس برمجيات وذكاء اصطناعي', description: 'يحيى فلحاوي — طالب هندسة برمجيات وذكاء اصطناعي. خبرة في Angular وSpring Boot وDjango و.NET. معرض أعمال احترافي من الدار البيضاء.' },
     preloader: { loading: 'جاري التحميل' },
-    nav: { about: 'نبذة', why: 'لماذا أنا', experience: 'الخبرة', skills: 'المهارات', projects: 'المشاريع', certs: 'الشهادات', cv: 'CV', contact: 'تواصل', menu: 'فتح القائمة', lang: 'اللغة' },
+    nav: { about: 'نبذة عني', why: 'لماذا أنا', experience: 'الخبرة', skills: 'المهارات', projects: 'المشاريع', certs: 'الشهادات', cv: 'السيرة الذاتية', contact: 'تواصل', menu: 'فتح القائمة', lang: 'اختيار اللغة' },
     hero: {
       badge: 'متاح للتدريب · الدار البيضاء، المغرب',
       label: 'مرحباً، أنا',
-      tagline: 'مهندس Full-Stack & IA — أُسلّم تطبيقات ويب آمنة من الهندسة إلى نشر Docker. متاح للتدريب فوراً.',
+      tagline: 'مهندس برمجيات شامل ومتخصص في الذكاء الاصطناعي، أطور تطبيقات ويب آمنة من التصميم إلى النشر باستخدام Docker. متاح لفرصة تدريب الآن.',
       pitch1: 'Angular · Spring Boot · Django · .NET',
       pitch2: 'JWT · RBAC · Docker · PostgreSQL',
       pitch3: 'الدار البيضاء · تدريب فوري',
       cta1: 'تحميل السيرة الذاتية',
       cta2: 'جدولة مقابلة',
-      scroll: 'تمرير',
-      statProjects: 'مشاريع GitHub',
+      scroll: 'انتقل إلى الأسفل',
+      statProjects: 'مشاريع على GitHub',
       statCerts: 'شهادات',
-      statInternships: 'تدريبات',
-      stackLabel: 'المكدس الحالي',
-      bentoRole: 'مطور Full-Stack',
-      bentoSub: 'EMSI · ماستر 2 IA',
+      statInternships: 'تجارب تدريبية',
+      stackLabel: 'التقنيات المستخدمة',
+      bentoRole: 'مطور برمجيات شامل',
+      bentoSub: 'EMSI · ماجستير 2 في الذكاء الاصطناعي',
       typewriter: [
-        'طالب مهندس · Informatics & IA',
-        'مطور Full-Stack',
-        'تتبع IA · Spring Boot · Angular',
+        'طالب هندسة · المعلوماتية والذكاء الاصطناعي',
+        'مطور تطبيقات متكاملة',
+        'تتبع قرارات الذكاء الاصطناعي · Spring Boot · Angular',
+        'Oracle Certified · Java SE 17 Developer',
         'من الفكرة إلى نشر Docker'
       ]
     },
@@ -376,16 +473,16 @@ window.I18N = {
     why: {
       tag: 'للموظّفين',
       title: 'لماذا <span class="text-gradient">توظّفني؟</span>',
-      subtitle: 'قابل للمسح في 30 ثانية — ملف تدريب Full-Stack & IA',
-      c1Title: 'Full-Stack جاهز للإنتاج',
-      c1Desc: 'Front Angular + Back Spring Boot/Django/.NET. أبرمج، أختبر وأنشر — ليس مجرد mockups.',
+      subtitle: 'تعرّف على مؤهلاتي في 30 ثانية — مرشح لتدريب في تطوير البرمجيات والذكاء الاصطناعي',
+      c1Title: 'تطوير متكامل جاهز للإنتاج',
+      c1Desc: 'واجهات Angular وخدمات خلفية باستخدام Spring Boot وDjango و.NET. أبرمج وأختبر وأنشر تطبيقات فعلية.',
       c2Title: 'خبرة في الشركات',
-      c2Desc: 'LEONI (صناعة) + 6SOLUTIONS (PFA IA). تطبيقات حقيقية، ليس فقط مشاريع مدرسية.',
+      c2Desc: 'خبرة في LEONI بالقطاع الصناعي، ومشروع تخرج في 6SOLUTIONS لتتبع قرارات الذكاء الاصطناعي.',
       c3Title: 'أمان وجودة',
-      c3Desc: 'JWT, RBAC, تدقيق SHA-256, اختبارات k6, Docker Compose. عقلية إنتاج من البداية.',
-      c4Title: 'ملف IA مميز',
-      c4Desc: 'ماستر 2 IA + مشروع تتبع IA متعدد القطاعات. نادر لملف junior web dev.',
-      cta: 'تحميل CV — نقرة واحدة'
+      c3Desc: 'مصادقة JWT وصلاحيات RBAC وسجل تدقيق SHA-256 واختبارات k6 وDocker Compose.',
+      c4Title: 'تخصص مميز في الذكاء الاصطناعي',
+      c4Desc: 'ماجستير في الذكاء الاصطناعي ومشروع لتتبع قراراته في قطاعات متعددة.',
+      cta: 'تحميل السيرة الذاتية'
     },
     about: {
       tag: 'نبذة',
@@ -404,7 +501,7 @@ window.I18N = {
       card4Desc: 'العربية · الفرنسية · الإنجليزية التقنية',
       eduTitle: 'التكوين',
       edu1Title: 'EMSI الدار البيضاء',
-      edu1Desc: 'مهندس Informatics & Réseaux · 2DSIC + ماستر 2 الذكاء الاصطناعي',
+      edu1Desc: 'مهندس في المعلوماتية والشبكات · 2DSIC + ماجستير 2 في الذكاء الاصطناعي',
       edu2Title: 'La Tour Eiffel — الدار البيضاء',
       edu2Desc: 'البكالوريا علوم فيزيائية، خيار ثنائي اللغة فرنسي'
     },
@@ -413,54 +510,56 @@ window.I18N = {
       title: 'تأثير في<br><span class="text-gradient">الشركات</span>',
       exp1Date: 'يوليو — سبتمبر 2026',
       exp1Type: 'تدريب PFA',
-      exp1Role: 'مطور Full-Stack & IA',
+      exp1Role: 'مطور برمجيات شامل وذكاء اصطناعي',
       exp1Company: '6SOLUTIONS · الدار البيضاء',
-      exp1Desc: '<strong>تتبع IA</strong> — منصة للتحقق البشري من قرارات IA (ائتمان، صحة، تعليم). مشروع ثنائي، من التصميم إلى النشر.',
-      exp1t1: 'Front Angular 21 + PrimeNG · Back Spring Boot · PostgreSQL',
-      exp1t2: 'JWT + RBAC · سجل تدقيق · بصمات SHA-256',
-      exp1t3: 'اختبارات k6 E2E · Docker Compose · CI Git/GitHub',
-      exp1impact1: '84+ commits',
-      exp1impact2: '3 مجالات IA',
-      exp1impact3: 'Docker prod-like',
+      exp1Desc: '<strong>تتبع قرارات الذكاء الاصطناعي</strong> — منصة لمراجعة القرارات المدعومة بالذكاء الاصطناعي في مجالات التمويل والصحة والتعليم. مشروع مشترك من التصميم إلى النشر.',
+      exp1t1: 'واجهة Angular 21 وPrimeNG · خدمات Spring Boot · PostgreSQL',
+      exp1t2: 'مصادقة JWT وصلاحيات RBAC · سجل تدقيق · بصمات SHA-256',
+      exp1t3: 'اختبارات k6 · Docker Compose · تكامل Git وGitHub',
+      exp1impact1: 'أكثر من 84 تغييراً برمجياً',
+      exp1impact2: '3 مجالات تطبيق',
+      exp1impact3: 'بيئة Docker مماثلة للإنتاج',
       exp2Date: 'يوليو 2025',
       exp2Type: 'تدريب',
       exp2Role: 'متدرب مطور ويب',
       exp2Company: 'LEONI Maroc · عين السبع',
-      exp2Desc: 'تطبيق ويب لإدارة وتتبع خروج الأصول، يحل محل عملية يدوية — UI, MySQL, اختبارات قبل الإنتاج.',
-      exp2t1: 'واجهة responsive · قاعدة MySQL · اختبارات وظيفية',
-      exp2impact1: 'عملية يدوية → رقمية',
-      exp2impact2: 'نشر في الإنتاج'
+      exp2Desc: 'تطبيق ويب لإدارة وتتبع إخراج الأصول استبدل إجراءً يدوياً، وشمل الواجهة وقاعدة MySQL والاختبار قبل الإنتاج.',
+      exp2t1: 'واجهة متجاوبة · قاعدة MySQL · اختبارات وظيفية',
+      exp2impact1: 'تحويل الإجراء اليدوي إلى رقمي',
+      exp2impact2: 'إطلاق التطبيق في بيئة الإنتاج'
     },
     skills: {
       tag: 'المهارات',
       title: 'ترسانة<br><span class="text-gradient">تقنية</span>',
-      glance: 'المكدس الرئيسي — مرئي فوراً',
+      glance: 'أبرز التقنيات والخبرات',
       tabLang: 'اللغات',
       tabFw: 'الأطر',
-      tabData: 'البيانات & DB',
-      tabTools: 'الأدوات'
+      tabData: 'البيانات وقواعدها',
+      tabIA: 'الذكاء الاصطناعي',
+      tabTools: 'الأدوات',
+      iaIntro: 'مهارات اكتسبتها خلال الماجستير ومشروع تتبع قرارات الذكاء الاصطناعي، وتشمل المراجعة البشرية والتدقيق وقابلية التفسير.'
     },
     projects: {
       tag: 'المشاريع',
       title: 'أعمال<br><span class="text-gradient">مختارة</span>',
-      featBadge: 'Featured · PFA 2026',
-      featTitle: 'تتبع IA',
-      featDesc: 'منصة متعددة القطاعات (ائتمان، صحة، تعليم) — تحقق بشري من قرارات IA، explainability ML، تدقيق SHA-256، نشر Docker. مشروع رئيسي 6SOLUTIONS.',
-      featM1: '84+ commits',
+      featBadge: 'مشروع التخرج · 2026',
+      featTitle: 'تتبع قرارات الذكاء الاصطناعي',
+      featDesc: 'المشكلة: غموض القرارات الآلية في القطاعات الحساسة. الحل: منصة للمراجعة البشرية وتفسير نماذج التعلم الآلي وتسجيل عمليات التدقيق ببصمة SHA-256، منشورة باستخدام Docker. مشروع التخرج في 6SOLUTIONS.',
+      featM1: 'أكثر من 84 تغييراً برمجياً',
       featM2: '3 قطاعات',
       featM3: 'JWT + RBAC',
       featM4: 'Docker Compose',
       p2Badge: 'أكاديمي',
       p2Title: 'GHotel — إدارة فندقية',
-      p2Desc: 'حجوزات، check-in/out، فوترة PDF/Excel · 3 أدوار · ASP.NET Core 8 MVC',
+      p2Desc: 'إدارة الحجوزات وتسجيل الدخول والمغادرة والفواتير بصيغتي PDF وExcel · 3 أدوار · ASP.NET Core 8 MVC',
       p2M1: '5000+ LOC',
       p2M2: '36 use cases',
       p3Badge: 'أكاديمي',
       p3Title: 'GestionCabinet',
-      p3Desc: 'تطبيق إدارة cabinet طبي — مرضى، مواعيد ومتابعة',
+      p3Desc: 'تطبيق لإدارة عيادة طبية يشمل المرضى والمواعيد والمتابعة',
       p4Badge: 'أكاديمي',
       p4Title: 'Gestion Match — FIFA 2030',
-      p4Desc: 'نظام إدارة كامل لكأس العالم 2030 — Java/JavaFX',
+      p4Desc: 'نظام متكامل لإدارة كأس العالم 2030 باستخدام Java وJavaFX',
       p5Badge: 'تدريب LEONI',
       p5Title: 'إدارة خروج الأصول',
       p5Desc: 'تطبيق ويب لتتبع خروج الأصول — LEONI Maroc، يحل محل عملية يدوية',
@@ -469,12 +568,57 @@ window.I18N = {
     certs: {
       tag: 'الشهادات',
       title: 'تعلم<br><span class="text-gradient">مستمر</span>',
-      intro: 'تعلم مستمر من خلال شهادات معترف بها في هندسة البرمجيات وتطوير الويب والسحابة والذكاء الاصطناعي.',
-      featured: 'مميزة',
-      viewCert: 'عرض الشهادة ←',
-      viewCredential: 'التحقق ↗',
-      modalClose: 'إغلاق',
-      modalVerify: 'التحقق ↗'
+      subtitle: '9 شهادات · 5 مؤسسات · Java OCP · الذكاء الاصطناعي · التطوير والمهارات المهنية',
+      statCount: 'شهادات',
+      statOrgs: 'مؤسسات',
+      statLatest: 'الأحدث',
+      statLatestVal: 'أكتوبر 2026',
+      filterLabel: 'تصفية الشهادات حسب الفئة',
+      filterAll: 'الكل',
+      filterAI: 'الذكاء الاصطناعي والمؤسسات',
+      filterFE: 'واجهات الويب والهواتف',
+      filterEng: 'هندسة البرمجيات',
+      filterLang: 'لغات البرمجة',
+      filterSoft: 'المهارات المهنية',
+      verify: 'عرض الشهادة',
+      verifyPdf: 'فتح الشهادة (PDF)',
+      openOracle: 'فتح شهادة Oracle Java SE 17 بصيغة PDF',
+      c9cat: 'تطوير البرمجيات · مهني',
+      c9title: 'Oracle Certified Professional: Java SE 17 Developer',
+      c9level: 'Oracle Certified Professional (OCP) · Oracle University',
+      c9date: '١٩ أكتوبر ٢٠٢٦',
+      c1cat: 'الذكاء الاصطناعي · مؤسسات',
+      c1title: 'Oracle Fusion AI Agent Studio',
+      c1level: 'Certified Foundations Associate — Rel 1',
+      c1date: '٢٣ أغسطس ٢٠٢٦',
+      c2cat: 'واجهات الويب · الهواتف',
+      c2title: 'React Native',
+      c2level: 'Cours Meta · Coursera',
+      c2date: '١٧ ديسمبر ٢٠٢٥',
+      c3cat: 'واجهات الويب',
+      c3title: 'React Basics',
+      c3level: 'Cours Meta · Coursera',
+      c3date: '١٣ ديسمبر ٢٠٢٥',
+      c4cat: 'هندسة البرمجيات',
+      c4title: 'Software Engineering: Design & Project Management',
+      c4level: 'HKUST · Coursera',
+      c4date: '٢٧ مايو ٢٠٢٥',
+      c5cat: 'لغات البرمجة · الخادم',
+      c5title: 'مقدمة في البرمجة كائنية التوجه باستخدام C++',
+      c5level: 'EPFL · Coursera',
+      c5date: '٢٥ ديسمبر ٢٠٢٤',
+      c6cat: 'لغات البرمجة · الويب',
+      c6title: 'Interactivity with JavaScript',
+      c6level: 'University of Michigan · Coursera',
+      c6date: '٢٤ ديسمبر ٢٠٢٤',
+      c7cat: 'البيانات · الويب',
+      c7title: 'Using Python to Access Web Data',
+      c7level: 'University of Michigan · Coursera',
+      c7date: '٢٩ مايو ٢٠٢٥',
+      c8cat: 'المهارات المهنية',
+      c8title: 'Successful Negotiation: Essential Strategies & Skills',
+      c8level: 'University of Michigan · Coursera',
+      c8date: '٢٢ يناير ٢٠٢٥'
     },
     contact: {
       tag: 'تواصل',
@@ -494,7 +638,7 @@ window.I18N = {
       labelLinkedin: 'LinkedIn',
       labelLocation: 'الموقع',
       location: 'الدار البيضاء، المغرب 🇲🇦',
-      interests: 'تطوع · veille tech · Open Source',
+      interests: 'العمل التطوعي · متابعة التقنية · البرمجيات مفتوحة المصدر',
       errorEmpty: 'يرجى ملء جميع الحقول.',
       errorEmail: 'بريد إلكتروني غير صالح.',
       sending: 'جاري الإرسال…',
@@ -513,7 +657,7 @@ window.I18N = {
     },
     sticky: { cv: 'CV', linkedin: 'LinkedIn', contact: 'تواصل' },
     theme: { light: 'الوضع الفاتح', dark: 'الوضع الداكن' },
-    marquee: { ai: 'IA قابل للتتبع' }
+    marquee: { ai: 'ذكاء اصطناعي قابل للتتبع' }
   }
 };
 
@@ -521,7 +665,8 @@ window.i18nManager = {
   lang: 'fr',
 
   init() {
-    this.lang = localStorage.getItem('lang') || 'fr';
+    const savedLang = localStorage.getItem('lang');
+    this.lang = window.I18N[savedLang] ? savedLang : 'fr';
     this.apply(this.lang);
     this.bindLangSwitch();
   },
@@ -548,6 +693,8 @@ window.i18nManager = {
     document.title = meta.title;
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.content = meta.description;
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', meta.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.description);
 
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.dataset.i18n;
@@ -568,6 +715,10 @@ window.i18nManager = {
       el.setAttribute('aria-label', this.t(el.dataset.i18nAria));
     });
 
+    document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+      el.setAttribute('title', this.t(el.dataset.i18nTitle));
+    });
+
     document.querySelectorAll('.lang-switch__btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
       btn.setAttribute('aria-pressed', btn.dataset.lang === lang);
@@ -583,6 +734,6 @@ window.i18nManager = {
   },
 
   getTypewriterRoles() {
-    return window.I18N[this.lang].hero.typewriter;
+    return (window.I18N[this.lang] || window.I18N.fr).hero.typewriter;
   }
 };
