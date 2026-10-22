@@ -2784,3 +2784,68 @@ body.custom-cursor, body.custom-cursor a, body.custom-cursor button { cursor: au
   .hero__name { font-size: clamp(2.8rem,12vw,5rem); }
   .bento-card, .glass { box-shadow: none; }
 }
+
+/* Logo lockups: use the artwork directly, without icon tiles or white frames. */
+.trust-logo__image--company {
+  width: auto;
+  height: 31px;
+  max-width: 124px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+}
+.trust-logo__image--6solutions { height: 30px; max-width: 128px; }
+.trust-logo__image--leoni { height: 28px; max-width: 92px; }
+.trust-logo__image--meta { width: 30px; height: 25px; max-width: 30px; opacity: .92; filter: none; }
+.trust-logo__image--oracle { width: 76px; height: 20px; max-width: 76px; opacity: .92; filter: none; }
+[data-theme="dark"] .trust-logo__image--leoni,
+[data-theme="dark"] .exp-item__brand--leoni img { filter: brightness(0) invert(1); }
+
+.exp-item__brand--6s, .exp-item__brand--leoni {
+  width: 142px;
+  height: 44px;
+  min-width: 142px;
+  max-width: 142px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.exp-item__brand--6s img, .exp-item__brand--leoni img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cert-card__logo,
+.cert-logo--oracle,
+.cert-logo--meta,
+.cert-logo--hkust,
+.cert-logo--epfl,
+.cert-logo--michigan {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 46px;
+  height: 44px;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+.cert-card__logo img { width: 100%; height: 100%; object-fit: contain; }
+.cert-logo--oracle,
+.cert-card--featured .cert-card__logo.cert-logo--oracle {
+  width: 108px;
+  height: 34px;
+}
+.cert-logo--meta { width: 42px; height: 42px; }
+.cert-card--featured .cert-card__logo { width: 108px; height: 38px; padding: 0; }
+.cert-card--featured .cert-card__logo img { object-fit: contain; }

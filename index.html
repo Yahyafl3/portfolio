@@ -15,7 +15,7 @@
       document.documentElement.lang = lang;
       if (lang === 'ar') document.documentElement.dir = 'rtl';
       var meta = document.getElementById('themeColorMeta');
-      if (meta) meta.content = theme === 'light' ? '#f5f7fb' : '#111827';
+      if (meta) meta.content = theme === 'light' ? '#f7f4ed' : '#121b18';
     })();
   </script>
   <meta property="og:title" content="Yahya Falhaoui — Ingénieur Informatique & IA">
@@ -28,7 +28,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300b4ff'/><stop offset='100%25' stop-color='%23a855f7'/></linearGradient></defs><text y='.85em' x='50%25' text-anchor='middle' font-size='72' font-family='system-ui' fill='url(%23g)'>YF</text></svg>">
+  <link rel="stylesheet" href="css/redesign.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23315d4b'/><stop offset='100%25' stop-color='%23b7633c'/></linearGradient></defs><text y='.85em' x='50%25' text-anchor='middle' font-size='72' font-family='system-ui' fill='url(%23g)'>YF</text></svg>">
 </head>
 <body>
   <!-- Preloader -->
@@ -195,10 +196,10 @@
         <span class="trust-bar__label" data-i18n="trust.label">Ils m'ont fait confiance</span>
         <div class="trust-bar__logos">
           <span class="trust-logo">EMSI</span>
-          <img class="trust-logo__image trust-logo__image--company" src="assets/logos/Leoni.png" alt="LEONI" width="96" height="31" loading="lazy">
-          <img class="trust-logo__image trust-logo__image--company trust-logo__image--6solutions" src="assets/logos/6soulutions.png" alt="6SOLUTIONS" width="112" height="31" loading="lazy">
-          <img class="trust-logo__image" src="assets/logos/meta-official.png" alt="Meta" width="92" height="32" loading="lazy">
-          <img class="trust-logo__image trust-logo__image--oracle" src="assets/logos/oracle-official.png" alt="Oracle" width="92" height="32" loading="lazy">
+          <img class="trust-logo__image trust-logo__image--company trust-logo__image--leoni" src="assets/logos/leoni-logo.png" alt="LEONI" width="96" height="31" loading="lazy">
+          <img class="trust-logo__image trust-logo__image--company trust-logo__image--6solutions" src="assets/logos/6solutions-logo.png" alt="6SOLUTIONS" width="112" height="31" loading="lazy">
+          <img class="trust-logo__image trust-logo__image--meta" src="assets/logos/meta-mark.png" alt="Meta" width="34" height="28" loading="lazy">
+          <img class="trust-logo__image trust-logo__image--oracle" src="assets/logos/oracle-wordmark.png" alt="Oracle" width="76" height="22" loading="lazy">
         </div>
       </div>
     </div>
@@ -343,7 +344,7 @@
             </div>
             <div class="exp-item__body">
               <div class="exp-item__top">
-                <div class="exp-item__brand exp-item__brand--6s"><img src="assets/logos/6soulutions.png" alt="Logo 6SOLUTIONS" width="112" height="31" loading="lazy"></div>
+                <div class="exp-item__brand exp-item__brand--6s"><img src="assets/logos/6solutions-logo.png" alt="Logo 6SOLUTIONS" width="140" height="39" loading="lazy"></div>
                 <div class="exp-item__meta">
                   <time datetime="2026-07" data-i18n="experience.exp1Date">Juil. — Sept. 2026</time>
                   <span class="exp-item__type" data-i18n="experience.exp1Type">Stage PFA</span>
@@ -378,7 +379,7 @@
             </div>
             <div class="exp-item__body">
               <div class="exp-item__top">
-                <div class="exp-item__brand exp-item__brand--leoni"><img src="assets/logos/Leoni.png" alt="Logo LEONI" width="112" height="36" loading="lazy"></div>
+                <div class="exp-item__brand exp-item__brand--leoni"><img src="assets/logos/leoni-logo.png" alt="Logo LEONI" width="140" height="39" loading="lazy"></div>
                 <div class="exp-item__meta">
                   <time datetime="2025-07" data-i18n="experience.exp2Date">Juillet 2025</time>
                   <span class="exp-item__type" data-i18n="experience.exp2Type">Stage</span>
@@ -635,7 +636,7 @@
             <div class="cert-card__glow" aria-hidden="true"></div>
             <div class="cert-card__top">
               <div class="cert-card__logo cert-logo--oracle">
-                <img src="assets/logos/oracle-icon.svg" alt="Oracle" width="80" height="32" loading="lazy">
+                <img src="assets/logos/oracle-wordmark.png" alt="Oracle" width="96" height="25" loading="lazy">
               </div>
               <span class="cert-card__badge cert-badge--lang" data-i18n="certs.c9cat">Langage · Professionnel</span>
             </div>
@@ -670,7 +671,7 @@
           <article class="cert-card glass tilt-card reveal" data-delay="40" data-cat="ai" aria-label="Oracle Fusion AI Agent Studio">
             <div class="cert-card__top">
               <div class="cert-card__logo cert-logo--oracle">
-                <img src="assets/logos/oracle-icon.svg" alt="Oracle" width="44" height="44" loading="lazy">
+                <img src="assets/logos/oracle-wordmark.png" alt="Oracle" width="92" height="24" loading="lazy">
               </div>
               <span class="cert-card__badge cert-badge--ai" data-i18n="certs.c1cat">IA · Enterprise</span>
             </div>
@@ -705,7 +706,7 @@
           <article class="cert-card glass tilt-card reveal" data-delay="60" data-cat="frontend" aria-label="React Basics — Meta">
             <div class="cert-card__top">
               <div class="cert-card__logo cert-logo--meta">
-                <img src="assets/logos/meta-icon.svg" alt="Meta" width="44" height="44" loading="lazy">
+                <img src="assets/logos/meta-mark.png" alt="Meta" width="38" height="38" loading="lazy">
               </div>
               <span class="cert-card__badge cert-badge--frontend" data-i18n="certs.c3cat">Frontend</span>
             </div>
@@ -740,7 +741,7 @@
           <article class="cert-card glass tilt-card reveal" data-delay="120" data-cat="frontend" aria-label="React Native — Meta">
             <div class="cert-card__top">
               <div class="cert-card__logo cert-logo--meta">
-                <img src="assets/logos/meta-icon.svg" alt="Meta" width="44" height="44" loading="lazy">
+                <img src="assets/logos/meta-mark.png" alt="Meta" width="38" height="38" loading="lazy">
               </div>
               <span class="cert-card__badge cert-badge--frontend" data-i18n="certs.c2cat">Frontend · Mobile</span>
             </div>
