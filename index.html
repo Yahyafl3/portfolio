@@ -195,10 +195,10 @@
         <span class="trust-bar__label" data-i18n="trust.label">Ils m'ont fait confiance</span>
         <div class="trust-bar__logos">
           <span class="trust-logo">EMSI</span>
-          <span class="trust-logo trust-logo--leoni">LEONI</span>
-          <span class="trust-logo trust-logo--6s">6SOLUTIONS</span>
-          <span class="trust-logo trust-logo--meta">Meta</span>
-          <span class="trust-logo trust-logo--oracle">Oracle</span>
+          <span class="trust-logo trust-logo--leoni" aria-label="LEONI">LEONI</span>
+          <span class="trust-logo trust-logo--6s" aria-label="6SOLUTIONS">6SOLUTIONS</span>
+          <img class="trust-logo__image" src="assets/logos/meta-official.png" alt="Meta" width="92" height="32" loading="lazy">
+          <img class="trust-logo__image trust-logo__image--oracle" src="assets/logos/oracle-official.png" alt="Oracle" width="92" height="32" loading="lazy">
         </div>
       </div>
     </div>
@@ -343,7 +343,7 @@
             </div>
             <div class="exp-item__body">
               <div class="exp-item__top">
-                <div class="exp-item__brand exp-item__brand--6s">6S</div>
+                <div class="exp-item__brand exp-item__brand--6s" aria-label="6SOLUTIONS">6SOLUTIONS</div>
                 <div class="exp-item__meta">
                   <time datetime="2026-07" data-i18n="experience.exp1Date">Juil. — Sept. 2026</time>
                   <span class="exp-item__type" data-i18n="experience.exp1Type">Stage PFA</span>
@@ -378,7 +378,7 @@
             </div>
             <div class="exp-item__body">
               <div class="exp-item__top">
-                <div class="exp-item__brand exp-item__brand--leoni">L</div>
+                <div class="exp-item__brand exp-item__brand--leoni" aria-label="LEONI">LEONI</div>
                 <div class="exp-item__meta">
                   <time datetime="2025-07" data-i18n="experience.exp2Date">Juillet 2025</time>
                   <span class="exp-item__type" data-i18n="experience.exp2Type">Stage</span>
@@ -431,7 +431,7 @@
             <button class="skills-tabs__btn active" id="tab-button-langages" role="tab" aria-controls="tab-langages" aria-selected="true" tabindex="0" data-tab="langages" data-i18n="skills.tabLang">Langages</button>
             <button class="skills-tabs__btn" id="tab-button-frameworks" role="tab" aria-controls="tab-frameworks" aria-selected="false" tabindex="-1" data-tab="frameworks" data-i18n="skills.tabFw">Frameworks</button>
             <button class="skills-tabs__btn" id="tab-button-data" role="tab" aria-controls="tab-data" aria-selected="false" tabindex="-1" data-tab="data" data-i18n="skills.tabData">Data & DB</button>
-            <button class="skills-tabs__btn" id="tab-button-ia" role="tab" aria-controls="tab-ia" aria-selected="false" tabindex="-1" data-tab="ia" data-i18n="skills.tabIA">IA &amp; Data</button>
+            <button class="skills-tabs__btn" id="tab-button-ia" role="tab" aria-controls="tab-ia" aria-selected="false" tabindex="-1" data-tab="ia" data-i18n="skills.tabIA">IA</button>
             <button class="skills-tabs__btn" id="tab-button-tools" role="tab" aria-controls="tab-tools" aria-selected="false" tabindex="-1" data-tab="tools" data-i18n="skills.tabTools">Outils</button>
           </div>
 
@@ -471,15 +471,16 @@
               </div>
             </div>
             <div class="skills-panel" id="tab-ia" role="tabpanel" aria-labelledby="tab-button-ia" hidden>
-              <p class="skills-panel__intro" data-i18n="skills.iaIntro">Compétences IA issues de mon Master 2 et du projet Traçabilité IA — validation humaine, audit et explicabilité.</p>
+              <p class="skills-panel__intro" data-i18n="skills.iaIntro">Machine Learning (scikit-learn), Deep Learning (PyTorch, Keras, YOLO), NLP et IA générative (LLM, RAG, LangChain, agents).</p>
               <div class="skills-tags-grid">
-                <span class="skill-chip skill-chip--hot">Python</span>
-                <span class="skill-chip skill-chip--hot">Flask</span>
-                <span class="skill-chip">Traçabilité IA</span>
-                <span class="skill-chip">Explainability ML</span>
-                <span class="skill-chip">Human-in-the-loop</span>
-                <span class="skill-chip">REST APIs (IA)</span>
-                <span class="skill-chip">Audit SHA-256</span>
+                <span class="skill-chip skill-chip--hot">Machine Learning · scikit-learn</span>
+                <span class="skill-chip skill-chip--hot">Deep Learning · PyTorch</span>
+                <span class="skill-chip">Keras</span>
+                <span class="skill-chip">YOLO</span>
+                <span class="skill-chip">NLP</span>
+                <span class="skill-chip">LLM · RAG</span>
+                <span class="skill-chip">LangChain</span>
+                <span class="skill-chip">Agents IA</span>
               </div>
             </div>
             <div class="skills-panel" id="tab-tools" role="tabpanel" aria-labelledby="tab-button-tools" hidden>

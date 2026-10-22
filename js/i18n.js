@@ -97,9 +97,9 @@ window.I18N = {
       tabLang: 'Langages',
       tabFw: 'Frameworks',
       tabData: 'Data & DB',
-      tabIA: 'IA & Data',
+      tabIA: 'IA',
       tabTools: 'Outils',
-      iaIntro: 'Compétences IA issues de mon Master 2 et du projet Traçabilité IA — validation humaine, audit et explicabilité.'
+      iaIntro: 'Machine Learning (scikit-learn), Deep Learning (PyTorch, Keras, YOLO), NLP et IA générative (LLM, RAG, LangChain, agents).'
     },
     projects: {
       tag: 'Projets',
@@ -316,9 +316,9 @@ window.I18N = {
       tabLang: 'Languages',
       tabFw: 'Frameworks',
       tabData: 'Data & DB',
-      tabIA: 'AI & Data',
+      tabIA: 'AI',
       tabTools: 'Tools',
-      iaIntro: 'AI skills from my Master 2 and AI Traceability project — human validation, audit trails, and explainability.'
+      iaIntro: 'Machine Learning (scikit-learn), Deep Learning (PyTorch, Keras, YOLO), NLP, and generative AI (LLMs, RAG, LangChain, agents).'
     },
     projects: {
       tag: 'Projects',
@@ -537,7 +537,7 @@ window.I18N = {
       tabData: 'البيانات وقواعدها',
       tabIA: 'الذكاء الاصطناعي',
       tabTools: 'الأدوات',
-      iaIntro: 'مهارات اكتسبتها خلال الماجستير ومشروع تتبع قرارات الذكاء الاصطناعي، وتشمل المراجعة البشرية والتدقيق وقابلية التفسير.'
+      iaIntro: 'تعلّم الآلة (scikit-learn)، والتعلّم العميق (PyTorch وKeras وYOLO)، ومعالجة اللغة الطبيعية والذكاء الاصطناعي التوليدي (LLM وRAG وLangChain والوكلاء).'
     },
     projects: {
       tag: 'المشاريع',
