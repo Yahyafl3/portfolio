@@ -281,7 +281,6 @@ ul { padding-inline-start: 1.2em; }
 .experience-entry__body { max-width: 850px; }
 .experience-entry__heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 42px; margin-bottom: 17px; }
 .experience-entry__heading img { width: auto; max-width: 135px; height: 34px; object-fit: contain; object-position: left center; }
-[data-theme="dark"] .experience-entry__heading img[src*="leoni"] { filter: brightness(0) invert(1); }
 .experience-entry__type { color: var(--quiet); text-align: end; font-size: .58rem; }
 .experience-entry h3 { margin: 0; font: 600 clamp(1.5rem, 3vw, 2.2rem)/1.1 var(--display); letter-spacing: -.05em; }
 .experience-entry__company { margin: 6px 0 17px; color: var(--accent); font-size: .8rem; font-weight: 600; }
